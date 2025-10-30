@@ -6,6 +6,7 @@ interface Partner {
   id: string;
   name: string;
   description: string;
+  logo: string;
 }
 
 export function PartnersCarousel() {
@@ -25,43 +26,27 @@ export function PartnersCarousel() {
   const partners: Partner[] = [
     {
       id: 'partner-1',
-      name: 'SUS',
-      description: 'Sistema Único de Saúde',
+      name: 'Butterfly',
+      description: 'Butterfly Network',
+      logo: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/logo-butterfly-sem-fundo.webp',
     },
     {
       id: 'partner-2',
-      name: 'ABM',
-      description: 'Associação Brasileira de Medicina',
+      name: 'SBN',
+      description: 'Sociedade Brasileira de Neurocirurgia',
+      logo: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/sbn_logo_transparente.webp',
     },
     {
       id: 'partner-3',
-      name: 'POCUS Brasil',
-      description: 'Point-of-Care Ultrasound Brasil',
+      name: 'Mercado Pago',
+      description: 'Mercado Pago',
+      logo: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/mercado-pago-logo.webp',
     },
     {
       id: 'partner-4',
-      name: 'SBUS',
-      description: 'Sociedade Brasileira de Ultrassonografia',
-    },
-    {
-      id: 'partner-5',
-      name: 'Ultrassom PA',
-      description: 'Ultrassonografia do Pará',
-    },
-    {
-      id: 'partner-6',
-      name: 'Hospital Regional',
-      description: 'Hospital Regional de Santarém',
-    },
-    {
-      id: 'partner-7',
-      name: 'UEPA',
-      description: 'Universidade do Estado do Pará',
-    },
-    {
-      id: 'partner-8',
-      name: 'Med Amazônia',
-      description: 'Medicina da Amazônia',
+      name: 'CRM',
+      description: 'Conselho Regional de Medicina',
+      logo: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/crm.webp',
     },
   ];
 
@@ -110,14 +95,17 @@ export function PartnersCarousel() {
                 >
                   <div className="mx-6 md:mx-10 flex shrink-0 items-center justify-center py-4">
                     <div className="text-center">
-                      <div className="flex items-center justify-center h-16 md:h-20 mb-2">
+                      <div className="flex items-center justify-center h-20 md:h-24 mb-3">
                         <div 
-                          className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary/20 to-violet-500/20 border border-white/10 flex items-center justify-center backdrop-blur-sm"
+                          className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-primary/10 to-violet-500/10 border border-white/10 flex items-center justify-center backdrop-blur-sm p-3 md:p-4"
                           aria-hidden="true"
                         >
-                          <span className="text-2xl md:text-3xl font-heading font-bold text-white/80">
-                            {partner.name.charAt(0)}
-                          </span>
+                          <img 
+                            src={partner.logo} 
+                            alt={partner.name}
+                            className="w-full h-full object-contain"
+                            loading="lazy"
+                          />
                         </div>
                       </div>
                       <p className="text-xs md:text-sm font-semibold text-white/90 mb-1">
