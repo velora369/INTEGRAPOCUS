@@ -240,21 +240,6 @@ export function Pricing() {
           </div>
         </div>
       </section>
-
-      {/* Floating Mobile CTA */}
-      {showFloatingCTA && (
-        <div
-          className="fixed bottom-0 left-0 right-0 z-40 p-4 bg-black/95 backdrop-blur-md border-t border-white/10 md:hidden"
-          data-testid="floating-cta"
-        >
-          <button
-            onClick={() => scrollToSection('preco')}
-            className="btn-primary w-full"
-          >
-            Garantir minha vaga no {selectedPayment === 'pix' ? 'PIX' : 'cartão'}
-          </button>
-        </div>
-      )}
     </>
   );
 }
