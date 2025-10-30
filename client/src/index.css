@@ -563,3 +563,25 @@
     }
   }
 }
+
+/* ========================
+   FOOTER SECTION ENHANCEMENTS
+   ======================== */
+
+@layer components {
+  /* Footer hover effects */
+  footer button:hover,
+  footer a:hover {
+    transition: all 0.2s ease;
+  }
+  
+  /* Newsletter input focus glow */
+  footer input[type="email"]:focus {
+    box-shadow: 0 0 0 3px rgba(51, 49, 197, 0.15);
+  }
+  
+  /* Social button hover glow */
+  footer [data-testid^="button-footer-"] button:hover {
+    box-shadow: 0 0 12px rgba(51, 49, 197, 0.4);
+  }
+}
