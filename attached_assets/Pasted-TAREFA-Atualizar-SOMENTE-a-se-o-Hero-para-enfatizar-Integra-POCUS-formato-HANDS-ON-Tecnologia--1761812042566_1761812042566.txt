@@ -1,0 +1,57 @@
+TAREFA: Atualizar SOMENTE a seção Hero para enfatizar Integra POCUS + formato HANDS-ON.
+Tecnologia: manter o projeto atual em TypeScript (não alterar outras seções). Sem emojis.
+
+MANTER:
+• Paleta e tokens já definidos (—cor-primaria: #3331C5; preto; branco).
+• Fundo do hero com .bg-gradient-hero-waves.with-grain.
+• Tipografia (display nos títulos; UI no corpo).
+• Botões: primário sólido #3331C5; secundário outline; foco visível; contraste AA.
+• Proibido qualquer referência visual a “borboleta”.
+
+COMPONENTE/ARQUITETURA:
+• Componente: Hero (ex.: Hero.tsx). id="inicio".
+• Layout: duas colunas no desktop (texto + visual); stack no mobile.
+• Incluir **Glass Card** de informação sem preço (apenas data e local).
+• CTAs: “Garantir minha vaga” → rolar para #preco; “Falar no WhatsApp” → wa.me.
+• Link secundário (texto) no card: “Ver valores e formas de pagamento” → ancora #preco.
+
+COPY — USAR EXATAMENTE
+Título (H1):
+  "Integra POCUS — Imersão Hands-on em POCUS"
+
+Subtítulo:
+  "Formação 100% presencial para integrar imagem e clínica no dia a dia: teoria objetiva em sala, estações práticas supervisionadas e checklists de decisão."
+
+Bullets (3 itens):
+  • Hands-on intensivo com supervisão direta
+  • Fundamentos aplicados + protocolos de aquisição
+  • Menos incerteza, mais assertividade
+
+Glass Card (sem preço):
+  • Data: 29 de novembro de 2025
+  • Local: Santarém, Pará
+  • Link textual: "Ver valores e formas de pagamento" → âncora #preco
+
+CTAs:
+  • Primário: "Garantir minha vaga" → rolar suave até #preco
+  • Secundário: "Falar no WhatsApp" → https://wa.me/5593991674540 (Maria)
+    Alternativa: https://wa.me/5593981160181 (Vanessa)
+
+DIRETRIZES VISUAIS:
+• Coluna visual: elemento abstrato (ondas/sonar/orb) com gradientes da marca; sem metáforas de asas.
+• Título com clamp responsivo (ex.: clamp(36px, 6vw, 56px)).
+• Card vidro com background semitransparente, blur e borda (padrão .card-glass).
+• Em mobile: empilhar conteúdo; CTAs em coluna; card logo abaixo do subtítulo.
+
+ACESSIBILIDADE & UX:
+• H1 com aria-labelledby; imagens decorativas com alt="" e aria-hidden="true".
+• prefers-reduced-motion: reduzir/parar microanimações do fundo no hero.
+• Botões com alvo mínimo 44×44px; linha de leitura ≤ 70ch.
+
+SEO (ajuste leve):
+• Atualizar metadata.title: "Integra POCUS — Imersão Hands-on em POCUS (Presencial | Santarém, PA)"
+• metadata.description: "Formação 100% presencial com teoria objetiva e estações de prática supervisionadas. Santarém (PA), 29/11/2025. Vagas limitadas."
+
+ENTREGA:
+• Substituir somente o conteúdo da Hero conforme acima, preservando classes/utilitários existentes.
+• Não exibir preços na Hero. O link do card e os CTAs devem apontar para a seção #preco.
