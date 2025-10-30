@@ -11,11 +11,6 @@ export function FAQ() {
         "Não! O curso é desenhado tanto para iniciantes quanto para quem já tem alguma familiaridade com o método. Começamos desde os fundamentos até aplicações avançadas.",
     },
     {
-      question: "O certificado tem validade para título de especialista?",
-      answer:
-        "O certificado comprova sua participação na imersão prática. Para título de especialista, consulte os requisitos específicos de sua sociedade de especialidade.",
-    },
-    {
       question: "Terei acesso aos equipamentos durante a prática?",
       answer:
         "Sim! As estações práticas contam com equipamentos profissionais e grupos pequenos para garantir que todos tenham amplo acesso hands-on supervisionado.",
@@ -29,11 +24,6 @@ export function FAQ() {
       question: "Receberei material didático?",
       answer:
         "Sim, todo o material teórico e protocolos práticos utilizados durante a imersão serão disponibilizados aos participantes.",
-    },
-    {
-      question: "Como funciona a política de cancelamento?",
-      answer:
-        "Nossa política de cancelamento e reembolso está disponível mediante solicitação. Entre em contato conosco para conhecer todas as condições e prazos.",
     },
   ];
 
