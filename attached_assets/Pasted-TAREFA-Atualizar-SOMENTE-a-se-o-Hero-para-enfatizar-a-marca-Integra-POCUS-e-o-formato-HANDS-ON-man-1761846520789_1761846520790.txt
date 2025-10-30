@@ -1,0 +1,91 @@
+TAREFA
+Atualizar SOMENTE a seção Hero para enfatizar a marca Integra POCUS e o formato HANDS-ON, mantendo o projeto em TypeScript. Não alterar outras seções. Sem emojis.
+
+MANTER (Design System existente)
+• Paleta/tokens: --cor-primaria:#3331C5; --preto:#000; --branco:#FFF; neutros e gradientes já definidos.
+• Fundo do hero: .bg-gradient-hero-waves.with-grain (usar grain ativo).
+• Tipografia: títulos com fonte display; corpo com fonte UI.
+• Botões: primário sólido #3331C5; secundário outline; foco visível; contraste AA.
+• Proibido qualquer referência visual a “borboleta”.
+
+COMPONENTE/ARQUITETURA
+• Componente alvo: Hero (ex.: Hero.tsx), id="inicio".
+• Layout responsivo em duas colunas (texto esquerda, visual direita). Empilhar no mobile.
+• Incluir Glass Card de informação (sem preço): Data + Local + link textual para a seção de preços (#preco).
+• CTAs: “Garantir minha vaga” (rolar suave para #preco) e “Falar no WhatsApp” (wa.me).
+• Não modificar rotas/ancoras existentes.
+
+COPY — USAR EXATAMENTE
+H1:
+  Integra POCUS — Imersão Hands-on em POCUS
+
+Subtítulo:
+  Formação 100% presencial para integrar imagem e clínica no dia a dia: teoria objetiva em sala, estações práticas supervisionadas e checklists de decisão.
+
+Pills (3 itens, linha abaixo do subtítulo):
+  • Presencial — teoria + hands-on
+  • Foco no raciocínio clínico
+  • Vagas limitadas
+
+Glass Card (sem preço):
+  • Data: 29 de novembro de 2025
+  • Local: Santarém, Pará
+  • Link textual (inline no card): Ver valores e formas de pagamento → âncora #preco
+
+CTAs:
+  • Primário: Garantir minha vaga → rolar para #preco
+  • Secundário: Falar no WhatsApp → https://wa.me/5593991674540 (Maria)
+    Alternativa: https://wa.me/5593981160181 (Vanessa)
+
+MELHORIAS DE IMPACTO (UI/UX MODERNO)
+1) Eyebrow/Pill superior
+   • Acima do H1, inserir um pequeno “badge” glass com texto:
+     “Imersão presencial — Santarém, PA — 29 NOV 2025”
+   • Estilo: pill glass (backdrop-blur, border 1px var(--border), texto branco com 85% de opacidade).
+
+2) Orb Sonar (coluna direita)
+   • Elemento visual abstrato (orb) com ondas/sonar usando conic-gradient + radial-gradients nas cores da marca.
+   • Animação rotacional MUITO lenta (30–45s linear infinite). 
+   • Respeitar `prefers-reduced-motion: reduce` (desabilitar rotação).
+   • No mobile, reduzir tamanho e posicionar atrás do texto com z-index apropriado (sem prejudicar legibilidade).
+
+3) “Shimmer Bar” sob o H1
+   • Inserir uma barra luminosa fina (3–6px de altura, 60–70% da largura do H1) com gradiente azul/violeta e leve blur.
+   • Animação de brilho horizontal suave (8–12s, ease-in-out, alternando). 
+   • Desativar animação em `prefers-reduced-motion`.
+
+4) Pills de prova social (a linha de 3 bullets)
+   • Transformar em “pills glass” com ícones minimalistas em SVG inline (2px stroke): 
+     - Presencial (ícone calendar/check)
+     - Raciocínio clínico (ícone spark/brain simples)
+     - Vagas limitadas (ícone clock/hourglass)
+   • `object-fit: contain` nos SVGs, 18–20px, cor herdando `currentColor`.
+
+5) Glass Card de informação
+   • Card vidro (blur 8px, border 1px rgba(255,255,255,.10), radius 18px, sombra suave).
+   • Ícones SVG inline: calendar para Data, map-pin para Local.
+   • Remover valores/preços do card.
+   • Incluir link textual “Ver valores e formas de pagamento” (underline em hover) → âncora #preco.
+
+6) Microinterações/feedback
+   • CTA primário: hover com leve “lift” (translateY(-2px), box-shadow sutil) e brilho da borda (outline 2px rgba(51,49,197,0.65)).
+   • CTA secundário: hover com aumento de contraste no border.
+   • Pausar quaisquer animações do hero em :hover/:focus caso a seção tenha interação de leitura (opcional).
+
+7) Responsividade
+   • Altura mínima do hero: clamp(68vh, 82vh, 92vh) no desktop; 70–80vh em tablets; auto no mobile.
+   • Grid: esquerda ~60–65%, direita ~35–40%; no mobile, ordem: H1, Sub, Pills, Card, CTAs, Orb decorativa ao fundo.
+   • Linha de leitura do subtítulo ≤ 70ch.
+
+ACESSIBILIDADE
+• H1 com `aria-labelledby` se necessário; imagens/ornamentos com `alt=""` e `aria-hidden="true"`.
+• Target de toque ≥ 44×44px em botões e links.
+• `prefers-reduced-motion`: desativar rotação da orb e shimmer.
+
+IMPLEMENTAÇÃO (aceitação)
+• Atualizar apenas Hero.tsx e estilos relacionados (CSS/TSX).
+• Reutilizar classes utilitárias existentes (glass, tokens, gradientes, grain).
+• Entregar SVGs inline para ícones (2px stroke, `stroke="currentColor"`).
+• Garantir que os CTAs e o link do card apontem para #preco.
+• Nenhum preço/valor aparece na Hero.
+• Sem emojis.

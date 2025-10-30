@@ -383,3 +383,183 @@
     aspect-ratio: 16 / 9;
   }
 }
+
+/* ========================
+   HERO SECTION STYLES
+   ======================== */
+
+@layer components {
+  /* Pills Glass */
+  .pill-glass {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .pill-glass svg {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    color: currentColor;
+  }
+  
+  .pill-glass:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+
+  /* Shimmer Bar under H1 */
+  .hero-shimmer-bar {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 65%;
+    height: 4px;
+    background: linear-gradient(90deg, 
+      rgba(51, 49, 197, 0.8), 
+      rgba(124, 109, 255, 0.9), 
+      rgba(61, 163, 255, 0.7),
+      rgba(124, 109, 255, 0.9),
+      rgba(51, 49, 197, 0.8)
+    );
+    background-size: 200% 100%;
+    filter: blur(2px);
+    border-radius: 2px;
+    animation: shimmer-slide 10s ease-in-out infinite alternate;
+  }
+  
+  @keyframes shimmer-slide {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Orb Sonar (visual element) */
+  .hero-orb-sonar {
+    width: clamp(280px, 40vw, 480px);
+    height: clamp(280px, 40vw, 480px);
+    position: relative;
+    animation: orb-rotate 40s linear infinite;
+  }
+  
+  .hero-orb-sonar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      conic-gradient(from 0deg, 
+        rgba(51, 49, 197, 0.35),
+        rgba(124, 109, 255, 0.45),
+        rgba(61, 163, 255, 0.30),
+        rgba(192, 139, 255, 0.40),
+        rgba(51, 49, 197, 0.35)
+      ),
+      radial-gradient(circle at 50% 50%, 
+        rgba(51, 49, 197, 0.25) 0%, 
+        rgba(74, 72, 224, 0.15) 35%, 
+        rgba(51, 49, 197, 0) 70%
+      );
+    border-radius: 50%;
+    filter: blur(40px);
+  }
+  
+  .hero-orb-sonar::after {
+    content: '';
+    position: absolute;
+    inset: 15%;
+    background: radial-gradient(circle at 40% 40%, 
+      rgba(124, 109, 255, 0.4) 0%, 
+      rgba(61, 163, 255, 0.25) 50%, 
+      transparent 100%
+    );
+    border-radius: 50%;
+    filter: blur(20px);
+  }
+  
+  @keyframes orb-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Primary CTA with lift effect */
+  .btn-primary-hero {
+    background: var(--cor-primaria);
+    color: var(--branco);
+    padding: 14px 22px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(51, 49, 197, 0.25);
+  }
+  
+  .btn-primary-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(51, 49, 197, 0.35);
+    filter: brightness(1.08);
+  }
+  
+  .btn-primary-hero:active {
+    transform: translateY(0);
+    filter: brightness(0.98);
+  }
+  
+  .btn-primary-hero:focus-visible {
+    outline: 2px solid rgba(51, 49, 197, 0.65);
+    outline-offset: 2px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1023px) {
+    .hero-orb-sonar {
+      width: clamp(200px, 50vw, 320px);
+      height: clamp(200px, 50vw, 320px);
+      opacity: 0.6;
+    }
+  }
+  
+  /* Respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-shimmer-bar {
+      animation: none !important;
+      background: linear-gradient(90deg, 
+        rgba(51, 49, 197, 0.8), 
+        rgba(124, 109, 255, 0.9)
+      );
+    }
+    
+    .hero-orb-sonar {
+      animation: none !important;
+    }
+    
+    .btn-primary-hero:hover {
+      transform: none;
+    }
+  }
+}
