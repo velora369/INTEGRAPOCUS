@@ -69,6 +69,12 @@ export function PartnersCarousel() {
 
       <div className="relative">
         <div className="relative mx-auto flex items-center justify-center max-w-6xl">
+          {/* Left fade gradient */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-[#0a0d1f] via-[#0a0d1f]/80 to-transparent z-10 pointer-events-none" />
+          
+          {/* Right fade gradient */}
+          <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-[#0a0d1f] via-[#0a0d1f]/80 to-transparent z-10 pointer-events-none" />
+          
           <Carousel
             opts={{ loop: true }}
             plugins={
@@ -77,7 +83,7 @@ export function PartnersCarousel() {
                 : [
                     AutoScroll({ 
                       playOnInit: true,
-                      speed: 0.5,
+                      speed: 0.625,
                       stopOnInteraction: false,
                       stopOnMouseEnter: false,
                       stopOnFocusIn: false,
