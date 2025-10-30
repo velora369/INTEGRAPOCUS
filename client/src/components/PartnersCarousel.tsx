@@ -97,7 +97,7 @@ export function PartnersCarousel() {
                     <div className="text-center">
                       <div className="flex items-center justify-center h-20 md:h-24 mb-3">
                         <div 
-                          className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-primary/10 to-violet-500/10 border border-white/10 flex items-center justify-center backdrop-blur-sm p-3 md:p-4"
+                          className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/95 border border-white/30 flex items-center justify-center p-3 md:p-4 shadow-lg"
                           aria-hidden="true"
                         >
                           <img 
