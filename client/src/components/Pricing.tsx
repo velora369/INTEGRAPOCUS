@@ -19,22 +19,7 @@ const PixIcon = ({ className }: { className?: string }) => (
 );
 
 export function Pricing() {
-  const [showFloatingCTA, setShowFloatingCTA] = useState(false);
   const [selectedPayment, setSelectedPayment] = useState<PaymentType>('cartao');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const pricingSection = document.getElementById('preco');
-      if (pricingSection) {
-        const rect = pricingSection.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        setShowFloatingCTA(!isVisible && window.scrollY > 800);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
