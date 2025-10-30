@@ -109,27 +109,6 @@ export function Footer() {
               >
                 Professores
               </button>
-              <button
-                onClick={() => scrollToSection('preco')}
-                className="block text-white/70 transition-colors hover:text-primary"
-                data-testid="link-footer-preco"
-              >
-                Preços
-              </button>
-              <button
-                onClick={() => scrollToSection('faq')}
-                className="block text-white/70 transition-colors hover:text-primary"
-                data-testid="link-footer-faq"
-              >
-                FAQ
-              </button>
-              <button
-                onClick={() => scrollToSection('contato')}
-                className="block text-white/70 transition-colors hover:text-primary"
-                data-testid="link-footer-contato"
-              >
-                Contato
-              </button>
             </nav>
           </div>
 
@@ -230,33 +209,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-center md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t border-white/10 pt-8 text-center">
           <p className="text-sm text-white/60">
             © {currentYear} Integra POCUS. Todos os direitos reservados.
           </p>
-          <nav className="flex gap-4 text-sm">
-            <a 
-              href="#preco" 
-              className="text-white/60 transition-colors hover:text-primary"
-              data-testid="link-footer-pricing-policy"
-            >
-              Preços e Pagamento
-            </a>
-            <button
-              onClick={() => scrollToSection('faq')}
-              className="text-white/60 transition-colors hover:text-primary"
-              data-testid="link-footer-faq-bottom"
-            >
-              Perguntas Frequentes
-            </button>
-            <button
-              onClick={() => scrollToSection('contato')}
-              className="text-white/60 transition-colors hover:text-primary"
-              data-testid="link-footer-contact-bottom"
-            >
-              Contato
-            </button>
-          </nav>
         </div>
       </div>
     </footer>
