@@ -1,4 +1,5 @@
 import { Check, CreditCard, Sparkles } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 
 type PaymentType = 'cartao' | 'pix';
@@ -212,45 +213,54 @@ export function Pricing() {
             </div>
 
             {/* Features Included */}
-            <div className="card-glass p-8 md:p-10 mt-6">
-              <h3 className="text-xl font-heading text-white mb-6 text-center">
-                O que está incluído
-              </h3>
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-[#25D366] flex-shrink-0" />
-                    <span className="text-white/80 text-sm">{feature}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="relative group/card">
+              <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-blue-500/20 opacity-0 group-hover/card:opacity-100 blur-sm transition-opacity duration-500" />
+              <div className="relative card-glass-modern p-8 md:p-10 mt-6">
+                <h3 className="text-xl md:text-2xl font-heading text-white mb-8 text-center bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                  O que está incluído
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                  {features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3 group/item">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-[#25D366]/30 blur-md rounded-full group-hover/item:blur-lg transition-all" />
+                        <Check className="relative w-5 h-5 text-[#25D366] flex-shrink-0" />
+                      </div>
+                      <span className="text-white/80 text-sm md:text-base group-hover/item:text-white/95 transition-colors">{feature}</span>
+                    </div>
+                  ))}
+                </div>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                <button
-                  onClick={() => scrollToSection('contato')}
-                  className="btn-primary text-lg px-8"
-                  data-testid="button-pricing-main-cta"
-                >
-                  Garantir minha vaga
-                </button>
-                <a
-                  href="https://wa.me/5593991674540?text=Olá! Gostaria de garantir minha vaga na Imersão Integra POCUS."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-whatsapp text-lg px-8"
-                  data-testid="button-pricing-whatsapp"
-                >
-                  Falar no WhatsApp
-                </a>
-              </div>
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                  <button
+                    onClick={() => scrollToSection('contato')}
+                    className="btn-primary-modern group/btn"
+                    data-testid="button-pricing-main-cta"
+                  >
+                    <span className="relative z-10">Garantir minha vaga</span>
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                  </button>
+                  <a
+                    href="https://wa.me/5593991674540?text=Olá! Gostaria de garantir minha vaga na Imersão Integra POCUS."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-whatsapp-modern group/whats"
+                    data-testid="button-pricing-whatsapp"
+                  >
+                    <FaWhatsapp className="w-5 h-5" />
+                    <span className="relative z-10">Falar no WhatsApp</span>
+                    <div className="absolute inset-0 rounded-2xl bg-[#128C7E] opacity-0 group-hover/whats:opacity-100 transition-opacity duration-300" />
+                  </a>
+                </div>
 
-              {/* Policy Note */}
-              <p className="text-center text-xs text-white/50">
-                * Política de cancelamento e reembolso disponível mediante solicitação.
-                <br />
-                Entre em contato para mais informações sobre condições e prazos.
-              </p>
+                {/* Policy Note */}
+                <p className="text-center text-xs text-white/50">
+                  * Política de cancelamento e reembolso disponível mediante solicitação.
+                  <br />
+                  Entre em contato para mais informações sobre condições e prazos.
+                </p>
+              </div>
             </div>
           </div>
         </div>
