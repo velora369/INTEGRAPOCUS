@@ -33,7 +33,7 @@ export function PartnersCarousel() {
     {
       id: 'partner-2',
       name: 'SBN',
-      description: 'Sociedade Brasileira de Neurocirurgia',
+      description: 'Sociedade Brasileira de Nefrologia',
       logo: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/sbn_logo_transparente.webp',
     },
     {
@@ -44,8 +44,8 @@ export function PartnersCarousel() {
     },
     {
       id: 'partner-4',
-      name: 'CRM',
-      description: 'Conselho Regional de Medicina',
+      name: 'CRM e CFM',
+      description: 'Conselho Regional e Federal de Medicina',
       logo: 'https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/crm.webp',
     },
   ];
@@ -78,9 +78,10 @@ export function PartnersCarousel() {
                 : [
                     AutoScroll({ 
                       playOnInit: true,
-                      speed: 1,
-                      stopOnInteraction: true,
+                      speed: 0.5,
+                      stopOnInteraction: false,
                       stopOnMouseEnter: true,
+                      stopOnFocusIn: false,
                     })
                   ]
             }
