@@ -1,7 +1,22 @@
-import { Check, CreditCard, Smartphone, Sparkles } from 'lucide-react';
+import { Check, CreditCard, Sparkles } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 type PaymentType = 'cartao' | 'pix';
+
+const PixIcon = ({ className }: { className?: string }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 256 256" 
+    className={className}
+    fill="currentColor"
+  >
+    <g>
+      <path d="M63.467,64h-3.627l42.88,-42.88c13.973,-13.92 36.587,-13.92 50.56,0l42.88,42.88h-3.627c-8.533,0 -16.587,3.307 -22.613,9.387l-36.267,36.107c-3.147,3.147 -8.16,3.147 -11.307,0l-36.267,-36.107c-6.027,-6.08 -14.08,-9.387 -22.613,-9.387z"></path>
+      <path d="M192.533,192h3.627l-42.88,42.88c-13.973,13.92 -36.587,13.92 -50.56,0l-42.88,-42.88h3.627c8.533,0 16.587,-3.307 22.613,-9.387l36.267,-36.107c3.147,-3.147 8.16,-3.147 11.307,0l36.267,36.107c6.027,6.08 14.08,9.387 22.613,9.387z"></path>
+      <path d="M234.88,153.28l-28.053,28.053h-14.293c-5.707,0 -11.04,-2.24 -15.093,-6.24l-36.267,-36.16c-7.253,-7.253 -19.093,-7.253 -26.347,0l-36.267,36.16c-4.053,4 -9.387,6.24 -15.093,6.24h-14.293l-28.053,-28.053c-13.92,-13.973 -13.92,-36.587 0,-50.56l28.053,-28.053h14.293c5.707,0 11.04,2.24 15.093,6.24l36.267,36.16c3.627,3.627 8.427,5.44 13.173,5.44c4.747,0 9.547,-1.813 13.173,-5.44l36.267,-36.16c4.053,-4 9.387,-6.24 15.093,-6.24h14.293l28.053,28.053c13.92,13.973 13.92,36.587 0,50.56z"></path>
+    </g>
+  </svg>
+);
 
 export function Pricing() {
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
@@ -92,7 +107,7 @@ export function Pricing() {
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-white/10 border border-white/20" />
                   )}
                   <span className="relative z-10 flex items-center gap-2">
-                    <Smartphone className="w-4 h-4" />
+                    <PixIcon className="w-4 h-4" />
                     PIX
                   </span>
                   {selectedPayment === 'pix' && (
@@ -132,7 +147,7 @@ export function Pricing() {
                       : 'bg-blue-400/10 border-blue-400/20'
                   }`}>
                     {selectedPayment === 'pix' ? (
-                      <Smartphone className="w-6 h-6 text-[#25D366]" />
+                      <PixIcon className="w-6 h-6 text-[#25D366]" />
                     ) : (
                       <CreditCard className="w-6 h-6 text-blue-400" />
                     )}
