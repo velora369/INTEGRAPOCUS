@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
+import { PartnersCarousel } from '@/components/PartnersCarousel';
 import { Audience } from '@/components/Audience';
 import { Outcomes } from '@/components/Outcomes';
 import { FormatDate } from '@/components/FormatDate';
@@ -41,6 +42,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <PartnersCarousel />
         <Audience />
         <Outcomes />
         <FormatDate />
