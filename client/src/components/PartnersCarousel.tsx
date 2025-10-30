@@ -50,6 +50,8 @@ export function PartnersCarousel() {
     },
   ];
 
+  const duplicatedPartners = [...partners, ...partners, ...partners];
+
   return (
     <section 
       className="relative py-16 md:py-20 bg-gradient-to-b from-[#0a0d1f] via-[#0d1129] to-[#0a0d1f] border-y border-white/5"
@@ -85,11 +87,11 @@ export function PartnersCarousel() {
             className="w-full"
           >
             <CarouselContent className="ml-0">
-              {partners.map((partner) => (
+              {duplicatedPartners.map((partner, index) => (
                 <CarouselItem
-                  key={partner.id}
+                  key={`${partner.id}-${index}`}
                   className="flex basis-[280px] md:basis-[320px] justify-center pl-0 flex-shrink-0"
-                  data-testid={`carousel-item-${partner.id}`}
+                  data-testid={`carousel-item-${partner.id}-${index}`}
                 >
                   <div className="mx-6 md:mx-10 flex shrink-0 items-center justify-center py-4">
                     <div className="text-center">
