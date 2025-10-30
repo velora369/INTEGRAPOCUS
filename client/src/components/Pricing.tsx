@@ -110,7 +110,7 @@ export function Pricing() {
                     <PixIcon className="w-4 h-4" />
                     PIX
                   </span>
-                  <div className="absolute -top-2 -right-2 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#25D366] text-black text-xs font-semibold whitespace-nowrap">
+                  <div className="absolute -top-2 -right-4 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#25D366] text-black text-xs font-semibold whitespace-nowrap">
                     Economize 22%
                   </div>
                 </button>
