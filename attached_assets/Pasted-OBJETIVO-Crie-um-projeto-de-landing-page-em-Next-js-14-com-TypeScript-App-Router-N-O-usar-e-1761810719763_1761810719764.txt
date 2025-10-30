@@ -1,0 +1,260 @@
+OBJETIVO
+Crie um projeto de landing page em **Next.js 14+ com TypeScript** (App Router). 
+NÃO usar emojis. 
+Sem arquivos HTML estáticos no repo; toda a UI em TS/TSX. 
+Pronto para deploy na **Netlify**.
+
+========================
+STACK E ESTRUTURA
+========================
+• Framework: Next.js (TypeScript), App Router.
+• Diretórios:
+  - app/
+    - layout.tsx (Global <html> e <body> + fontes, noise overlay opcional)
+    - page.tsx (landing completa)
+    - globals.css (Design System e utilitários de gradiente/grão)
+  - components/
+    - Header.tsx
+    - Hero.tsx
+    - Audience.tsx
+    - Outcomes.tsx
+    - FormatDate.tsx
+    - Professors.tsx
+    - Pricing.tsx
+    - LogosGrid.tsx
+    - LogosMarquee.tsx
+    - Notices.tsx
+    - FAQ.tsx
+    - Contact.tsx
+    - Footer.tsx
+  - lib/
+    - noise.ts (gerar dataURL de textura granulada)
+    - schema.ts (JSON-LD helper)
+  - public/ (se precisar de assets locais)
+• Config:
+  - next.config.mjs com remotePatterns para imagens externas:
+    hostname: "yungwizzeprod2.wordpress.com", pathname: "/wp-content/uploads/**"
+  - tsconfig.json, package.json (scripts: dev, build, start)
+  - netlify.toml (build = "next build"; publish = ".next"; adapter automático da Netlify para Next)
+• Acessibilidade: landmarks ARIA, foco visível, prefers-reduced-motion respeitado.
+
+========================
+IDENTIDADE & DIFERENCIAÇÃO (OBRIGATÓRIO)
+========================
+• Marca: Integra POCUS.
+• Proibido ícones/formatos que remetam à marca Butterfly (nada de asas). 
+• Símbolo/mascote permitido: “mucura” abstrata/geométrica (se precisar).
+• Estética: minimalista, tecnológica e futurista, limpa. Sem poluição visual.
+
+========================
+PALETA, TOKENS E TIPOGRAFIA (globals.css)
+========================
+:root{
+  --cor-primaria:#3331C5; --preto:#000000; --branco:#FFFFFF;
+  --azul-500:#4A48E0; --violeta-500:#7C6DFF; --lilac-500:#C08BFF;
+  --rosa-500:#E38DFE; --sky-400:#3DA3FF; --laranja-400:#FF9A3C;
+  --surface:rgba(255,255,255,0.05);
+  --surface-strong:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.12);
+  --text:#FFFFFF;
+  --grain-opacity:0.06;
+}
+• Fundo dark (preto) com glows azuis. Contraste AA obrigatório.
+• Fontes: 
+  - Títulos (H1–H3): Didot LP Display (fallback: 'Didot','Bodoni Moda', Georgia, serif).
+  - Corpo/UI: Neue Montreal (fallback: Inter, Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial).
+• Tamanhos (clamp): H1 36–56px / H2 28–36px / H3 22–28px / body 16–18px.
+
+========================
+GRADIENTES & TEXTURA (globals.css + lib/noise.ts)
+========================
+Defina utilitários de fundo:
+.bg-gradient-indigo-night:
+  background:
+    radial-gradient(1200px 800px at 15% 10%, rgba(51,49,197,0.40) 0 60%),
+    radial-gradient(1000px 700px at 85% 80%, rgba(74,72,224,0.28) 0 60%),
+    linear-gradient(#000,#000);
+
+.bg-gradient-hero-waves:
+  background:
+    conic-gradient(from 180deg at 70% 40%, rgba(124,109,255,0.18), rgba(61,163,255,0.10), rgba(192,139,255,0.14), rgba(124,109,255,0.18)),
+    radial-gradient(900px 600px at 20% 20%, rgba(51,49,197,0.45) 0 60%),
+    #000;
+
+.bg-gradient-lavender:
+  background:
+    radial-gradient(800px 600px at 80% 20%, rgba(124,109,255,0.24) 0 60%),
+    radial-gradient(700px 500px at 15% 85%, rgba(227,141,254,0.18) 0 55%),
+    #000;
+
+.bg-gradient-sunset-soft: /* decorativo; não usar sob texto/CTA */
+  background:
+    radial-gradient(900px 700px at 20% 30%, rgba(255,154,60,0.28) 0 55%),
+    radial-gradient(900px 700px at 80% 65%, rgba(61,163,255,0.20) 0 55%),
+    radial-gradient(700px 500px at 60% 30%, rgba(227,141,254,0.22) 0 60%),
+    #000;
+
+• .with-grain aplica overlay usando var(--noise-url) criado em lib/noise.ts com canvas (128×128) e opacidade var(--grain-opacity).
+• Mapping:
+  BODY: .bg-gradient-indigo-night.with-grain
+  HERO: .bg-gradient-hero-waves.with-grain
+  “Para quem”/“O que você desenvolve”: .bg-gradient-lavender + cards glass
+  Divisores decorativos: .bg-gradient-sunset-soft (sem texto)
+  Preço/Inscrição: fundo escuro simples (sem sunset)
+  Footer: preto com leve radial azul; grão ≤0.04
+
+========================
+COMPONENTES (TSX) E CONTEÚDO
+========================
+Header.tsx
+• Sticky, semi-transparente com blur. Nav com âncoras: Início, Professores, Para quem é, O que você desenvolve, Formato e Data, Preço, FAQ, Avisos, Contato.
+• CTA “Inscrever-se” rola até Preço.
+
+Hero.tsx
+• H1: "Ultrassom à beira-leito, do conceito à prática."
+• Sub: "Imersão 100% presencial com teoria em sala e estações de prática hands-on para decisões mais rápidas e seguras."
+• Bullets: Presencial — teoria + hands-on • Foco no raciocínio clínico • Vagas limitadas
+• Card vidro com Data: 29 de novembro de 2025; Local: [placeholder].
+• CTAs: “Garantir minha vaga” (rolar para Preço) e “Falar no WhatsApp” (wa.me).
+
+Audience.tsx
+• Texto: Estudantes (anos finais), médicos recém-formados, residentes, generalistas e especialistas que querem diagnosticar mais rápido e conduzir com mais segurança no PA, enfermaria, ambulatório ou UTI.
+• 3–5 cards.
+
+Outcomes.tsx
+• 5 blocos:
+  1) Fundamentos aplicados de POCUS…
+  2) Aplicações clínicas por sistemas…
+  3) Interpretação que importa…
+  4) Da imagem à conduta…
+  5) Noções de procedimentos guiados…
+
+FormatDate.tsx
+• 2 colunas:
+  A) Formato: teoria presencial; hands-on presencial; integração imagem + clínica + decisão.
+  B) Agenda: Imersão 29/11/2025; Carga horária [placeholder]; Local [placeholder].
+• Aviso: “Vagas limitadas.”
+
+Professors.tsx
+• Perfil lado a lado (stack no mobile) com **next/image** e alt adequados.
+• Dr. Emanuel Esposito:
+  - Nefrologista (24+ anos)
+  - Responsável técnico em nefrologia e transplante (hospital terciário)
+  - Professor UEPA
+  - Membro do comitê de POCUS da SBN
+  - Mestrando UFOPA
+  - Usa POCUS diariamente
+  Imagens:
+    https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/dr-emanuel1.jpg
+    https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/dr-emanuel2.jpg
+• Dr. Luan Moraes:
+  - Médico UEPA
+  - Coord. Clínica Médica do HRBA
+  - Plantonista emergência HRBA
+  - Atuação em Trauma e Estabilização Adulto (HMS)
+  - Pesquisa e ensino em POCUS
+  Imagens:
+    https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/drluan1.jpg
+    https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/drluan2.jpg
+
+Pricing.tsx
+• Card de preço:
+  - À vista no Pix: R$ 2.497,00
+  - Cartão: 12x de R$ 267,42
+• CTA “Garantir minha vaga” e “Falar no WhatsApp”.
+• Microtexto de política (placeholder).
+• CTA flutuante no mobile para esta âncora.
+
+LogosGrid.tsx (estático) e LogosMarquee.tsx (esteira contínua)
+• Cada logo dentro de caixa de **mesma altura** (clamp 40–70px), `object-fit: contain`.
+• Aceitar SVG/PNG; versão branca preferida; alt informativo.
+• Respeitar prefers-reduced-motion (pausar animação).
+• Opção de grid simétrico como no exemplo Shadcnblocks (sem animação).
+
+Notices.tsx
+• Cards de “Avisos e atualizações” (3 placeholders).
+
+FAQ.tsx
+• 6 perguntas com respostas curtas; conteúdo fácil de editar.
+
+Contact.tsx
+• Botões grandes:
+  - WhatsApp (Maria): (93) 99167-4540 → https://wa.me/5593991674540
+  - WhatsApp (Vanessa): +55 (93) 98116-0181 → https://wa.me/5593981160181
+• Link: https://www.instagram.com/integra.pocus
+• Form simples (nome, e-mail, mensagem) sem backend.
+
+Footer.tsx
+• Logo tipográfica “Integra POCUS”, navegação resumida, avisos legais.
+• Sem emojis.
+
+========================
+ESTILO COMUM (globals.css)
+========================
+• Grid: 12 col desktop; 8 col tablet; 4 col mobile.
+• Espaçamento 8-pt: 4/8/12/16/24/32/48/64.
+• Cards glass (classe .card-glass):
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+• Botão primário:
+  background: var(--cor-primaria); color:#fff; padding:14px 22px; border-radius:14px; font-weight:600;
+  hover: filter:brightness(1.06); active:brightness(0.98);
+  focus: outline:2px solid rgba(51,49,197,0.65); outline-offset:2px;
+• Secundário outline: transparente; color:#fff; border:1px solid var(--border).
+
+========================
+SEO & JSON-LD
+========================
+• Em app/page.tsx exporte `metadata` com title/description.
+• Adicione JSON-LD (Event) com helper lib/schema.ts e `<script type="application/ld+json">`:
+  {
+    "@context":"https://schema.org",
+    "@type":"Event",
+    "name":"Integra POCUS — Imersão Presencial",
+    "startDate":"2025-11-29",
+    "eventAttendanceMode":"OfflineEventAttendanceMode",
+    "location":{"@type":"Place","name":"[Local]","address":"[Endereço]"},
+    "offers":{"@type":"Offer","price":"2497.00","priceCurrency":"BRL"},
+    "performer":[{"@type":"Person","name":"Dr. Emanuel Esposito"},{"@type":"Person","name":"Dr. Luan Moraes"}],
+    "organizer":{"@type":"Organization","name":"Integra POCUS"},
+    "url":"[URL do site]"
+  }
+
+========================
+ACESSIBILIDADE & UX
+========================
+• Landmarks semânticos; foco visível; target mínimo 44×44px.
+• Linha de leitura ≤ 70 caracteres.
+• prefers-reduced-motion: reduzir animações (parar marquee).
+• Imagens com alt; next/image com sizes responsivos.
+
+========================
+CONTEÚDO TEXTUAL (usar exatamente)
+========================
+Hero H1: "Ultrassom à beira-leito, do conceito à prática."
+Hero Sub: "Imersão 100% presencial com teoria em sala e estações de prática hands-on para decisões mais rápidas e seguras."
+Para quem: texto conforme especificado em Audience.tsx.
+Outcomes: 5 itens listados acima.
+Formato e data: conforme seção FormatDate.
+Professores: bullets de cada docente.
+Preço: Pix R$ 2.497,00; Cartão 12x de R$ 267,42.
+Contatos: WhatsApp (Maria) e (Vanessa) + Instagram @integra.pocus.
+
+========================
+QUALIDADE & BUILD
+========================
+• ESLint + strict mode. 
+• Imagens: loading="lazy", width/height definidos, sizes.
+• Scripts package.json:
+  - dev: next dev
+  - build: next build
+  - start: next start
+• netlify.toml básico:
+  [build]
+    command = "npm run build"
+    publish = ".next"
+  # Netlify Next Runtime cuidará do resto.
+
+ENTREGAR: projeto completo em TS/TSX conforme acima, sem emojis.
