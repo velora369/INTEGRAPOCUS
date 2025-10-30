@@ -66,7 +66,7 @@ export function PartnersCarousel() {
       </div>
 
       <div className="relative">
-        <div className="relative mx-auto flex items-center justify-center">
+        <div className="relative mx-auto flex items-center justify-center max-w-6xl">
           <Carousel
             opts={{ loop: true }}
             plugins={
@@ -88,7 +88,7 @@ export function PartnersCarousel() {
               {partners.map((partner) => (
                 <CarouselItem
                   key={partner.id}
-                  className="flex basis-1/2 justify-center pl-0 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+                  className="flex basis-[280px] md:basis-[320px] justify-center pl-0 flex-shrink-0"
                   data-testid={`carousel-item-${partner.id}`}
                 >
                   <div className="mx-6 md:mx-10 flex shrink-0 items-center justify-center py-4">
