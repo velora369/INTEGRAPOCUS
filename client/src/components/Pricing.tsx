@@ -1,5 +1,4 @@
 import { Check, CreditCard, Sparkles } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 
 type PaymentType = 'cartao' | 'pix';
@@ -267,7 +266,7 @@ export function Pricing() {
             onClick={() => scrollToSection('preco')}
             className="btn-primary w-full"
           >
-            Garantir minha vaga
+            Garantir minha vaga no {selectedPayment === 'pix' ? 'PIX' : 'cartão'}
           </button>
         </div>
       )}
