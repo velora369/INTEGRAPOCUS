@@ -52,7 +52,7 @@ export function PartnersCarousel() {
 
   return (
     <section 
-      className="relative py-16 md:py-20 bg-black/30 border-y border-white/5"
+      className="relative py-16 md:py-20 bg-gradient-to-b from-[#0a0d1f] via-[#0d1129] to-[#0a0d1f] border-y border-white/5"
       role="region"
       aria-label="Parceiros e Apoiadores"
       data-testid="section-partners-carousel"
@@ -77,7 +77,7 @@ export function PartnersCarousel() {
                       playOnInit: true,
                       speed: 0.5,
                       stopOnInteraction: false,
-                      stopOnMouseEnter: true,
+                      stopOnMouseEnter: false,
                       stopOnFocusIn: false,
                     })
                   ]
