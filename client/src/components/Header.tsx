@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Menu } from 'lucide-react';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from './ui/sheet';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [targetSection, setTargetSection] = useState<string | null>(null);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const fallbackTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,26 +19,92 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const performScroll = useCallback(() => {
+    if (targetSection) {
+      const element = document.getElementById(targetSection);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+      setTargetSection(null);
+    }
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+      scrollTimeoutRef.current = null;
+    }
+    if (fallbackTimeoutRef.current) {
+      clearTimeout(fallbackTimeoutRef.current);
+      fallbackTimeoutRef.current = null;
+    }
+  }, [targetSection]);
+
   useEffect(() => {
     if (!isOpen && targetSection) {
-      setTimeout(() => {
-        const element = document.getElementById(targetSection);
-        if (element) {
-          const offset = 80;
-          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-          window.scrollTo({
-            top: elementPosition - offset,
-            behavior: 'smooth'
-          });
+      let rafId: number | null = null;
+      let attempts = 0;
+      const maxAttempts = 60;
+      
+      const checkSheetClosed = () => {
+        const sheetContent = document.querySelector('[role="dialog"]');
+        const isRemoved = !sheetContent;
+        
+        attempts++;
+        
+        if (isRemoved || attempts >= maxAttempts) {
+          if (rafId !== null) {
+            cancelAnimationFrame(rafId);
+            rafId = null;
+          }
+          performScroll();
+        } else {
+          rafId = requestAnimationFrame(checkSheetClosed);
         }
-        setTargetSection(null);
-      }, 300);
+      };
+      
+      rafId = requestAnimationFrame(checkSheetClosed);
+      
+      fallbackTimeoutRef.current = setTimeout(() => {
+        if (rafId !== null) {
+          cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+        performScroll();
+      }, 1000);
+      
+      return () => {
+        if (rafId !== null) {
+          cancelAnimationFrame(rafId);
+        }
+        if (fallbackTimeoutRef.current) {
+          clearTimeout(fallbackTimeoutRef.current);
+          fallbackTimeoutRef.current = null;
+        }
+      };
     }
-  }, [isOpen, targetSection]);
+  }, [isOpen, targetSection, performScroll]);
 
   const scrollToSection = (id: string) => {
     setTargetSection(id);
     setIsOpen(false);
+  };
+  
+  const handleOpenChange = (open: boolean) => {
+    setIsOpen(open);
+    if (open) {
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+        scrollTimeoutRef.current = null;
+      }
+      if (fallbackTimeoutRef.current) {
+        clearTimeout(fallbackTimeoutRef.current);
+        fallbackTimeoutRef.current = null;
+      }
+      setTargetSection(null);
+    }
   };
 
   const navItems = [
@@ -82,7 +150,7 @@ export function Header() {
             </h2>
           </div>
 
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <Sheet open={isOpen} onOpenChange={handleOpenChange}>
             <SheetTrigger asChild>
               <button
                 className="relative p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
@@ -100,6 +168,9 @@ export function Header() {
                 <SheetTitle className="text-2xl font-heading text-white text-left">
                   Integra <span className="text-gradient-primary">POCUS</span>
                 </SheetTitle>
+                <SheetDescription className="sr-only">
+                  Menu de navegação do site
+                </SheetDescription>
               </SheetHeader>
 
               <div className="mt-8 space-y-6">
