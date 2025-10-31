@@ -77,21 +77,18 @@ export function StudentGallery() {
           </div>
 
           <h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent font-heading"
+            className="text-4xl md:text-5xl lg:text-6xl font-title font-bold text-gradient-heading mb-6"
             data-testid="text-gallery-title"
           >
             Nossos Alunos em Ação
           </h2>
           
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Users className="w-5 h-5 text-purple-400" />
-            <p 
-              className="text-lg md:text-xl text-white/80 font-body font-light max-w-3xl mx-auto"
-              data-testid="text-gallery-subtitle"
-            >
-              Momentos especiais da nossa primeira turma de hands-on em POCUS
-            </p>
-          </div>
+          <p 
+            className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed font-body font-light mb-4"
+            data-testid="text-gallery-subtitle"
+          >
+            Momentos especiais da nossa primeira turma de hands-on em POCUS
+          </p>
 
           <p 
             className="text-base text-white/60 font-body font-light max-w-2xl mx-auto leading-relaxed"
