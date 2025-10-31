@@ -23,7 +23,7 @@ export function Header() {
     if (targetSection) {
       const element = document.getElementById(targetSection);
       if (element) {
-        const offset = 80;
+        const offset = 70;
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
         window.scrollTo({
           top: elementPosition - offset,
@@ -142,7 +142,7 @@ export function Header() {
     >
       <div className="container-custom">
         <nav
-          className="flex items-center justify-between py-6"
+          className="flex items-center justify-between py-4"
           aria-label="Navegação principal"
         >
           <button 
@@ -154,7 +154,7 @@ export function Header() {
             <img 
               src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/icone_sem_fundo.webp" 
               alt="Integra POCUS"
-              className="h-12 md:h-14 w-auto object-contain"
+              className="h-10 md:h-11 w-auto object-contain"
               data-testid="img-logo-header"
             />
           </button>
