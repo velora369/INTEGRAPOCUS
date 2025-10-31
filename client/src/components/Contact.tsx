@@ -5,19 +5,17 @@ import { useState, FormEvent } from 'react';
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     message: ''
   });
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Since there's no backend, we'll just show the WhatsApp option
-    const message = `Olá! Meu nome é ${formData.name}. ${formData.message}`;
+    const message = `Olá, meu nome é ${formData.name}. ${formData.message}`;
     const whatsappUrl = `https://wa.me/5593991674540?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
     // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', message: '' });
   };
 
   return (
@@ -115,25 +113,6 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm text-white/70 mb-2 font-body font-light">
-                  E-mail
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#3331C5]/50 focus:border-transparent font-body font-light"
-                    placeholder="seu@email.com"
-                    required
-                    data-testid="input-email"
-                  />
-                </div>
-              </div>
-
-              <div>
                 <label htmlFor="message" className="block text-sm text-white/70 mb-2 font-body font-light">
                   Mensagem
                 </label>
@@ -141,7 +120,7 @@ export function Contact() {
                   id="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={4}
+                  rows={6}
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#3331C5]/50 focus:border-transparent resize-none font-body font-light"
                   placeholder="Como podemos ajudar?"
                   required
