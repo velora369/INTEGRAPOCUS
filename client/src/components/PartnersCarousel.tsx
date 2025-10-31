@@ -54,7 +54,7 @@ export function PartnersCarousel() {
 
   return (
     <section 
-      className="relative py-16 md:py-20 bg-[#1a2847] border-y border-white/10"
+      className="relative py-16 md:py-20 bg-gradient-hero-waves with-grain border-y border-white/10"
       role="region"
       aria-label="Parceiros e Apoiadores"
       data-testid="section-partners-carousel"
@@ -70,10 +70,10 @@ export function PartnersCarousel() {
       <div className="relative">
         <div className="relative mx-auto flex items-center justify-center max-w-6xl">
           {/* Left fade gradient */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#1a2847] via-[#1a2847]/50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#000] via-[#000]/50 to-transparent z-10 pointer-events-none" />
           
           {/* Right fade gradient */}
-          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#1a2847] via-[#1a2847]/50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#000] via-[#000]/50 to-transparent z-10 pointer-events-none" />
           
           <Carousel
             opts={{ loop: true }}
