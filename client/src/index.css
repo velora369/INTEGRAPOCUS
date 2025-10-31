@@ -415,7 +415,7 @@
   }
   
   .marquee-animate {
-    animation: marquee 40s linear infinite;
+    animation: marquee 26.67s linear infinite;
   }
   
   .marquee-animate:hover {
