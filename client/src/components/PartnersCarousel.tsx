@@ -77,7 +77,7 @@ export function PartnersCarousel() {
                 : [
                     AutoScroll({ 
                       playOnInit: true,
-                      speed: 1.25,
+                      speed: 0.9375,
                       stopOnInteraction: false,
                       stopOnMouseEnter: false,
                       stopOnFocusIn: false,
