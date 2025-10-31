@@ -37,10 +37,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-gradient-indigo-night with-grain min-h-screen">
+    <>
       <Header />
-      <main className="pt-20">
-        <Hero />
+      <div className="bg-gradient-indigo-night with-grain min-h-screen">
+        <main className="pt-20">
+          <Hero />
         <PartnersCarousel />
         <Audience />
         <Professors />
@@ -51,8 +52,9 @@ export default function Home() {
         <FAQ />
         <Notices />
         <Contact />
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
