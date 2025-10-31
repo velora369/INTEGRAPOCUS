@@ -43,7 +43,7 @@ export function Contact() {
             <div className="card-glass p-6">
               <div className="flex items-center gap-3 mb-4">
                 <SiWhatsapp className="w-6 h-6 text-[#25D366]" />
-                <h3 className="text-xl text-white font-body font-light">Support WhatsApp</h3>
+                <h3 className="text-xl text-white font-body font-light">Suporte WhatsApp</h3>
               </div>
               
               <div className="space-y-3">
@@ -64,7 +64,7 @@ export function Contact() {
                   className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2 text-center"
                   data-testid="link-whatsapp-support-2"
                 >
-                  <p className="text-white/80 text-base font-body font-light">+55 (93) 98116-0181</p>
+                  <p className="text-white/80 text-base font-body font-light">(93) 98116-0181</p>
                 </a>
               </div>
             </div>
