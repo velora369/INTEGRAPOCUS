@@ -164,3 +164,33 @@ Preferred communication style: Simple, everyday language.
    - Better touch targets for mobile interaction
    - Content properly spaced to avoid overlap with fixed header
    - Maintains visual hierarchy with appropriate z-index (z-9999)
+
+### Enhanced Section Title Typography (October 31, 2025)
+**Section title sizing increased for improved readability and visual hierarchy:**
+
+1. **Typography Updates**
+   - All main section titles now use responsive sizing: `text-3xl md:text-4xl lg:text-5xl`
+   - Titles properly scale across breakpoints: 30px (mobile) → 36px (tablet) → 48px (desktop)
+   - Maintains existing gradient effects and NeueMontreal-Bold font
+
+2. **Affected Sections**
+   - Para quem é essa imersão (Audience)
+   - Professores (Professors)
+   - O que você vai desenvolver (Outcomes)
+   - Formato e Data (FormatDate)
+   - Investimento (Pricing)
+   - Perguntas Frequentes (FAQ)
+   - Avisos e Atualizações (Notices)
+   - Fale Conosco (Contact)
+
+3. **Visual Hierarchy**
+   - Section titles (h2): `text-3xl md:text-4xl lg:text-5xl` - Primary emphasis
+   - Sub-headlines (p): `text-lg` - Secondary emphasis
+   - Clear size differentiation ensures proper content hierarchy
+   - Improved scannability and content structure
+
+4. **Quality Assurance**
+   - Architect-approved for production
+   - Consistent implementation across all sections
+   - Responsive behavior verified across breakpoints
+   - No conflicts with existing gradient or font styling
