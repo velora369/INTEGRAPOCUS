@@ -1,3 +1,5 @@
+import { GradientBackground } from '@/components/ui/gradient-background';
+
 export function Hero() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -14,11 +16,17 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[clamp(68vh,82vh,92vh)] flex items-center bg-gradient-hero-waves with-grain overflow-hidden"
+      className="relative"
       role="region"
       aria-label="Hero principal"
     >
-      <div className="container-custom py-16 md:py-24 lg:py-32 w-full">
+      <GradientBackground 
+        className="min-h-[70vh] md:min-h-[80vh] lg:min-h-[clamp(68vh,82vh,92vh)] with-grain"
+        animationDuration={10}
+        overlay={true}
+        overlayOpacity={0.2}
+      >
+        <div className="container-custom py-16 md:py-24 lg:py-32 w-full">
         <div className="grid lg:grid-cols-[60fr_40fr] gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
           
           {/* LEFT COLUMN - Content */}
@@ -253,7 +261,8 @@ export function Hero() {
           </div>
 
         </div>
-      </div>
+        </div>
+      </GradientBackground>
     </section>
   );
 }
