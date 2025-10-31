@@ -27,7 +27,7 @@ Preferred communication style: Simple, everyday language.
 **Design System Implementation**
 - Custom CSS variables defined in `client/src/index.css` for brand colors, surfaces, and effects
 - Gradient backgrounds with grain texture overlays for visual depth
-- Typography system using Bodoni Moda for headings and Montserrat/Inter for body text
+- **Dual-font typography system**: NeueMontreal-Bold (700) for h2 section titles, NeueMontreal-Light (300) for all secondary text
 - Responsive design with mobile-first approach
 - Dark theme with blue/violet accent colors (#3331C5 primary)
 
@@ -71,7 +71,7 @@ Preferred communication style: Simple, everyday language.
 - PostCSS with Autoprefixer for CSS processing
 
 **External Assets**
-- Custom fonts: Bodoni Moda (serif) and Montserrat (sans-serif) from Google Fonts
+- **Custom fonts**: NeueMontreal-Bold (OTF, weight 700) and NeueMontreal-Light (OTF, weight 300) from `attached_assets/`
 - Professor images hosted on WordPress CDN (`yungwizzeprod2.wordpress.com`)
 - Vite configured to allow external image domains
 
@@ -107,3 +107,32 @@ Preferred communication style: Simple, everyday language.
 - Modular component structure allows easy addition of new sections
 - Storage interface abstraction allows migration from in-memory to PostgreSQL without code changes
 - Form submissions currently route to WhatsApp but could be extended to save to database
+
+## Recent Changes
+
+### Typography System Implementation (October 31, 2025)
+**Complete dual-font typography system now production-ready:**
+
+1. **Font Files Added**
+   - `attached_assets/NeueMontreal-Bold_1761939090629.otf` (weight 700)
+   - `attached_assets/NeueMontreal-Light_1761939885448.otf` (weight 300)
+
+2. **CSS Configuration** (`client/src/index.css`)
+   - @font-face declarations for both NeueMontreal weights with explicit font-weight values
+   - CSS variable `--font-body` correctly points to 'NeueMontreal' family
+   - Tailwind font utilities: `font-title` (NeueMontreal-Bold) and `font-body` (NeueMontreal-Light)
+
+3. **Component Updates**
+   - All h2 section titles use `font-title font-bold` class
+   - All secondary text (paragraphs, buttons, links, inputs, badges, navigation) use `font-body font-light` class
+   - Removed all conflicting font-weight classes (`font-medium`, `font-semibold`, `font-heading`)
+   - Updated shadcn button component to use `font-body font-light` by default
+   - Applied consistently across: Hero, Professors, Audience, Outcomes, EquipmentShowcase, Pricing, FAQ, Contact, FormatDate, Notices, Header, Footer
+
+4. **Quality Assurance**
+   - Architect-approved as production-ready
+   - Zero font-weight conflicts remaining
+   - Gradient effects on section titles preserved
+   - Typography renders correctly across all components
+
+**Performance Note**: Fonts are currently in OTF format. Future optimization: convert to woff2 format for improved web performance.
