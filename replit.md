@@ -138,7 +138,7 @@ Preferred communication style: Simple, everyday language.
 **Performance Note**: Fonts are currently in OTF format. Future optimization: convert to woff2 format for improved web performance.
 
 ### Fixed Header Navigation (October 31, 2025)
-**Header component updated to remain visible throughout entire page navigation:**
+**Header component updated to remain visible throughout entire page navigation with proper sizing:**
 
 1. **Background Visibility Enhancement**
    - Changed header background from fully transparent (`bg-transparent`) to semi-transparent with blur (`bg-black/40 backdrop-blur-md border-b border-white/5`)
@@ -146,11 +146,21 @@ Preferred communication style: Simple, everyday language.
    - When scrolled past 20px, applies `header-glass` class with darker background for increased contrast
 
 2. **Technical Implementation**
-   - Header maintains `fixed top-0 left-0 right-0 z-50` positioning
+   - Header maintains `fixed top-0 left-0 right-0 z-[9999]` positioning with inline `position: fixed` for reliability
+   - Navigation padding increased from `py-4` to `py-6` for better visual presence and touch target sizing
+   - Main content offset adjusted to `pt-20` to prevent content from being hidden behind fixed header
    - Smooth transition between initial state and scrolled state (`transition-all duration-300`)
    - Mobile hamburger menu and navigation remain accessible throughout entire page
 
-3. **User Experience**
-   - Logo and menu button consistently visible during scroll
+3. **Height Consistency**
+   - Header maintains consistent height in both default and scrolled states
+   - CSS `header-glass` utility only modifies background, backdrop-filter, and border properties
+   - No padding or height changes occur during scroll transitions
+   - Vertical padding (`py-6`) applies equally in all states
+
+4. **User Experience**
+   - Logo and menu button consistently visible during scroll with adequate sizing
    - Improved navigation accessibility for users
-   - Maintains visual hierarchy with appropriate z-index (z-50)
+   - Better touch targets for mobile interaction
+   - Content properly spaced to avoid overlap with fixed header
+   - Maintains visual hierarchy with appropriate z-index (z-9999)
