@@ -54,7 +54,7 @@ export function PartnersCarousel() {
 
   return (
     <section 
-      className="relative py-16 md:py-20 bg-gradient-hero-waves with-grain border-y border-white/10"
+      className="relative py-16 md:py-20 bg-gradient-hero-waves with-grain"
       role="region"
       aria-label="Parceiros e Apoiadores"
       data-testid="section-partners-carousel"
