@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 export function Hero() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -11,6 +13,78 @@ export function Hero() {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.9,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
+  const pillContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const pillVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 10 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
   return (
     <section
       id="inicio"
@@ -19,13 +93,22 @@ export function Hero() {
       aria-label="Hero principal"
     >
       <div className="container-custom py-16 md:py-24 lg:py-32 w-full">
-        <div className="max-w-4xl mx-auto">
+        <motion.div 
+          className="max-w-4xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           
           {/* Content */}
           <div className="relative z-10">
             
             {/* Eyebrow Badge */}
-            <div className="inline-flex items-center mb-6" data-testid="badge-hero-eyebrow">
+            <motion.div 
+              className="inline-flex items-center mb-6" 
+              data-testid="badge-hero-eyebrow"
+              variants={itemVariants}
+            >
               <div 
                 className="px-4 py-2 rounded-full backdrop-blur-md border border-white/10 bg-white/5"
                 style={{ backdropFilter: 'blur(12px)' }}
@@ -34,12 +117,13 @@ export function Hero() {
                   Imersão presencial — Santarém, PA — 29 NOV 2025
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* H1 */}
-            <h1 
+            <motion.h1 
               className="text-gradient-heading mb-4 font-title font-bold relative inline-block"
               data-testid="text-hero-title"
+              variants={titleVariants}
             >
               Integra POCUS — Imersão Hands-on em POCUS
               
@@ -48,21 +132,26 @@ export function Hero() {
                 className="hero-shimmer-bar"
                 aria-hidden="true"
               />
-            </h1>
+            </motion.h1>
 
             {/* Subtitle */}
-            <p 
+            <motion.p 
               className="text-lg md:text-xl text-white/90 mb-8 max-w-prose leading-relaxed font-body font-light"
               data-testid="text-hero-subtitle"
               style={{ maxWidth: '70ch' }}
+              variants={itemVariants}
             >
               Formação 100% presencial para integrar imagem e clínica no dia a dia: teoria objetiva em sala, estações práticas supervisionadas e checklists de decisão.
-            </p>
+            </motion.p>
 
             {/* Pills - Proof Points */}
-            <div className="flex flex-wrap gap-3 mb-10" data-testid="container-hero-pills">
+            <motion.div 
+              className="flex flex-wrap gap-3 mb-10" 
+              data-testid="container-hero-pills"
+              variants={pillContainerVariants}
+            >
               {/* Pill 1: Presencial */}
-              <div className="pill-glass">
+              <motion.div className="pill-glass" variants={pillVariants}>
                 <svg 
                   width="20" 
                   height="20" 
@@ -82,10 +171,10 @@ export function Hero() {
                   <polyline points="9 14 11 16 15 12"/>
                 </svg>
                 <span className="font-body font-light">Presencial — teoria + hands-on</span>
-              </div>
+              </motion.div>
 
               {/* Pill 2: Raciocínio clínico */}
-              <div className="pill-glass">
+              <motion.div className="pill-glass" variants={pillVariants}>
                 <svg 
                   width="20" 
                   height="20" 
@@ -102,10 +191,10 @@ export function Hero() {
                   <circle cx="12" cy="12" r="3"/>
                 </svg>
                 <span className="font-body font-light">Foco no raciocínio clínico</span>
-              </div>
+              </motion.div>
 
               {/* Pill 3: Vagas limitadas */}
-              <div className="pill-glass">
+              <motion.div className="pill-glass" variants={pillVariants}>
                 <svg 
                   width="20" 
                   height="20" 
@@ -122,11 +211,15 @@ export function Hero() {
                   <polyline points="12 6 12 12 16 14"/>
                 </svg>
                 <span className="font-body font-light">Vagas limitadas</span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Glass Card - Event Info */}
-            <div className="card-glass p-6 mb-10 max-w-2xl" data-testid="card-hero-info">
+            <motion.div 
+              className="card-glass p-6 mb-10 max-w-2xl" 
+              data-testid="card-hero-info"
+              variants={cardVariants}
+            >
               <div className="grid sm:grid-cols-2 gap-5">
                 {/* Date */}
                 <div className="flex items-start gap-3">
@@ -187,10 +280,14 @@ export function Hero() {
                   Ver valores e formas de pagamento →
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4" data-testid="container-hero-ctas">
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4" 
+              data-testid="container-hero-ctas"
+              variants={itemVariants}
+            >
               <button
                 onClick={() => scrollToSection('preco')}
                 className="btn-primary-hero text-lg px-8 font-body font-light"
@@ -207,10 +304,10 @@ export function Hero() {
               >
                 Falar no WhatsApp
               </a>
-            </div>
+            </motion.div>
           </div>
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );
