@@ -21,10 +21,9 @@ export function Hero() {
       aria-label="Hero principal"
     >
       <GradientBackground 
-        className="min-h-[70vh] md:min-h-[80vh] lg:min-h-[clamp(68vh,82vh,92vh)] with-grain"
+        className="min-h-[70vh] md:min-h-[80vh] lg:min-h-[clamp(68vh,82vh,92vh)]"
         animationDuration={10}
-        overlay={true}
-        overlayOpacity={0.2}
+        overlay={false}
       >
         <div className="container-custom py-16 md:py-24 lg:py-32 w-full">
         <div className="grid lg:grid-cols-[60fr_40fr] gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
