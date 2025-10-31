@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { PartnersCarousel } from '@/components/PartnersCarousel';
 import { EquipmentShowcase } from '@/components/EquipmentShowcase';
+import { StudentGallery } from '@/components/StudentGallery';
 import { Audience } from '@/components/Audience';
 import { Outcomes } from '@/components/Outcomes';
 import { FormatDate } from '@/components/FormatDate';
@@ -47,6 +48,7 @@ export default function Home() {
         <Professors />
         <Outcomes />
         <EquipmentShowcase />
+        <StudentGallery />
         <FormatDate />
         <Pricing />
         <FAQ />
