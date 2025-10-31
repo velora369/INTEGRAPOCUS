@@ -145,14 +145,19 @@ export function Header() {
           className="flex items-center justify-between py-6"
           aria-label="Navegação principal"
         >
-          <div className="flex items-center">
+          <button 
+            onClick={() => scrollToSection('inicio')}
+            className="flex items-center cursor-pointer transition-transform hover:scale-105 active:scale-95"
+            aria-label="Voltar ao início"
+            data-testid="button-logo-header"
+          >
             <img 
               src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/icone_sem_fundo.webp" 
               alt="Integra POCUS"
               className="h-12 md:h-14 w-auto object-contain"
               data-testid="img-logo-header"
             />
-          </div>
+          </button>
 
           <Sheet open={isOpen} onOpenChange={handleOpenChange}>
             <SheetTrigger asChild>
