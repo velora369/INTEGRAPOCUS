@@ -43,7 +43,7 @@ export function Contact() {
             <div className="card-glass p-6">
               <div className="flex items-center gap-3 mb-4">
                 <SiWhatsapp className="w-6 h-6 text-[#25D366]" />
-                <h3 className="text-xl font-heading text-white">Support WhatsApp</h3>
+                <h3 className="text-xl font-secondary font-light text-white">Support WhatsApp</h3>
               </div>
               
               <div className="space-y-3">
@@ -72,7 +72,7 @@ export function Contact() {
             <div className="card-glass p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Instagram className="w-6 h-6 text-white/70" />
-                <h3 className="text-xl font-heading text-white">Instagram</h3>
+                <h3 className="text-xl font-secondary font-light text-white">Instagram</h3>
               </div>
               
               <a
@@ -91,7 +91,7 @@ export function Contact() {
           <div className="card-glass p-6">
             <div className="flex items-center gap-3 mb-6">
               <Mail className="w-6 h-6 text-white/70" />
-              <h3 className="text-xl font-heading text-white">Envie uma Mensagem</h3>
+              <h3 className="text-xl font-secondary font-light text-white">Envie uma Mensagem</h3>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">

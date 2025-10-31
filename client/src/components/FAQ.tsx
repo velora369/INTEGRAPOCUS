@@ -57,7 +57,7 @@ export function FAQ() {
                 aria-expanded={openIndex === index}
                 data-testid={`button-faq-${index}`}
               >
-                <h3 className="text-lg font-heading text-white pr-4">
+                <h3 className="text-lg font-secondary font-light text-white pr-4">
                   {faq.question}
                 </h3>
                 <ChevronDown

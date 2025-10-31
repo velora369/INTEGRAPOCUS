@@ -61,7 +61,7 @@ export function Outcomes() {
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-heading text-white mb-3">
+                <h3 className="text-xl font-secondary font-light text-white mb-3">
                   {outcome.title}
                 </h3>
                 <p className="text-sm text-white/70 leading-relaxed">

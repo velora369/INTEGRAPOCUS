@@ -56,7 +56,7 @@ export function Notices() {
                     {notice.date}
                   </p>
                 </div>
-                <h3 className="text-xl font-heading text-white mb-3">
+                <h3 className="text-xl font-secondary font-light text-white mb-3">
                   {notice.title}
                 </h3>
                 <p className="text-sm text-white/70 leading-relaxed">
