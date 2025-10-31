@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div className="bg-gradient-indigo-night with-grain min-h-screen">
       <Header />
-      <main>
+      <main className="pt-16">
         <Hero />
         <PartnersCarousel />
         <Audience />
