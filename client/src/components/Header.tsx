@@ -146,9 +146,12 @@ export function Header() {
           aria-label="Navegação principal"
         >
           <div className="flex items-center">
-            <h2 className="text-xl md:text-2xl text-white font-body font-light">
-              Integra <span className="text-gradient-primary">POCUS</span>
-            </h2>
+            <img 
+              src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/10/icone_sem_fundo.webp" 
+              alt="Integra POCUS"
+              className="h-12 md:h-14 w-auto object-contain"
+              data-testid="img-logo-header"
+            />
           </div>
 
           <Sheet open={isOpen} onOpenChange={handleOpenChange}>
