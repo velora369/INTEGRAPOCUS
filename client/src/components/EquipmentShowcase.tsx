@@ -33,7 +33,7 @@ export function EquipmentShowcase() {
               className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed"
               data-testid="text-equipment-subtitle"
             >
-              Utilizamos o <strong className="text-white font-semibold">Butterfly IQ</strong>, um ultrassom portátil revolucionário da Butterfly Network que conecta diretamente ao seu smartphone ou tablet, permitindo exames de alta qualidade em qualquer lugar.
+              Utilizamos os aparelhos da <strong className="text-white font-semibold">Butterfly</strong>, um ultrassom portátil revolucionário da Butterfly Network que conecta diretamente ao seu smartphone ou tablet, permitindo exames de alta qualidade em qualquer lugar.
             </p>
           </div>
 
@@ -168,7 +168,7 @@ export function EquipmentShowcase() {
           {/* CTA */}
           <div className="text-center mt-12">
             <p className="text-white/70 text-sm mb-4" data-testid="text-equipment-footer">
-              Durante o curso, você terá acesso hands-on a múltiplos aparelhos Butterfly IQ
+              Durante o curso, você terá acesso hands-on a múltiplos aparelhos Butterfly
             </p>
             <a
               href="#preco"

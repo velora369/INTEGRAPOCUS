@@ -8,8 +8,6 @@ import { Outcomes } from '@/components/Outcomes';
 import { FormatDate } from '@/components/FormatDate';
 import { Professors } from '@/components/Professors';
 import { Pricing } from '@/components/Pricing';
-import { LogosGrid } from '@/components/LogosGrid';
-import { LogosMarquee } from '@/components/LogosMarquee';
 import { Notices } from '@/components/Notices';
 import { FAQ } from '@/components/FAQ';
 import { Contact } from '@/components/Contact';
@@ -44,16 +42,14 @@ export default function Home() {
       <main>
         <Hero />
         <PartnersCarousel />
-        <EquipmentShowcase />
         <Audience />
-        <Outcomes />
-        <FormatDate />
         <Professors />
+        <Outcomes />
+        <EquipmentShowcase />
+        <FormatDate />
         <Pricing />
-        <LogosGrid />
-        <LogosMarquee />
-        <Notices />
         <FAQ />
+        <Notices />
         <Contact />
       </main>
       <Footer />
