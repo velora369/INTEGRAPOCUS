@@ -61,7 +61,7 @@ export function Audience() {
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-secondary font-light text-white mb-2">
+                    <h3 className="text-xl font-heading text-white mb-2">
                       {audience.title}
                     </h3>
                     <p className="text-sm text-white/70 leading-relaxed">

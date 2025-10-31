@@ -23,7 +23,7 @@ export function FormatDate() {
           <div className="card-glass p-8">
             <div className="flex items-center gap-3 mb-6">
               <BookOpen className="w-8 h-8 text-white/80" />
-              <h3 className="text-2xl font-secondary font-light text-white">Formato</h3>
+              <h3 className="text-2xl font-heading text-white">Formato</h3>
             </div>
             
             <div className="space-y-4">
@@ -63,7 +63,7 @@ export function FormatDate() {
           <div className="card-glass p-8">
             <div className="flex items-center gap-3 mb-6">
               <Calendar className="w-8 h-8 text-white/80" />
-              <h3 className="text-2xl font-secondary font-light text-white">Agenda</h3>
+              <h3 className="text-2xl font-heading text-white">Agenda</h3>
             </div>
             
             <div className="space-y-6">

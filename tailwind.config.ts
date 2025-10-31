@@ -89,7 +89,6 @@ export default {
         heading: ["'Bodoni Moda'", "'Didot'", "Georgia", "serif"],
         body: ["'Montserrat'", "'Inter'", "system-ui", "-apple-system", "'Segoe UI'", "'Roboto'", "'Helvetica'", "'Arial'", "sans-serif"],
         title: ["'NeueMontreal'", "system-ui", "sans-serif"],
-        secondary: ["'NeueMontreal'", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

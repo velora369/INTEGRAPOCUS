@@ -103,7 +103,7 @@ export function EquipmentShowcase() {
                   <line x1="12" y1="18" x2="12.01" y2="18"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-secondary font-light text-white mb-2" data-testid="text-feature-portable-title">
+              <h3 className="text-lg font-semibold text-white mb-2" data-testid="text-feature-portable-title">
                 Ultra Portátil
               </h3>
               <p className="text-white/70 text-sm leading-relaxed" data-testid="text-feature-portable-description">
@@ -129,7 +129,7 @@ export function EquipmentShowcase() {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-secondary font-light text-white mb-2" data-testid="text-feature-quality-title">
+              <h3 className="text-lg font-semibold text-white mb-2" data-testid="text-feature-quality-title">
                 Alta Resolução
               </h3>
               <p className="text-white/70 text-sm leading-relaxed" data-testid="text-feature-quality-description">
@@ -155,7 +155,7 @@ export function EquipmentShowcase() {
                   <polyline points="20 6 9 17 4 12"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-secondary font-light text-white mb-2" data-testid="text-feature-easy-title">
+              <h3 className="text-lg font-semibold text-white mb-2" data-testid="text-feature-easy-title">
                 Intuitivo
               </h3>
               <p className="text-white/70 text-sm leading-relaxed" data-testid="text-feature-easy-description">
