@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Instagram, MessageCircle } from 'lucide-react';
+import { Menu } from 'lucide-react';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 
 export function Header() {
@@ -41,17 +42,15 @@ export function Header() {
   const socialLinks = [
     {
       name: 'WhatsApp',
-      icon: MessageCircle,
+      icon: FaWhatsapp,
       url: 'https://wa.me/5511999999999',
-      color: 'from-green-500 to-emerald-600',
-      description: 'Tire suas dúvidas'
+      color: '#25D366',
     },
     {
       name: 'Instagram',
-      icon: Instagram,
+      icon: FaInstagram,
       url: 'https://instagram.com/integrapocus',
-      color: 'from-purple-500 to-pink-600',
-      description: 'Acompanhe nosso conteúdo'
+      color: '#E4405F',
     }
   ];
 
@@ -108,34 +107,26 @@ export function Header() {
                   ))}
                 </nav>
 
-                {/* Social Links Cards */}
+                {/* Social Links Icons */}
                 <div className="pt-6 border-t border-white/10">
                   <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-4 px-4">
                     Conecte-se conosco
                   </h3>
-                  <div className="space-y-3">
+                  <div className="flex items-center gap-4 px-4">
                     {socialLinks.map((social) => (
                       <a
                         key={social.name}
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r hover:shadow-lg hover:shadow-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 hover:scale-[1.02]"
-                        style={{
-                          background: `linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)`
-                        }}
+                        className="group relative p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-110"
+                        aria-label={social.name}
+                        title={social.name}
                       >
-                        <div className={`p-3 rounded-lg bg-gradient-to-br ${social.color} shadow-lg`}>
-                          <social.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div className="flex-1">
-                          <p className="font-semibold text-white group-hover:text-white/90 transition-colors">
-                            {social.name}
-                          </p>
-                          <p className="text-sm text-white/60 group-hover:text-white/70 transition-colors">
-                            {social.description}
-                          </p>
-                        </div>
+                        <social.icon 
+                          className="w-7 h-7 transition-colors" 
+                          style={{ color: social.color }}
+                        />
                       </a>
                     ))}
                   </div>
