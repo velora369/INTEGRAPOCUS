@@ -179,7 +179,7 @@ export function StudentGallery() {
               Faça parte da próxima turma e viva essa experiência transformadora
             </p>
             <a 
-              href="#inscricoes" 
+              href="#preco" 
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-body font-light hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
               data-testid="button-join-next-class"
             >
