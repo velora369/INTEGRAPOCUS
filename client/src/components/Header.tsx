@@ -145,7 +145,7 @@ export function Header() {
           aria-label="Navegação principal"
         >
           <div className="flex items-center">
-            <h2 className="text-xl md:text-2xl font-heading text-white">
+            <h2 className="text-xl md:text-2xl text-white font-body font-light">
               Integra <span className="text-gradient-primary">POCUS</span>
             </h2>
           </div>
@@ -165,7 +165,7 @@ export function Header() {
               className="w-[300px] sm:w-[400px] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border-l border-white/10 backdrop-blur-xl"
             >
               <SheetHeader className="border-b border-white/10 pb-4">
-                <SheetTitle className="text-2xl font-heading text-white text-left">
+                <SheetTitle className="text-2xl text-white text-left font-body font-light">
                   Integra <span className="text-gradient-primary">POCUS</span>
                 </SheetTitle>
                 <SheetDescription className="sr-only">
@@ -180,7 +180,7 @@ export function Header() {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className="w-full text-left px-4 py-3 rounded-lg text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-white/10 font-medium"
+                      className="w-full text-left px-4 py-3 rounded-lg text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-white/10 font-body font-light"
                       data-testid={`nav-link-${item.id}`}
                     >
                       {item.label}
@@ -190,7 +190,7 @@ export function Header() {
 
                 {/* Social Links Icons */}
                 <div className="pt-6 border-t border-white/10">
-                  <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-4 px-4">
+                  <h3 className="text-sm text-white/60 uppercase tracking-wider mb-4 px-4 font-body font-light">
                     Conecte-se conosco
                   </h3>
                   <div className="flex items-center gap-4 px-4">
@@ -217,7 +217,7 @@ export function Header() {
                 <div className="pt-6">
                   <button
                     onClick={() => scrollToSection('preco')}
-                    className="w-full btn-primary justify-center shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all"
+                    className="w-full btn-primary justify-center shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all font-body font-light"
                     data-testid="button-header-cta"
                   >
                     Inscrever-se Agora

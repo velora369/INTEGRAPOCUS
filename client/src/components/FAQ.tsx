@@ -36,10 +36,10 @@ export function FAQ() {
     >
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 id="faq-heading" className="text-gradient-heading mb-6 font-title">
+          <h2 id="faq-heading" className="text-gradient-heading mb-6 font-title font-bold">
             Perguntas Frequentes
           </h2>
-          <p className="text-lg text-white/80">
+          <p className="text-lg text-white/80 font-body font-light">
             Tire suas dúvidas sobre a imersão.
           </p>
         </div>
@@ -57,7 +57,7 @@ export function FAQ() {
                 aria-expanded={openIndex === index}
                 data-testid={`button-faq-${index}`}
               >
-                <h3 className="text-lg font-heading text-white pr-4">
+                <h3 className="text-lg text-white pr-4 font-body font-light">
                   {faq.question}
                 </h3>
                 <ChevronDown
@@ -73,7 +73,7 @@ export function FAQ() {
                 }`}
               >
                 <div className="px-6 pb-6">
-                  <p className="text-white/70 leading-relaxed">{faq.answer}</p>
+                  <p className="text-white/70 leading-relaxed font-body font-light">{faq.answer}</p>
                 </div>
               </div>
             </div>

@@ -40,10 +40,10 @@ export function Professors() {
     >
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 id="professors-heading" className="text-gradient-heading mb-6 font-title">
+          <h2 id="professors-heading" className="text-gradient-heading mb-6 font-title font-bold">
             Professores
           </h2>
-          <p className="text-lg text-white/80">
+          <p className="text-lg text-white/80 font-body font-light">
             Aprenda com especialistas que utilizam POCUS diariamente em sua prática clínica.
           </p>
         </div>
@@ -84,7 +84,7 @@ export function Professors() {
                   {/* Credentials with Enhanced Styling */}
                   <div className="flex flex-col justify-center">
                     <div className="mb-6">
-                      <h3 className="text-2xl md:text-3xl font-heading text-white mb-2 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text">
+                      <h3 className="text-2xl md:text-3xl text-white mb-2 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text font-body font-light">
                         {professor.name}
                       </h3>
                       <div className="h-1 w-20 bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 rounded-full" />
@@ -100,7 +100,7 @@ export function Professors() {
                             <div className="w-1.5 h-1.5 rounded-full bg-blue-400/60 group-hover/item:bg-blue-400 transition-colors" />
                             <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-blue-400/40 blur-sm group-hover/item:blur group-hover/item:bg-blue-400/60 transition-all" />
                           </div>
-                          <span className="text-sm md:text-base leading-relaxed group-hover/item:text-white/90 transition-colors">
+                          <span className="text-sm md:text-base leading-relaxed group-hover/item:text-white/90 transition-colors font-body font-light">
                             {credential}
                           </span>
                         </li>

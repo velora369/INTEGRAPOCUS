@@ -31,10 +31,10 @@ export function Notices() {
     >
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 id="notices-heading" className="text-gradient-heading mb-6 font-title">
+          <h2 id="notices-heading" className="text-gradient-heading mb-6 font-title font-bold">
             Avisos e Atualizações
           </h2>
-          <p className="text-lg text-white/80">
+          <p className="text-lg text-white/80 font-body font-light">
             Fique por dentro das últimas novidades sobre a imersão.
           </p>
         </div>
@@ -52,14 +52,14 @@ export function Notices() {
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                     <Icon className="w-5 h-5 text-white" />
                   </div>
-                  <p className="text-xs text-white/50 uppercase tracking-wide">
+                  <p className="text-xs text-white/50 uppercase tracking-wide font-body font-light">
                     {notice.date}
                   </p>
                 </div>
-                <h3 className="text-xl font-heading text-white mb-3">
+                <h3 className="text-xl text-white mb-3 font-body font-light">
                   {notice.title}
                 </h3>
-                <p className="text-sm text-white/70 leading-relaxed">
+                <p className="text-sm text-white/70 leading-relaxed font-body font-light">
                   {notice.description}
                 </p>
               </div>

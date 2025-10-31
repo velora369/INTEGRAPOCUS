@@ -54,10 +54,10 @@ export function Pricing() {
         
         <div className="container-custom relative">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 id="pricing-heading" className="text-gradient-heading mb-4 font-title">
+            <h2 id="pricing-heading" className="text-gradient-heading mb-4 font-title font-bold">
               Investimento
             </h2>
-            <p className="text-lg text-white/80 mb-8">
+            <p className="text-lg text-white/80 mb-8 font-body font-light">
               Garanta sua vaga nesta experiência transformadora de aprendizado.
             </p>
 
@@ -66,7 +66,7 @@ export function Pricing() {
               <div className="inline-flex items-center rounded-full bg-white/5 backdrop-blur-sm border border-white/10 p-1">
                 <button
                   onClick={() => setSelectedPayment('cartao')}
-                  className={`relative px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  className={`relative px-6 py-2.5 rounded-full text-sm transition-all duration-300 ${
                     selectedPayment === 'cartao'
                       ? 'text-white'
                       : 'text-white/60 hover:text-white/80'
@@ -75,14 +75,14 @@ export function Pricing() {
                   {selectedPayment === 'cartao' && (
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-white/10 border border-white/20" />
                   )}
-                  <span className="relative z-10 flex items-center gap-2">
+                  <span className="relative z-10 flex items-center gap-2 font-body font-light">
                     <CreditCard className="w-4 h-4" />
                     Cartão
                   </span>
                 </button>
                 <button
                   onClick={() => setSelectedPayment('pix')}
-                  className={`relative px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  className={`relative px-6 py-2.5 rounded-full text-sm transition-all duration-300 ${
                     selectedPayment === 'pix'
                       ? 'text-white'
                       : 'text-white/60 hover:text-white/80'
@@ -91,11 +91,11 @@ export function Pricing() {
                   {selectedPayment === 'pix' && (
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-white/10 border border-white/20" />
                   )}
-                  <span className="relative z-10 flex items-center gap-2">
+                  <span className="relative z-10 flex items-center gap-2 font-body font-light">
                     <PixIcon className="w-4 h-4" />
                     PIX
                   </span>
-                  <div className="absolute -top-2 -right-4 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#25D366] text-black text-xs font-semibold whitespace-nowrap">
+                  <div className="absolute -top-2 -right-4 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#25D366] text-black text-xs whitespace-nowrap font-body font-light">
                     Economize 22%
                   </div>
                 </button>
@@ -119,7 +119,7 @@ export function Pricing() {
                 {selectedPayment === 'pix' && (
                   <div className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 rounded-full bg-[#25D366]/20 border border-[#25D366]/30">
                     <Sparkles className="w-3 h-3 text-[#25D366]" />
-                    <span className="text-xs font-semibold text-[#25D366]">Melhor oferta</span>
+                    <span className="text-xs text-[#25D366] font-body font-light">Melhor oferta</span>
                   </div>
                 )}
                 
@@ -136,7 +136,7 @@ export function Pricing() {
                     )}
                   </div>
                   <div>
-                    <p className="text-sm text-white/60 uppercase tracking-wide">
+                    <p className="text-sm text-white/60 uppercase tracking-wide font-body font-light">
                       {selectedPayment === 'pix' ? 'À vista no Pix' : 'Cartão de Crédito'}
                     </p>
                     <div className={`h-0.5 w-12 rounded-full mt-1 bg-gradient-to-r ${
@@ -151,17 +151,17 @@ export function Pricing() {
                   {selectedPayment === 'pix' ? (
                     <>
                       <div className="flex items-baseline gap-2 mb-2">
-                        <span className="text-5xl md:text-6xl font-extralight text-white font-heading">R$ 2.497</span>
+                        <span className="text-5xl md:text-6xl font-extralight text-white font-body font-light">R$ 2.497</span>
                       </div>
-                      <p className="text-sm text-white/60">Pagamento único</p>
+                      <p className="text-sm text-white/60 font-body font-light">Pagamento único</p>
                     </>
                   ) : (
                     <>
                       <div className="flex items-baseline gap-2 mb-2">
-                        <span className="text-3xl font-extralight text-white/60 font-heading">12x de</span>
-                        <span className="text-5xl md:text-6xl font-extralight text-white font-heading">R$ 267,80</span>
+                        <span className="text-3xl font-extralight text-white/60 font-body font-light">12x de</span>
+                        <span className="text-5xl md:text-6xl font-extralight text-white font-body font-light">R$ 267,80</span>
                       </div>
-                      <p className="text-sm text-white/60">total R$ 3.208,80</p>
+                      <p className="text-sm text-white/60 font-body font-light">total R$ 3.208,80</p>
                     </>
                   )}
                 </div>
@@ -171,22 +171,22 @@ export function Pricing() {
                 <ul className="space-y-3 mb-6">
                   {selectedPayment === 'pix' ? (
                     <>
-                      <li className="flex items-center gap-2 text-sm text-white/80">
+                      <li className="flex items-center gap-2 text-sm text-white/80 font-body font-light">
                         <div className="w-1 h-1 rounded-full bg-[#25D366]" />
                         Economia imediata
                       </li>
-                      <li className="flex items-center gap-2 text-sm text-white/80">
+                      <li className="flex items-center gap-2 text-sm text-white/80 font-body font-light">
                         <div className="w-1 h-1 rounded-full bg-[#25D366]" />
                         Confirmação instantânea
                       </li>
                     </>
                   ) : (
                     <>
-                      <li className="flex items-center gap-2 text-sm text-white/80">
+                      <li className="flex items-center gap-2 text-sm text-white/80 font-body font-light">
                         <div className="w-1 h-1 rounded-full bg-blue-400" />
                         Parcele em 12 vezes
                       </li>
-                      <li className="flex items-center gap-2 text-sm text-white/80">
+                      <li className="flex items-center gap-2 text-sm text-white/80 font-body font-light">
                         <div className="w-1 h-1 rounded-full bg-blue-400" />
                         Maior flexibilidade
                       </li>
@@ -200,7 +200,7 @@ export function Pricing() {
             <div className="relative group/card">
               <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-blue-500/20 opacity-0 group-hover/card:opacity-100 blur-sm transition-opacity duration-500" />
               <div className="relative card-glass-modern p-8 md:p-10 mt-6">
-                <h3 className="text-xl md:text-2xl font-heading text-white mb-8 text-center bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                <h3 className="text-xl md:text-2xl text-white mb-8 text-center bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent font-body font-light">
                   O que está incluído
                 </h3>
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -210,7 +210,7 @@ export function Pricing() {
                         <div className="absolute inset-0 bg-[#25D366]/30 blur-md rounded-full group-hover/item:blur-lg transition-all" />
                         <Check className="relative w-5 h-5 text-[#25D366] flex-shrink-0" />
                       </div>
-                      <span className="text-white/80 text-sm md:text-base group-hover/item:text-white/95 transition-colors">{feature}</span>
+                      <span className="text-white/80 text-sm md:text-base group-hover/item:text-white/95 transition-colors font-body font-light">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -219,7 +219,7 @@ export function Pricing() {
                 <div className="flex justify-center mb-6">
                   <button
                     onClick={() => scrollToSection('contato')}
-                    className="btn-primary-modern group/btn w-full sm:w-auto"
+                    className="btn-primary-modern group/btn w-full sm:w-auto font-body font-light"
                     data-testid="button-pricing-main-cta"
                   >
                     <span className="relative z-10">
@@ -230,7 +230,7 @@ export function Pricing() {
                 </div>
 
                 {/* Policy Note */}
-                <p className="text-center text-xs text-white/50">
+                <p className="text-center text-xs text-white/50 font-body font-light">
                   * Política de cancelamento e reembolso disponível mediante solicitação.
                   <br />
                   Entre em contato para mais informações sobre condições e prazos.

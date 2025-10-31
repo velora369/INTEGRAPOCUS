@@ -30,7 +30,7 @@ export function Hero() {
                 className="px-4 py-2 rounded-full backdrop-blur-md border border-white/10 bg-white/5"
                 style={{ backdropFilter: 'blur(12px)' }}
               >
-                <span className="text-white/85 text-sm font-medium tracking-wide">
+                <span className="text-white/85 text-sm tracking-wide font-body font-light">
                   Imersão presencial — Santarém, PA — 29 NOV 2025
                 </span>
               </div>
@@ -38,7 +38,7 @@ export function Hero() {
 
             {/* H1 */}
             <h1 
-              className="text-gradient-heading mb-4 font-title relative inline-block"
+              className="text-gradient-heading mb-4 font-title font-bold relative inline-block"
               data-testid="text-hero-title"
             >
               Integra POCUS — Imersão Hands-on em POCUS
@@ -52,7 +52,7 @@ export function Hero() {
 
             {/* Subtitle */}
             <p 
-              className="text-lg md:text-xl text-white/90 mb-8 max-w-prose leading-relaxed"
+              className="text-lg md:text-xl text-white/90 mb-8 max-w-prose leading-relaxed font-body font-light"
               data-testid="text-hero-subtitle"
               style={{ maxWidth: '70ch' }}
             >
@@ -81,7 +81,7 @@ export function Hero() {
                   <line x1="3" y1="10" x2="21" y2="10"/>
                   <polyline points="9 14 11 16 15 12"/>
                 </svg>
-                <span>Presencial — teoria + hands-on</span>
+                <span className="font-body font-light">Presencial — teoria + hands-on</span>
               </div>
 
               {/* Pill 2: Raciocínio clínico */}
@@ -101,7 +101,7 @@ export function Hero() {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   <circle cx="12" cy="12" r="3"/>
                 </svg>
-                <span>Foco no raciocínio clínico</span>
+                <span className="font-body font-light">Foco no raciocínio clínico</span>
               </div>
 
               {/* Pill 3: Vagas limitadas */}
@@ -121,7 +121,7 @@ export function Hero() {
                   <circle cx="12" cy="12" r="10"/>
                   <polyline points="12 6 12 12 16 14"/>
                 </svg>
-                <span>Vagas limitadas</span>
+                <span className="font-body font-light">Vagas limitadas</span>
               </div>
             </div>
 
@@ -148,8 +148,8 @@ export function Hero() {
                     <line x1="3" y1="10" x2="21" y2="10"/>
                   </svg>
                   <div>
-                    <p className="text-sm text-white/60 mb-1">Data</p>
-                    <p className="text-white font-medium" data-testid="text-event-date">29 de novembro de 2025</p>
+                    <p className="text-sm text-white/60 mb-1 font-body font-light">Data</p>
+                    <p className="text-white font-body font-light" data-testid="text-event-date">29 de novembro de 2025</p>
                   </div>
                 </div>
 
@@ -171,8 +171,8 @@ export function Hero() {
                     <circle cx="12" cy="10" r="3"/>
                   </svg>
                   <div>
-                    <p className="text-sm text-white/60 mb-1">Local</p>
-                    <p className="text-white font-medium" data-testid="text-event-location">Santarém, Pará</p>
+                    <p className="text-sm text-white/60 mb-1 font-body font-light">Local</p>
+                    <p className="text-white font-body font-light" data-testid="text-event-location">Santarém, Pará</p>
                   </div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export function Hero() {
               <div className="mt-5 pt-5 border-t border-white/10">
                 <a
                   href="#preco"
-                  className="text-white/80 hover:text-white text-sm font-medium underline-offset-4 hover:underline transition-all inline-block"
+                  className="text-white/80 hover:text-white text-sm underline-offset-4 hover:underline transition-all inline-block font-body font-light"
                   data-testid="link-hero-pricing"
                 >
                   Ver valores e formas de pagamento →
@@ -193,7 +193,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4" data-testid="container-hero-ctas">
               <button
                 onClick={() => scrollToSection('preco')}
-                className="btn-primary-hero text-lg px-8"
+                className="btn-primary-hero text-lg px-8 font-body font-light"
                 data-testid="button-hero-main-cta"
               >
                 Garantir minha vaga
@@ -202,7 +202,7 @@ export function Hero() {
                 href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre a Imersão Integra POCUS."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary text-lg px-8"
+                className="btn-secondary text-lg px-8 font-body font-light"
                 data-testid="button-hero-whatsapp"
               >
                 Falar no WhatsApp
@@ -240,10 +240,10 @@ export function Hero() {
                         <circle cx="12" cy="7" r="4"/>
                       </svg>
                     </div>
-                    <p className="text-white/60 text-sm" data-testid="text-hero-instructor-name">
+                    <p className="text-white/60 text-sm font-body font-light" data-testid="text-hero-instructor-name">
                       Dr. Emmanuel
                     </p>
-                    <p className="text-white/40 text-xs mt-1" data-testid="text-hero-instructor-role">
+                    <p className="text-white/40 text-xs mt-1 font-body font-light" data-testid="text-hero-instructor-role">
                       Instrutor Principal
                     </p>
                   </div>

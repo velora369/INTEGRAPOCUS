@@ -16,24 +16,24 @@ export function EquipmentShowcase() {
                 className="px-4 py-2 rounded-full backdrop-blur-md border border-white/10 bg-white/5"
                 style={{ backdropFilter: 'blur(12px)' }}
               >
-                <span className="text-white/85 text-sm font-medium tracking-wide">
+                <span className="text-white/85 text-sm tracking-wide font-body font-light">
                   Tecnologia de ponta
                 </span>
               </div>
             </div>
 
             <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-title text-gradient-heading mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-title font-bold text-gradient-heading mb-6"
               data-testid="text-equipment-title"
             >
               Conheça o Equipamento Usado nas Aulas
             </h2>
 
             <p 
-              className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed font-body font-light"
               data-testid="text-equipment-subtitle"
             >
-              Utilizamos os aparelhos da <strong className="text-white font-semibold">Butterfly</strong>, um ultrassom portátil revolucionário da Butterfly Network que conecta diretamente ao seu smartphone ou tablet, permitindo exames de alta qualidade em qualquer lugar.
+              Utilizamos os aparelhos da <strong className="text-white font-body font-light">Butterfly</strong>, um ultrassom portátil revolucionário da Butterfly Network que conecta diretamente ao seu smartphone ou tablet, permitindo exames de alta qualidade em qualquer lugar.
             </p>
           </div>
 
@@ -56,12 +56,12 @@ export function EquipmentShowcase() {
 
               {/* Attribution Footer */}
               <div className="px-4 py-3 bg-black/30 backdrop-blur-sm border-t border-white/5">
-                <p className="text-xs text-white/50 text-center">
+                <p className="text-xs text-white/50 text-center font-body font-light">
                   <a 
                     href="https://sketchfab.com/3d-models/butterfly-iq-c8b00e87bc5f4b12a3e8f853f7f10ac9" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                    className="text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
                     data-testid="link-equipment-sketchfab"
                   >
                     Butterfly IQ
@@ -71,7 +71,7 @@ export function EquipmentShowcase() {
                     href="https://sketchfab.com/dcwaltman" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    className="text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
                   >
                     Daniel Waltman
                   </a>
@@ -103,10 +103,10 @@ export function EquipmentShowcase() {
                   <line x1="12" y1="18" x2="12.01" y2="18"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2" data-testid="text-feature-portable-title">
+              <h3 className="text-lg text-white mb-2 font-body font-light" data-testid="text-feature-portable-title">
                 Ultra Portátil
               </h3>
-              <p className="text-white/70 text-sm leading-relaxed" data-testid="text-feature-portable-description">
+              <p className="text-white/70 text-sm leading-relaxed font-body font-light" data-testid="text-feature-portable-description">
                 Conecta diretamente ao smartphone ou tablet, permitindo mobilidade total durante as práticas.
               </p>
             </div>
@@ -129,10 +129,10 @@ export function EquipmentShowcase() {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2" data-testid="text-feature-quality-title">
+              <h3 className="text-lg text-white mb-2 font-body font-light" data-testid="text-feature-quality-title">
                 Alta Resolução
               </h3>
-              <p className="text-white/70 text-sm leading-relaxed" data-testid="text-feature-quality-description">
+              <p className="text-white/70 text-sm leading-relaxed font-body font-light" data-testid="text-feature-quality-description">
                 Imagens de qualidade clínica com tecnologia de última geração para diagnósticos precisos.
               </p>
             </div>
@@ -155,10 +155,10 @@ export function EquipmentShowcase() {
                   <polyline points="20 6 9 17 4 12"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2" data-testid="text-feature-easy-title">
+              <h3 className="text-lg text-white mb-2 font-body font-light" data-testid="text-feature-easy-title">
                 Intuitivo
               </h3>
-              <p className="text-white/70 text-sm leading-relaxed" data-testid="text-feature-easy-description">
+              <p className="text-white/70 text-sm leading-relaxed font-body font-light" data-testid="text-feature-easy-description">
                 Interface amigável que facilita o aprendizado e permite foco total na técnica de exame.
               </p>
             </div>
@@ -167,12 +167,12 @@ export function EquipmentShowcase() {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-white/70 text-sm mb-4" data-testid="text-equipment-footer">
+            <p className="text-white/70 text-sm mb-4 font-body font-light" data-testid="text-equipment-footer">
               Durante o curso, você terá acesso hands-on a múltiplos aparelhos Butterfly
             </p>
             <a
               href="#preco"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
+              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
               data-testid="link-equipment-cta"
             >
               Garantir minha vaga

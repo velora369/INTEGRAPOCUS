@@ -87,7 +87,7 @@ export default {
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
         heading: ["'Bodoni Moda'", "'Didot'", "Georgia", "serif"],
-        body: ["'Montserrat'", "'Inter'", "system-ui", "-apple-system", "'Segoe UI'", "'Roboto'", "'Helvetica'", "'Arial'", "sans-serif"],
+        body: ["'NeueMontreal'", "system-ui", "sans-serif"],
         title: ["'NeueMontreal'", "system-ui", "sans-serif"],
       },
       keyframes: {

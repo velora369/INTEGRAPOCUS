@@ -29,10 +29,10 @@ export function Contact() {
     >
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 id="contact-heading" className="text-gradient-heading mb-6 font-title">
+          <h2 id="contact-heading" className="text-gradient-heading mb-6 font-title font-bold">
             Fale Conosco
           </h2>
-          <p className="text-lg text-white/80">
+          <p className="text-lg text-white/80 font-body font-light">
             Tire suas dúvidas ou garanta sua vaga entrando em contato.
           </p>
         </div>
@@ -43,7 +43,7 @@ export function Contact() {
             <div className="card-glass p-6">
               <div className="flex items-center gap-3 mb-4">
                 <SiWhatsapp className="w-6 h-6 text-[#25D366]" />
-                <h3 className="text-xl font-heading text-white">Support WhatsApp</h3>
+                <h3 className="text-xl text-white font-body font-light">Support WhatsApp</h3>
               </div>
               
               <div className="space-y-3">
@@ -54,7 +54,7 @@ export function Contact() {
                   className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2 text-center"
                   data-testid="link-whatsapp-support-1"
                 >
-                  <p className="text-white/80 text-base">(93) 99167-4540</p>
+                  <p className="text-white/80 text-base font-body font-light">(93) 99167-4540</p>
                 </a>
 
                 <a
@@ -64,7 +64,7 @@ export function Contact() {
                   className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2 text-center"
                   data-testid="link-whatsapp-support-2"
                 >
-                  <p className="text-white/80 text-base">+55 (93) 98116-0181</p>
+                  <p className="text-white/80 text-base font-body font-light">+55 (93) 98116-0181</p>
                 </a>
               </div>
             </div>
@@ -72,7 +72,7 @@ export function Contact() {
             <div className="card-glass p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Instagram className="w-6 h-6 text-white/70" />
-                <h3 className="text-xl font-heading text-white">Instagram</h3>
+                <h3 className="text-xl text-white font-body font-light">Instagram</h3>
               </div>
               
               <a
@@ -82,7 +82,7 @@ export function Contact() {
                 className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2"
                 data-testid="link-instagram"
               >
-                <p className="text-white font-medium">@integra.pocus</p>
+                <p className="text-white font-body font-light">@integra.pocus</p>
               </a>
             </div>
           </div>
@@ -91,12 +91,12 @@ export function Contact() {
           <div className="card-glass p-6">
             <div className="flex items-center gap-3 mb-6">
               <Mail className="w-6 h-6 text-white/70" />
-              <h3 className="text-xl font-heading text-white">Envie uma Mensagem</h3>
+              <h3 className="text-xl text-white font-body font-light">Envie uma Mensagem</h3>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm text-white/70 mb-2">
+                <label htmlFor="name" className="block text-sm text-white/70 mb-2 font-body font-light">
                   Nome
                 </label>
                 <div className="relative">
@@ -106,7 +106,7 @@ export function Contact() {
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#3331C5]/50 focus:border-transparent"
+                    className="w-full bg-white/5 border border-white/10 rounded-lg pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#3331C5]/50 focus:border-transparent font-body font-light"
                     placeholder="Seu nome completo"
                     required
                     data-testid="input-name"
@@ -115,7 +115,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm text-white/70 mb-2">
+                <label htmlFor="email" className="block text-sm text-white/70 mb-2 font-body font-light">
                   E-mail
                 </label>
                 <div className="relative">
@@ -125,7 +125,7 @@ export function Contact() {
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#3331C5]/50 focus:border-transparent"
+                    className="w-full bg-white/5 border border-white/10 rounded-lg pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#3331C5]/50 focus:border-transparent font-body font-light"
                     placeholder="seu@email.com"
                     required
                     data-testid="input-email"
@@ -134,7 +134,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm text-white/70 mb-2">
+                <label htmlFor="message" className="block text-sm text-white/70 mb-2 font-body font-light">
                   Mensagem
                 </label>
                 <textarea
@@ -142,7 +142,7 @@ export function Contact() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={4}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#3331C5]/50 focus:border-transparent resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#3331C5]/50 focus:border-transparent resize-none font-body font-light"
                   placeholder="Como podemos ajudar?"
                   required
                   data-testid="input-message"
@@ -151,7 +151,7 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="btn-primary w-full"
+                className="btn-primary w-full font-body font-light"
                 data-testid="button-submit-contact"
               >
                 <Send className="w-5 h-5" />
