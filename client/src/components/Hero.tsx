@@ -296,7 +296,7 @@ export function Hero() {
                 Garantir minha vaga
               </button>
               <a
-                href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre a Imersão Integra POCUS."
+                href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre o Hands-on Integra POCUS."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary text-lg px-8 font-body font-light"

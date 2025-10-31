@@ -29,7 +29,7 @@ export function Footer() {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const email = formData.get('email');
-    const message = `Olá! Gostaria de receber atualizações sobre a Imersão Integra POCUS. Meu email: ${email}`;
+    const message = `Olá! Gostaria de receber atualizações sobre o Hands-on Integra POCUS. Meu email: ${email}`;
     window.open(`https://wa.me/5593991674540?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -166,7 +166,7 @@ export function Footer() {
                       asChild
                     >
                       <a
-                        href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre a Imersão Integra POCUS."
+                        href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre o Hands-on Integra POCUS."
                         target="_blank"
                         rel="noopener noreferrer"
                         data-testid="button-footer-whatsapp"

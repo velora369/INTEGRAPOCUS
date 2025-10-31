@@ -48,7 +48,7 @@ export function Contact() {
               
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre a Imersão Integra POCUS."
+                  href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre o Hands-on Integra POCUS."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2 text-center"
@@ -58,13 +58,13 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="https://wa.me/5593981160181?text=Olá! Gostaria de saber mais sobre a Imersão Integra POCUS."
+                  href="https://wa.me/5593981160181?text=Olá! Gostaria de saber mais sobre o Hands-on Integra POCUS."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2 text-center"
                   data-testid="link-whatsapp-support-2"
                 >
-                  <p className="text-white/80 text-base font-body font-light">(93) 99811-60181</p>
+                  <p className="text-white/80 text-base font-body font-light">(93) 998116-0181</p>
                 </a>
               </div>
             </div>
