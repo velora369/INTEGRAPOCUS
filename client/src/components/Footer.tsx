@@ -121,26 +121,6 @@ export function Footer() {
               <p className="font-medium text-white/90">Integra POCUS</p>
               <p>Santarém, Pará</p>
               <p>29 de novembro de 2025</p>
-              <div className="pt-2 space-y-1">
-                <p>
-                  <a
-                    href="https://wa.me/5593991674540"
-                    className="hover:text-primary transition-colors"
-                    data-testid="link-footer-phone-maria"
-                  >
-                    Maria: (93) 99167-4540
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="https://wa.me/5593981160181"
-                    className="hover:text-primary transition-colors"
-                    data-testid="link-footer-phone-vanessa"
-                  >
-                    Vanessa: (93) 98116-0181
-                  </a>
-                </p>
-              </div>
             </address>
           </div>
 

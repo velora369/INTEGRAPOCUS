@@ -1,4 +1,5 @@
-import { MessageCircle, Instagram, Mail, User, Send } from 'lucide-react';
+import { Instagram, Mail, User, Send } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import { useState, FormEvent } from 'react';
 
 export function Contact() {
@@ -41,31 +42,29 @@ export function Contact() {
           <div className="space-y-6">
             <div className="card-glass p-6">
               <div className="flex items-center gap-3 mb-4">
-                <MessageCircle className="w-6 h-6 text-[#25D366]" />
-                <h3 className="text-xl font-heading text-white">WhatsApp</h3>
+                <SiWhatsapp className="w-6 h-6 text-[#25D366]" />
+                <h3 className="text-xl font-heading text-white">Support WhatsApp</h3>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <a
                   href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre a Imersão Integra POCUS."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2"
-                  data-testid="link-whatsapp-maria"
+                  className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2 text-center"
+                  data-testid="link-whatsapp-support-1"
                 >
-                  <p className="text-white font-medium mb-1">Maria</p>
-                  <p className="text-white/60 text-sm">(93) 99167-4540</p>
+                  <p className="text-white/80 text-base">(93) 99167-4540</p>
                 </a>
 
                 <a
                   href="https://wa.me/5593981160181?text=Olá! Gostaria de saber mais sobre a Imersão Integra POCUS."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2"
-                  data-testid="link-whatsapp-vanessa"
+                  className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2 text-center"
+                  data-testid="link-whatsapp-support-2"
                 >
-                  <p className="text-white font-medium mb-1">Vanessa</p>
-                  <p className="text-white/60 text-sm">+55 (93) 98116-0181</p>
+                  <p className="text-white/80 text-base">+55 (93) 98116-0181</p>
                 </a>
               </div>
             </div>
