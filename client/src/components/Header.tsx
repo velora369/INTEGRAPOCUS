@@ -142,7 +142,7 @@ export function Header() {
     >
       <div className="container-custom">
         <nav
-          className="flex items-center justify-between py-4"
+          className="flex items-center justify-between py-6"
           aria-label="Navegação principal"
         >
           <div className="flex items-center">
