@@ -23,7 +23,7 @@ export function EquipmentShowcase() {
             </div>
 
             <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-heading text-gradient-heading mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-title text-gradient-heading mb-6"
               data-testid="text-equipment-title"
             >
               Conheça o Equipamento Usado nas Aulas

@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 /* ========================
+   CUSTOM FONTS
+   ======================== */
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('@assets/NeueMontreal-Bold_1761939090629.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================
    INTEGRA POCUS DESIGN SYSTEM
    ======================== */
 
