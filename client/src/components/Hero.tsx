@@ -38,7 +38,7 @@ export function Hero() {
 
             {/* H1 */}
             <h1 
-              className="text-white mb-4 font-heading relative inline-block"
+              className="text-gradient-heading mb-4 font-heading relative inline-block"
               data-testid="text-hero-title"
             >
               Integra POCUS — Imersão Hands-on em POCUS

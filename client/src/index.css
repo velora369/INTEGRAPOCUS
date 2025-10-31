@@ -454,6 +454,13 @@
     -webkit-text-fill-color: transparent;
   }
   
+  .text-gradient-heading {
+    background: linear-gradient(90deg, #4A90E2 0%, #7C6DFF 50%, #C08BFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;

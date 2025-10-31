@@ -54,7 +54,7 @@ export function Pricing() {
         
         <div className="container-custom relative">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 id="pricing-heading" className="text-white mb-4 font-heading">
+            <h2 id="pricing-heading" className="text-gradient-heading mb-4 font-heading">
               Investimento
             </h2>
             <p className="text-lg text-white/80 mb-8">
