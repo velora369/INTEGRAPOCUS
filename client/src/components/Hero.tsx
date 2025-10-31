@@ -210,13 +210,43 @@ export function Hero() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN - Visual (Orb Sonar) */}
+          {/* RIGHT COLUMN - 3D Model */}
           <div className="relative order-1 lg:order-2 flex items-center justify-center min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
-            <div 
-              className="hero-orb-sonar"
-              aria-hidden="true"
-              data-testid="visual-hero-orb"
-            />
+            <div className="w-full max-w-md mx-auto">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl">
+                <div className="aspect-[4/3] w-full">
+                  <iframe 
+                    title="Butterfly IQ - Modelo 3D Interativo" 
+                    className="w-full h-full"
+                    frameBorder="0" 
+                    allowFullScreen 
+                    allow="autoplay; fullscreen; xr-spatial-tracking" 
+                    src="https://sketchfab.com/models/c8b00e87bc5f4b12a3e8f853f7f10ac9/embed?autostart=1&ui_theme=dark"
+                  />
+                </div>
+                <div className="px-3 py-2 bg-black/30 backdrop-blur-sm border-t border-white/5">
+                  <p className="text-xs text-white/50 text-center">
+                    <a 
+                      href="https://sketchfab.com/3d-models/butterfly-iq-c8b00e87bc5f4b12a3e8f853f7f10ac9" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                    >
+                      Butterfly IQ
+                    </a>
+                    {' '}por{' '}
+                    <a 
+                      href="https://sketchfab.com/dcwaltman" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                    >
+                      Daniel Waltman
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
