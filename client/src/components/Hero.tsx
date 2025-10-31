@@ -210,40 +210,43 @@ export function Hero() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN - 3D Model */}
+          {/* RIGHT COLUMN - Instructor Image */}
           <div className="relative order-1 lg:order-2 flex items-center justify-center min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
             <div className="w-full max-w-md mx-auto">
               <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl">
-                <div className="aspect-[4/3] w-full">
-                  <iframe 
-                    title="Butterfly IQ - Modelo 3D Interativo" 
-                    className="w-full h-full"
-                    frameBorder="0" 
-                    allowFullScreen 
-                    allow="autoplay; fullscreen; xr-spatial-tracking" 
-                    src="https://sketchfab.com/models/c8b00e87bc5f4b12a3e8f853f7f10ac9/embed?autostart=1&ui_theme=dark"
-                  />
-                </div>
-                <div className="px-3 py-2 bg-black/30 backdrop-blur-sm border-t border-white/5">
-                  <p className="text-xs text-white/50 text-center">
-                    <a 
-                      href="https://sketchfab.com/3d-models/butterfly-iq-c8b00e87bc5f4b12a3e8f853f7f10ac9" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
-                    >
-                      Butterfly IQ
-                    </a>
-                    {' '}por{' '}
-                    <a 
-                      href="https://sketchfab.com/dcwaltman" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-blue-400 hover:text-blue-300 transition-colors"
-                    >
-                      Daniel Waltman
-                    </a>
-                  </p>
+                <div className="aspect-[3/4] w-full bg-gradient-to-br from-blue-900/20 to-purple-900/20 flex items-center justify-center">
+                  {/* TODO: Replace with actual Dr. Emmanuel image */}
+                  {/* <img 
+                    src="path-to-dr-emmanuel-image.jpg" 
+                    alt="Dr. Emmanuel - Instrutor do curso"
+                    className="w-full h-full object-cover"
+                    data-testid="img-hero-instructor"
+                  /> */}
+                  <div className="text-center p-8">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center" data-testid="icon-hero-instructor-placeholder">
+                      <svg 
+                        width="48" 
+                        height="48" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        className="text-white/40"
+                        aria-hidden="true"
+                      >
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                      </svg>
+                    </div>
+                    <p className="text-white/60 text-sm" data-testid="text-hero-instructor-name">
+                      Dr. Emmanuel
+                    </p>
+                    <p className="text-white/40 text-xs mt-1" data-testid="text-hero-instructor-role">
+                      Instrutor Principal
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
