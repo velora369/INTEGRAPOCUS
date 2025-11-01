@@ -110,6 +110,36 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Equipment Section Icon Updates (November 1, 2025)
+**All icons in the "Conheça o Equipamento Usado nas Aulas" section updated with new custom SVG designs:**
+
+1. **Equipment Feature Icons**
+   - "Ultra Portátil": Updated to smartphone/tablet icon (mobile device connectivity)
+   - "Alta Resolução": Updated to magnifying glass with zoom/plus icon (high-resolution imaging)
+   - "Intuitivo": Updated to checklist icon (user-friendly interface)
+
+2. **Technical Implementation**
+   - Replaced basic outline icons with custom inline SVG components
+   - Created three new icon components: SmartphoneIcon, MagnifyingGlassIcon, ChecklistIcon
+   - Icons use `fill="currentColor"` for proper color inheritance
+   - Responsive sizing: Icons scale from 56x56px (mobile) to 64x64px (tablet+)
+   - Updated gradient backgrounds from single-color backgrounds to purple-to-blue gradient
+   - Added proper padding (`p-3 sm:p-3.5`) for optimal icon display
+
+3. **Responsive Design**
+   - Icon containers scale from `w-14 h-14` on mobile to `w-16 h-16` on larger screens
+   - SVGs use `w-full h-full` classes to fill container responsively
+   - ViewBox dimensions preserved for each icon's optimal aspect ratio
+   - Gradient backgrounds maintain visual consistency with site theme
+   - Glass-morphism card effects maintained for feature cards
+
+4. **Quality Assurance**
+   - All 3 equipment feature icons successfully updated and tested
+   - Icons display correctly across all breakpoints
+   - Color inheritance works properly with gradient backgrounds
+   - Maintains consistent visual language with the rest of the site
+   - Icons properly aligned within their rounded square containers
+
 ### Student Gallery Section Text Update (November 1, 2025)
 **Updated title and subtitle in the student gallery section:**
 

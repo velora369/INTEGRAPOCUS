@@ -1,3 +1,29 @@
+// Custom SVG Icons
+function SmartphoneIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-full h-full">
+      <path fill="currentColor" d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99M17 19H7V5h10z"/>
+    </svg>
+  );
+}
+
+function MagnifyingGlassIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-full h-full">
+      <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/>
+      <path fill="currentColor" d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2z"/>
+    </svg>
+  );
+}
+
+function ChecklistIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-full h-full">
+      <path fill="currentColor" fillRule="evenodd" d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M10 17H5v-2h5zm0-4H5v-2h5zm0-4H5V7h5zm4.82 6L12 12.16l1.41-1.41l1.41 1.42L17.99 9l1.42 1.42z"/>
+    </svg>
+  );
+}
+
 export function EquipmentShowcase() {
   return (
     <section
@@ -86,22 +112,10 @@ export function EquipmentShowcase() {
             
             {/* Feature 1: Portátil */}
             <div className="card-glass p-6">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg 
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                  className="text-blue-400"
-                  aria-hidden="true"
-                >
-                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                  <line x1="12" y1="18" x2="12.01" y2="18"/>
-                </svg>
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 p-3 sm:p-3.5">
+                <div className="text-white w-full h-full">
+                  <SmartphoneIcon />
+                </div>
               </div>
               <h3 className="text-lg text-white mb-2 font-body font-light" data-testid="text-feature-portable-title">
                 Ultra Portátil
@@ -113,21 +127,10 @@ export function EquipmentShowcase() {
 
             {/* Feature 2: Qualidade */}
             <div className="card-glass p-6">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
-                <svg 
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                  className="text-purple-400"
-                  aria-hidden="true"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 p-3 sm:p-3.5">
+                <div className="text-white w-full h-full">
+                  <MagnifyingGlassIcon />
+                </div>
               </div>
               <h3 className="text-lg text-white mb-2 font-body font-light" data-testid="text-feature-quality-title">
                 Alta Resolução
@@ -139,21 +142,10 @@ export function EquipmentShowcase() {
 
             {/* Feature 3: Fácil Uso */}
             <div className="card-glass p-6">
-              <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4">
-                <svg 
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                  className="text-green-400"
-                  aria-hidden="true"
-                >
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 p-3 sm:p-3.5">
+                <div className="text-white w-full h-full">
+                  <ChecklistIcon />
+                </div>
               </div>
               <h3 className="text-lg text-white mb-2 font-body font-light" data-testid="text-feature-easy-title">
                 Intuitivo
