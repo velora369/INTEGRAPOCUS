@@ -110,6 +110,36 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Audience Section Icon Updates (November 1, 2025)
+**All icons in the "Para quem é esta imersão?" section updated with new custom SVG designs:**
+
+1. **Target Audience Icons**
+   - "Estudantes": Updated to open book icon (educational/academic symbol)
+   - "Recém-formados e Residentes": Updated to graduation cap with people icon (recent graduates)
+   - "Generalistas": Updated to first aid kit with cross icon (general practice medicine)
+   - "Emergencistas": Updated to ambulance with emergency lights icon (emergency medical services)
+   - "Especialistas": Updated to medical professional with stethoscope icon (specialized practice)
+
+2. **Technical Implementation**
+   - Replaced Lucide React icons with custom inline SVG components
+   - Each icon is now a functional component returning SVG markup
+   - Icons use `fill="currentColor"` for proper color inheritance from parent
+   - Responsive sizing: Icons are 48x56px (mobile) and 56x56px (tablet+)
+   - Maintained circular background with `bg-white/10` glass effect
+   - Added proper padding (`p-2.5 sm:p-3`) to ensure icons fit well within containers
+
+3. **Responsive Design**
+   - Icon containers scale from `w-12 h-12` on mobile to `w-14 h-14` on larger screens
+   - SVGs use `w-full h-full` classes to fill container responsively
+   - ViewBox dimensions preserved for each icon's optimal aspect ratio
+   - Glass-morphism card effects maintained with hover states
+
+4. **Quality Assurance**
+   - All 5 audience category icons successfully updated and tested
+   - Icons display correctly across all breakpoints
+   - Color inheritance works properly with dark theme
+   - Maintains consistent visual language with the rest of the site
+
 ### Hero Section Icon Updates (November 1, 2025)
 **All icons in the Hero section updated with new SVG designs:**
 
