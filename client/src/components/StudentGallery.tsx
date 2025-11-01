@@ -80,14 +80,14 @@ export function StudentGallery() {
             className="text-4xl md:text-5xl lg:text-6xl font-title font-bold text-gradient-heading mb-6"
             data-testid="text-gallery-title"
           >
-            Nossos Alunos em Ação
+            Equipe e alunos
           </h2>
           
           <p 
             className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed font-body font-light mb-4"
             data-testid="text-gallery-subtitle"
           >
-            Momentos especiais da nossa primeira turma de hands-on em POCUS
+            Alunos e instrutores unidos no aprendizado
           </p>
 
           <p 

@@ -110,6 +110,18 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Student Gallery Section Text Update (November 1, 2025)
+**Updated title and subtitle in the student gallery section:**
+
+1. **Text Changes**
+   - Section title changed from "Nossos Alunos em Ação" to "Equipe e alunos"
+   - Subtitle changed from "Momentos especiais da nossa primeira turma de hands-on em POCUS" to "Alunos e instrutores unidos no aprendizado"
+
+2. **Purpose**
+   - Better reflects the collaborative nature of the learning environment
+   - Emphasizes the unity between students and instructors
+   - More accurately represents the team-based educational approach
+
 ### Outcomes Section Icon Updates (November 1, 2025)
 **All icons in the "O que você vai desenvolver?" section updated with new custom SVG designs:**
 
