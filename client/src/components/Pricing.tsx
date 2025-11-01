@@ -159,9 +159,8 @@ export function Pricing() {
                     <>
                       <div className="flex items-baseline gap-2 mb-2">
                         <span className="text-3xl font-extralight text-white/60 font-body font-light">12x de</span>
-                        <span className="text-5xl md:text-6xl font-extralight text-white font-body font-light">R$ 267,80</span>
+                        <span className="text-5xl md:text-6xl font-extralight text-white font-light">R$ 267,80</span>
                       </div>
-                      <p className="text-sm text-white/60 font-body font-light">total R$ 3.208,80</p>
                     </>
                   )}
                 </div>
