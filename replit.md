@@ -110,6 +110,38 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Outcomes Section Icon Updates (November 1, 2025)
+**All icons in the "O que você vai desenvolver?" section updated with new custom SVG designs:**
+
+1. **Learning Outcome Icons**
+   - "Fundamentos aplicados de POCUS": Updated to ultrasound transducer icon (medical imaging device)
+   - "Aplicações clínicas por sistemas": Updated to human body silhouette icon (body systems)
+   - "Interpretação que importa": Updated to eye with focus icon (vision/interpretation)
+   - "Da imagem à conduta": Updated to circular arrows/flow icon (decision-making process)
+   - "Noções de procedimentos guiados": Updated to syringe/needle icon (medical procedures)
+
+2. **Technical Implementation**
+   - Replaced Lucide React icons with custom inline SVG components
+   - Each icon is now a functional component returning SVG markup
+   - Icons use `fill="currentColor"` for proper color inheritance
+   - Responsive sizing: Icons scale from 56x56px (mobile) to 64x64px (tablet+)
+   - Maintained gradient background containers with purple-to-blue gradient
+   - Added proper padding (`p-3 sm:p-3.5`) to ensure icons fit well within gradient containers
+
+3. **Responsive Design**
+   - Icon containers scale from `w-14 h-14` on mobile to `w-16 h-16` on larger screens
+   - SVGs use `w-full h-full` classes to fill container responsively
+   - ViewBox dimensions preserved for each icon's optimal aspect ratio
+   - Glass-morphism card effects maintained with hover elevation states
+   - Gradient backgrounds maintain visual consistency with site theme
+
+4. **Quality Assurance**
+   - All 5 learning outcome icons successfully updated and tested
+   - Icons display correctly across all breakpoints
+   - Color inheritance works properly with gradient backgrounds
+   - Maintains consistent visual language with the rest of the site
+   - Icons properly align within their rounded square containers
+
 ### Audience Section Icon Updates (November 1, 2025)
 **All icons in the "Para quem é esta imersão?" section updated with new custom SVG designs:**
 
