@@ -155,20 +155,14 @@ export function Hero() {
                 <svg 
                   width="20" 
                   height="20" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
+                  viewBox="0 0 24 24"
                   className="flex-shrink-0"
                   aria-hidden="true"
                 >
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                  <line x1="16" y1="2" x2="16" y2="6"/>
-                  <line x1="8" y1="2" x2="8" y2="6"/>
-                  <line x1="3" y1="10" x2="21" y2="10"/>
-                  <polyline points="9 14 11 16 15 12"/>
+                  <g fill="currentColor">
+                    <path d="M3 3h18v4.385h-2V5H5v9h4.333v2H3z"/>
+                    <path d="M12.684 10.287C13.558 11.212 14.303 12 16 12h2a2 2 0 0 1 2 2v1a2 2 0 0 1-1 1.732V22h-3v-8c-2.617 0-3.956-1.45-4.84-2.405a14 14 0 0 0-.367-.388l1.414-1.414q.249.25.477.494M19 9.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0"/>
+                  </g>
                 </svg>
                 <span className="font-body font-light">Presencial — teoria + hands-on</span>
               </motion.div>
@@ -178,17 +172,14 @@ export function Hero() {
                 <svg 
                   width="20" 
                   height="20" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
+                  viewBox="0 0 24 24"
                   className="flex-shrink-0"
                   aria-hidden="true"
                 >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  <circle cx="12" cy="12" r="3"/>
+                  <g fill="currentColor">
+                    <path d="M9 9V7h2v2h2v2h-2v2H9v-2H7V9zm-2 7h10v-2H7zm10 3H7v-2h10z"/>
+                    <path fillRule="evenodd" d="M14.778 4H18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3.152a2.99 2.99 0 0 1 2.813-2c1.296 0 2.399.834 2.813 2M6 6v14h12V6zm5.965-.751s-.747-.017-.747-.782c0 0 0-.73.747-.73c0 0 .747 0 .747.782c0 0-.017.73-.747.73" clipRule="evenodd"/>
+                  </g>
                 </svg>
                 <span className="font-body font-light">Foco no raciocínio clínico</span>
               </motion.div>
@@ -198,17 +189,11 @@ export function Hero() {
                 <svg 
                   width="20" 
                   height="20" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
+                  viewBox="0 0 48 48"
                   className="flex-shrink-0"
                   aria-hidden="true"
                 >
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
+                  <path fill="currentColor" fillRule="evenodd" d="M4 24C4 12.954 12.954 4 24 4s20 8.954 20 20s-8.954 20-20 20S4 35.046 4 24m22-11a2 2 0 1 0-4 0v14a2 2 0 1 0 4 0zm-2 20a2 2 0 1 1 0 4a2 2 0 0 1 0-4" clipRule="evenodd"/>
                 </svg>
                 <span className="font-body font-light">Vagas limitadas</span>
               </motion.div>
@@ -226,19 +211,15 @@ export function Hero() {
                   <svg 
                     width="24" 
                     height="24" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
+                    viewBox="0 0 48 48"
                     className="flex-shrink-0 mt-0.5 text-white/70"
                     aria-hidden="true"
                   >
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                    <line x1="16" y1="2" x2="16" y2="6"/>
-                    <line x1="8" y1="2" x2="8" y2="6"/>
-                    <line x1="3" y1="10" x2="21" y2="10"/>
+                    <g fill="currentColor">
+                      <path fillRule="evenodd" d="M12 21a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm0 2v2h2v-2zm6 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zm2 0h2v2h-2zm8-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm0 2v2h2v-2zm-18 8a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zm4 0v2h-2v-2zm6-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm2 2h-2v2h2z" clipRule="evenodd"/>
+                      <path d="M36 32.5a1 1 0 1 0-2 0v2.914l1.293 1.293a1 1 0 0 0 1.414-1.414L36 34.586z"/>
+                      <path fillRule="evenodd" d="M12 7a1 1 0 1 1 2 0v5a1 1 0 1 0 2 0V9h10V7a1 1 0 1 1 2 0v5a1 1 0 1 0 2 0V9h3a3 3 0 0 1 3 3v16.07A7.001 7.001 0 0 1 35 42a6.99 6.99 0 0 1-5.745-3H9a3 3 0 0 1-3-3V12a3 3 0 0 1 3-3h3zm16 28a7 7 0 0 1 6-6.93V18H8v18a1 1 0 0 0 1 1h19.29a7 7 0 0 1-.29-2m12 0a5 5 0 1 1-10 0a5 5 0 0 1 10 0" clipRule="evenodd"/>
+                    </g>
                   </svg>
                   <div>
                     <p className="text-sm text-white/60 mb-1 font-body font-light">Data</p>
@@ -251,17 +232,11 @@ export function Hero() {
                   <svg 
                     width="24" 
                     height="24" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
+                    viewBox="0 0 24 24"
                     className="flex-shrink-0 mt-0.5 text-white/70"
                     aria-hidden="true"
                   >
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
+                    <path fill="currentColor" d="M12 4c2.2 0 4 1.8 4 4c0 2.1-2.1 5.5-4 7.9c-1.9-2.5-4-5.8-4-7.9c0-2.2 1.8-4 4-4m0-2C8.7 2 6 4.7 6 8c0 4.5 6 11 6 11s6-6.6 6-11c0-3.3-2.7-6-6-6m0 4c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m8 13c0 2.2-3.6 4-8 4s-8-1.8-8-4c0-1.3 1.2-2.4 3.1-3.2l.6.9c-1 .5-1.7 1.1-1.7 1.8c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5c0-.7-.7-1.3-1.8-1.8l.6-.9c2 .8 3.2 1.9 3.2 3.2"/>
                   </svg>
                   <div>
                     <p className="text-sm text-white/60 mb-1 font-body font-light">Local</p>

@@ -110,6 +110,31 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Hero Section Icon Updates (November 1, 2025)
+**All icons in the Hero section updated with new SVG designs:**
+
+1. **Pill Icons (Feature Highlights)**
+   - "Presencial — teoria + hands-on": Updated to presentation/teaching icon (person with presentation screen)
+   - "Foco no raciocínio clínico": Updated to clipboard with checklist icon (medical documentation)
+   - "Vagas limitadas": Updated to circle with exclamation mark icon (alert/urgency indicator)
+
+2. **Event Info Card Icons**
+   - "Data" (Date): Updated to calendar with clock icon (comprehensive date/time visualization)
+   - "Local" (Location): Updated to map pin icon (geographical location marker)
+
+3. **Technical Implementation**
+   - All icons converted from stroke-based to fill-based SVG designs
+   - Icons use `fill="currentColor"` for proper color inheritance
+   - Maintained proper sizing: 20x20 for pills, 24x24 for event info
+   - ViewBox adjusted per icon to maintain proper aspect ratios
+   - Icons remain accessible with `aria-hidden="true"` attributes
+
+4. **Quality Assurance**
+   - Icons display correctly across all screen sizes
+   - Color inheritance works properly with the glass-morphism pill design
+   - Visual consistency maintained with the dark theme
+   - All icons tested and verified in production build
+
 ### Typography System Implementation (October 31, 2025)
 **Complete dual-font typography system now production-ready:**
 
