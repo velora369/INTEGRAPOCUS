@@ -33,15 +33,6 @@ export function Audience() {
     {
       icon: () => (
         <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="0 0 24 24">
-          <path fill="currentColor" d="M12 11a4 4 0 1 0 0-8a4 4 0 0 0 0 8m-3.38 1.922l.374-.549a7 7 0 0 0 2.895.627h.223a7 7 0 0 0 2.505-.464l.263.386c.122.18.245.53.327.973c.08.427.102.832.087 1.055a.8.8 0 0 0 .04.3h-.378a.76.76 0 0 0-.688.439l-.691 1.48a.76.76 0 0 0 .689 1.081H15.4v-1.5h1.25v1.5h1.084a.76.76 0 0 0 .689-1.081l-.69-1.48a.76.76 0 0 0-.69-.439h-.293a.8.8 0 0 0 .04-.2c.026-.378-.012-.912-.108-1.43c-.093-.502-.262-1.101-.562-1.542l-.049-.072a2 2 0 0 1 .152-.006A4.777 4.777 0 0 1 21 16.777V21H3v-4.223c0-2.52 1.95-4.584 4.424-4.764l-.044.065c-.591.869-.681 1.946-.608 2.81c.025.297.07.59.132.866a1.5 1.5 0 1 0 1.47-.302a5 5 0 0 1-.108-.69c-.06-.706.04-1.379.354-1.84"/>
-        </svg>
-      ),
-      title: 'Especialistas',
-      description: 'Médicos de diversas especialidades que buscam integrar o ultrassom como extensão do exame físico em sua área.'
-    },
-    {
-      icon: () => (
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="0 0 24 24">
           <g fill="currentColor">
             <path d="M18 3a1 1 0 1 0-2 0v1.5a1 1 0 1 0 2 0zM7.5 12v-1.5H6v-2h1.5V7h2v1.5H11v2H9.5V12z"/>
             <path fillRule="evenodd" d="M8.95 19q.05.243.05.5a2.5 2.5 0 1 1-4.95-.5H2V5a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v4h1V8a1 1 0 1 1 2 0v1h.092a2 2 0 0 1 1.728.992l1.908 3.27A2 2 0 0 1 22 14.27V19h-2.05q.05.243.05.5a2.5 2.5 0 1 1-4.95-.5zM4 17v-2h9v2zm9-4H4V6h9zm2 4v-2h5v2zm0-4h4.259l-1.167-2H15zm2.5 6a.5.5 0 1 0 0 1a.5.5 0 0 0 0-1m-11 0a.5.5 0 1 0 0 1a.5.5 0 0 0 0-1" clipRule="evenodd"/>
@@ -51,6 +42,15 @@ export function Audience() {
       ),
       title: 'Emergencistas',
       description: 'Profissionais de pronto atendimento e UTI que necessitam de decisões rápidas e precisas à beira-leito.'
+    },
+    {
+      icon: () => (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M12 11a4 4 0 1 0 0-8a4 4 0 0 0 0 8m-3.38 1.922l.374-.549a7 7 0 0 0 2.895.627h.223a7 7 0 0 0 2.505-.464l.263.386c.122.18.245.53.327.973c.08.427.102.832.087 1.055a.8.8 0 0 0 .04.3h-.378a.76.76 0 0 0-.688.439l-.691 1.48a.76.76 0 0 0 .689 1.081H15.4v-1.5h1.25v1.5h1.084a.76.76 0 0 0 .689-1.081l-.69-1.48a.76.76 0 0 0-.69-.439h-.293a.8.8 0 0 0 .04-.2c.026-.378-.012-.912-.108-1.43c-.093-.502-.262-1.101-.562-1.542l-.049-.072a2 2 0 0 1 .152-.006A4.777 4.777 0 0 1 21 16.777V21H3v-4.223c0-2.52 1.95-4.584 4.424-4.764l-.044.065c-.591.869-.681 1.946-.608 2.81c.025.297.07.59.132.866a1.5 1.5 0 1 0 1.47-.302a5 5 0 0 1-.108-.69c-.06-.706.04-1.379.354-1.84"/>
+        </svg>
+      ),
+      title: 'Especialistas',
+      description: 'Médicos de diversas especialidades que buscam integrar o ultrassom como extensão do exame físico em sua área.'
     }
   ];
 
