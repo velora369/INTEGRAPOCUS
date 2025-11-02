@@ -162,6 +162,7 @@ export function Header() {
           <Sheet open={isOpen} onOpenChange={handleOpenChange}>
             <SheetTrigger asChild>
               <button
+                onClick={() => setIsOpen(!isOpen)}
                 className="relative p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
                 aria-label="Menu"
                 data-testid="button-mobile-menu"
