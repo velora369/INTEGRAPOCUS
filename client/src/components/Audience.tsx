@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 export function Audience() {
   const audiences = [
     {
@@ -88,15 +90,54 @@ export function Audience() {
           {audiences.map((audience, index) => {
             const IconComponent = audience.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                className="card-glass p-6 hover-elevate active-elevate-2"
+                className="card-glass p-6"
                 data-testid={`card-audience-${index}`}
+                initial="rest"
+                whileHover="hover"
+                whileTap="tap"
+                variants={{
+                  rest: { 
+                    y: 0, 
+                    scale: 1,
+                    boxShadow: "0 4px 20px rgba(124, 109, 255, 0.1)"
+                  },
+                  hover: { 
+                    y: -8,
+                    scale: 1.02,
+                    boxShadow: "0 12px 40px rgba(124, 109, 255, 0.25), 0 0 30px rgba(61, 163, 255, 0.15)",
+                    transition: { 
+                      duration: 0.3,
+                      ease: "easeOut"
+                    }
+                  },
+                  tap: { 
+                    scale: 0.98,
+                    transition: { 
+                      duration: 0.1,
+                      ease: "easeOut"
+                    }
+                  }
+                }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 flex items-center justify-center p-2.5 sm:p-3">
+                  <motion.div 
+                    className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 flex items-center justify-center p-2.5 sm:p-3"
+                    variants={{
+                      rest: { scale: 1, rotate: 0 },
+                      hover: { 
+                        scale: 1.1,
+                        rotate: 5,
+                        transition: { 
+                          duration: 0.3,
+                          ease: "easeOut"
+                        }
+                      }
+                    }}
+                  >
                     <IconComponent />
-                  </div>
+                  </motion.div>
                   <div className="flex-1">
                     <h3 className="text-xl text-white mb-2 font-body font-light">
                       {audience.title}
@@ -106,7 +147,7 @@ export function Audience() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

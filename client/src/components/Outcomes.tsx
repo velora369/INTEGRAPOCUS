@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 export function Outcomes() {
   const outcomes = [
     {
@@ -85,15 +87,54 @@ export function Outcomes() {
           {outcomes.map((outcome, index) => {
             const IconComponent = outcome.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                className="card-glass p-6 group hover-elevate active-elevate-2"
+                className="card-glass p-6"
                 data-testid={`card-outcome-${index}`}
+                initial="rest"
+                whileHover="hover"
+                whileTap="tap"
+                variants={{
+                  rest: { 
+                    y: 0, 
+                    scale: 1,
+                    boxShadow: "0 4px 20px rgba(124, 109, 255, 0.1)"
+                  },
+                  hover: { 
+                    y: -8,
+                    scale: 1.02,
+                    boxShadow: "0 12px 40px rgba(124, 109, 255, 0.25), 0 0 30px rgba(61, 163, 255, 0.15)",
+                    transition: { 
+                      duration: 0.3,
+                      ease: "easeOut"
+                    }
+                  },
+                  tap: { 
+                    scale: 0.98,
+                    transition: { 
+                      duration: 0.1,
+                      ease: "easeOut"
+                    }
+                  }
+                }}
               >
                 <div className="mb-4">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#7C6DFF]/20 to-[#3DA3FF]/20 flex items-center justify-center p-3 sm:p-3.5">
+                  <motion.div 
+                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#7C6DFF]/20 to-[#3DA3FF]/20 flex items-center justify-center p-3 sm:p-3.5"
+                    variants={{
+                      rest: { scale: 1, rotate: 0 },
+                      hover: { 
+                        scale: 1.1,
+                        rotate: 5,
+                        transition: { 
+                          duration: 0.3,
+                          ease: "easeOut"
+                        }
+                      }
+                    }}
+                  >
                     <IconComponent />
-                  </div>
+                  </motion.div>
                 </div>
                 <h3 className="text-xl text-white mb-3 font-body font-light">
                   {outcome.title}
@@ -101,7 +142,7 @@ export function Outcomes() {
                 <p className="text-sm text-white/70 leading-relaxed font-body font-light">
                   {outcome.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
