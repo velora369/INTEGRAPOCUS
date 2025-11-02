@@ -50,13 +50,13 @@ export function StudentGallery() {
   return (
     <section 
       id="alunos" 
-      className="py-20 px-6 relative overflow-hidden"
+      className="py-20 px-6 relative overflow-hidden bg-white"
       data-testid="section-student-gallery"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -69,9 +69,9 @@ export function StudentGallery() {
           transition={{ duration: 0.6 }}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-white/10 backdrop-blur-md mb-6">
-            <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm text-white/90 font-body font-light">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 backdrop-blur-md mb-6">
+            <Sparkles className="w-4 h-4 text-purple-600" />
+            <span className="text-sm text-slate-700 font-body font-light">
               Turma 2025
             </span>
           </div>
@@ -84,14 +84,14 @@ export function StudentGallery() {
           </h2>
           
           <p 
-            className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed font-body font-light mb-4"
+            className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-body font-light mb-4"
             data-testid="text-gallery-subtitle"
           >
             Alunos e instrutores unidos no aprendizado
           </p>
 
           <p 
-            className="text-base text-white/60 font-body font-light max-w-2xl mx-auto leading-relaxed"
+            className="text-base text-slate-600 font-body font-light max-w-2xl mx-auto leading-relaxed"
             data-testid="text-gallery-description"
           >
             Veja como nossos alunos vivenciam na prática tudo que aprendem em teoria, 
@@ -171,8 +171,8 @@ export function StudentGallery() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <div className="inline-block p-6 rounded-2xl card-glass">
-            <p className="text-white/80 font-body font-light text-lg mb-4">
+          <div className="inline-block p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-purple-50 border border-purple-100 shadow-lg">
+            <p className="text-slate-700 font-body font-light text-lg mb-4">
               Faça parte da próxima turma e viva essa experiência transformadora
             </p>
             <a 
