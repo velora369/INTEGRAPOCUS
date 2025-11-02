@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 const CalendarIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48" className={className}>
     <g fill="currentColor">
@@ -63,15 +65,54 @@ export function Notices() {
           {notices.map((notice, index) => {
             const Icon = notice.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className="card-glass p-6"
                 data-testid={`card-notice-${index}`}
+                initial="rest"
+                whileHover="hover"
+                whileTap="tap"
+                variants={{
+                  rest: { 
+                    y: 0, 
+                    scale: 1,
+                    boxShadow: "0 4px 20px rgba(124, 109, 255, 0.1)"
+                  },
+                  hover: { 
+                    y: -8,
+                    scale: 1.02,
+                    boxShadow: "0 12px 40px rgba(124, 109, 255, 0.25), 0 0 30px rgba(61, 163, 255, 0.15)",
+                    transition: { 
+                      duration: 0.3,
+                      ease: "easeOut"
+                    }
+                  },
+                  tap: { 
+                    scale: 0.98,
+                    transition: { 
+                      duration: 0.1,
+                      ease: "easeOut"
+                    }
+                  }
+                }}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <motion.div 
+                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0"
+                    variants={{
+                      rest: { scale: 1, rotate: 0 },
+                      hover: { 
+                        scale: 1.1, 
+                        rotate: 5,
+                        transition: { 
+                          duration: 0.3,
+                          ease: "easeOut"
+                        }
+                      }
+                    }}
+                  >
                     <Icon className="w-5 h-5 text-white" />
-                  </div>
+                  </motion.div>
                   <p className="text-xs text-white/50 uppercase tracking-wide font-body font-light">
                     {notice.date}
                   </p>
@@ -82,7 +123,7 @@ export function Notices() {
                 <p className="text-sm text-white/70 leading-relaxed font-body font-light">
                   {notice.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
