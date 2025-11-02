@@ -20,7 +20,7 @@ export function FormatDate() {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Format Column */}
           <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-50 to-purple-50 border border-purple-100 shadow-lg">
-            <h3 className="text-2xl text-slate-800 font-body font-light mb-6">Formato</h3>
+            <h3 className="text-2xl text-slate-800 font-body font-bold mb-6">Formato</h3>
             
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -57,7 +57,7 @@ export function FormatDate() {
 
           {/* Agenda Column */}
           <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-50 to-blue-50 border border-blue-100 shadow-lg">
-            <h3 className="text-2xl text-slate-800 font-body font-light mb-6">Agenda</h3>
+            <h3 className="text-2xl text-slate-800 font-body font-bold mb-6">Agenda</h3>
             
             <div className="space-y-6">
               <div className="flex items-start gap-3">
