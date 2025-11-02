@@ -51,6 +51,19 @@ export function Audience() {
       ),
       title: 'Especialistas',
       description: 'Médicos de diversas especialidades que buscam integrar o ultrassom como extensão do exame físico em sua área.'
+    },
+    {
+      icon: () => (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="0 0 24 24">
+          <g fill="currentColor">
+            <path d="M3 10a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm2 1v6h14v-6z"/>
+            <path d="M8 14a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-1-4a1 1 0 1 1 2 0a1 1 0 0 1-2 0m10 4a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-1-4a1 1 0 1 1 2 0a1 1 0 0 1-2 0"/>
+            <path fillRule="evenodd" d="M2 6a1 1 0 0 1 1-1h1V4a1 1 0 1 1 2 0v1h12V4a1 1 0 1 1 2 0v1h1a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m12 13a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1M3 19a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2z" clipRule="evenodd"/>
+          </g>
+        </svg>
+      ),
+      title: 'Hospitalistas',
+      description: 'Médicos de enfermaria que querem usar o POCUS à beira-leito para reavaliação diária, estratificação de risco e procedimentos guiados com segurança.'
     }
   ];
 
@@ -72,7 +85,7 @@ export function Audience() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {audiences.map((audience, index) => {
             const IconComponent = audience.icon;
             return (
