@@ -216,16 +216,31 @@ export function Pricing() {
 
                 {/* CTAs */}
                 <div className="flex justify-center mb-6">
-                  <button
-                    onClick={() => scrollToSection('contato')}
-                    className="btn-primary-modern group/btn w-full sm:w-auto font-body font-light"
-                    data-testid="button-pricing-main-cta"
-                  >
-                    <span className="relative z-10">
-                      Garantir minha vaga no {selectedPayment === 'pix' ? 'PIX' : 'cartão'}
-                    </span>
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                  </button>
+                  {selectedPayment === 'pix' ? (
+                    <a
+                      href="https://wa.me/5593991674540?text=Olá! Tenho interesse em garantir meu acesso ao curso hands-on da IntegraPocus no PIX."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary-modern group/btn w-full sm:w-auto font-body font-light"
+                      data-testid="button-pricing-main-cta"
+                    >
+                      <span className="relative z-10">
+                        Garantir minha vaga no PIX
+                      </span>
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => scrollToSection('contato')}
+                      className="btn-primary-modern group/btn w-full sm:w-auto font-body font-light"
+                      data-testid="button-pricing-main-cta"
+                    >
+                      <span className="relative z-10">
+                        Garantir minha vaga no cartão
+                      </span>
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                    </button>
+                  )}
                 </div>
 
                 {/* Policy Note */}
