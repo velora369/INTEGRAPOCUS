@@ -171,9 +171,9 @@ export function Header() {
             </SheetTrigger>
             <SheetContent 
               side="right" 
-              className="w-[300px] sm:w-[400px] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border-l border-white/10 backdrop-blur-xl"
+              className="w-[300px] sm:w-[400px] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border-l border-white/10 backdrop-blur-xl flex flex-col p-0"
             >
-              <SheetHeader className="border-b border-white/10 pb-4">
+              <SheetHeader className="border-b border-white/10 pb-4 px-6 pt-6 flex-shrink-0">
                 <SheetTitle className="text-2xl text-white text-left font-body font-light">
                   Integra <span className="text-gradient-primary">POCUS</span>
                 </SheetTitle>
@@ -182,55 +182,57 @@ export function Header() {
                 </SheetDescription>
               </SheetHeader>
 
-              <div className="mt-8 space-y-6">
-                {/* Navigation Links */}
-                <nav className="space-y-2">
-                  {navItems.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => scrollToSection(item.id)}
-                      className="w-full text-left px-4 py-3 rounded-lg text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-white/10 font-body font-light"
-                      data-testid={`nav-link-${item.id}`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                </nav>
-
-                {/* Social Links Icons */}
-                <div className="pt-6 border-t border-white/10">
-                  <h3 className="text-sm text-white/60 uppercase tracking-wider mb-4 px-4 font-body font-light">
-                    Conecte-se conosco
-                  </h3>
-                  <div className="flex items-center gap-4 px-4">
-                    {socialLinks.map((social) => (
-                      <a
-                        key={social.name}
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-110"
-                        aria-label={social.name}
-                        title={social.name}
+              <div className="flex-1 overflow-y-auto overflow-x-hidden px-6 py-6">
+                <div className="space-y-6 pb-4">
+                  {/* Navigation Links */}
+                  <nav className="space-y-2">
+                    {navItems.map((item) => (
+                      <button
+                        key={item.id}
+                        onClick={() => scrollToSection(item.id)}
+                        className="w-full text-left px-4 py-3 rounded-lg text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-white/10 font-body font-light"
+                        data-testid={`nav-link-${item.id}`}
                       >
-                        <social.icon 
-                          className="w-7 h-7 transition-colors" 
-                          style={{ color: social.color }}
-                        />
-                      </a>
+                        {item.label}
+                      </button>
                     ))}
-                  </div>
-                </div>
+                  </nav>
 
-                {/* CTA Button */}
-                <div className="pt-6">
-                  <button
-                    onClick={() => scrollToSection('preco')}
-                    className="w-full btn-primary justify-center shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all font-body font-light"
-                    data-testid="button-header-cta"
-                  >
-                    Inscrever-se Agora
-                  </button>
+                  {/* Social Links Icons */}
+                  <div className="pt-6 border-t border-white/10">
+                    <h3 className="text-sm text-white/60 uppercase tracking-wider mb-4 px-4 font-body font-light">
+                      Conecte-se conosco
+                    </h3>
+                    <div className="flex items-center gap-4 px-4">
+                      {socialLinks.map((social) => (
+                        <a
+                          key={social.name}
+                          href={social.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group relative p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-110"
+                          aria-label={social.name}
+                          title={social.name}
+                        >
+                          <social.icon 
+                            className="w-7 h-7 transition-colors" 
+                            style={{ color: social.color }}
+                          />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="pt-6">
+                    <button
+                      onClick={() => scrollToSection('preco')}
+                      className="w-full btn-primary justify-center shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all font-body font-light"
+                      data-testid="button-header-cta"
+                    >
+                      Inscrever-se Agora
+                    </button>
+                  </div>
                 </div>
               </div>
             </SheetContent>
