@@ -74,13 +74,13 @@ export function Contact() {
               </div>
               
               <a
-                href="https://www.instagram.com/integra.pocus"
+                href="https://www.instagram.com/integrapocus/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2"
                 data-testid="link-instagram"
               >
-                <p className="text-white font-body font-light">@integra.pocus</p>
+                <p className="text-white font-body font-light">@integrapocus</p>
               </a>
             </div>
           </div>

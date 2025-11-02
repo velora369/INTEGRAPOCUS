@@ -127,7 +127,7 @@ export function Header() {
     {
       name: 'Instagram',
       icon: FaInstagram,
-      url: 'https://instagram.com/integrapocus',
+      url: 'https://www.instagram.com/integrapocus/',
       color: '#E4405F',
     }
   ];

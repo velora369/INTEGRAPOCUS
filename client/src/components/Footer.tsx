@@ -140,7 +140,7 @@ export function Footer() {
                       asChild
                     >
                       <a
-                        href="https://www.instagram.com/integra.pocus"
+                        href="https://www.instagram.com/integrapocus/"
                         target="_blank"
                         rel="noopener noreferrer"
                         data-testid="button-footer-instagram"
