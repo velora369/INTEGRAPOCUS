@@ -12,17 +12,20 @@ function SmartphoneIcon() {
 
 function MagnifyingGlassIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-full h-full">
-      <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/>
-      <path fill="currentColor" d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" className="w-full h-full">
+      <g fill="none" stroke="#fff" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M22.25 14.246h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1"/>
+        <path d="M17.344 17.527a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/>
+        <path strokeLinecap="round" strokeLinejoin="round" d="m23.135 22.323l-2.212-3.317a.75.75 0 0 0-1.275.044l-2.4 4.2m-5.998 0h-9a1.5 1.5 0 0 1-1.5-1.5V2.25a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.047.426l3 2.883a1.5 1.5 0 0 1 .453 1.074v6.117m-16.5-3h12m-12 4.5h6m-6 4.5h6"/>
+      </g>
     </svg>
   );
 }
 
 function ChecklistIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-full h-full">
-      <path fill="currentColor" fillRule="evenodd" d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M10 17H5v-2h5zm0-4H5v-2h5zm0-4H5V7h5zm4.82 6L12 12.16l1.41-1.41l1.41 1.42L17.99 9l1.42 1.42z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" className="w-full h-full">
+      <path fill="#fff" d="M11.5 13.5h1v-6h-1zm3-1.5h1V8.5h-1zm-6-.5h1v-3h-1zM7 21v-3.762q-1.425-1.3-2.212-2.922T4 10.986q0-3.327 2.333-5.657T12 3q2.702 0 4.884 1.645t2.83 4.25l1.036 4.103q.1.38-.142.692q-.242.31-.646.31H18v3.385q0 .666-.475 1.14t-1.14.475H14v2h-1v-3h3.385q.269 0 .442-.173t.173-.442V13h2.7l-.95-3.875q-.575-2.294-2.47-3.71Q14.388 4 12 4Q9.1 4 7.05 6.03Q5 8.062 5 10.97q0 1.494.613 2.84q.612 1.346 1.737 2.392L8 16.8V21zm5.35-8.5"/>
     </svg>
   );
 }
