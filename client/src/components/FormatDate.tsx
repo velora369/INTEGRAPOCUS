@@ -1,3 +1,4 @@
+import { MapPin } from 'lucide-react';
 
 export function FormatDate() {
   return (
@@ -78,9 +79,19 @@ export function FormatDate() {
               
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
-                <div>
+                <div className="w-full">
                   <p className="text-sm text-slate-600 mb-1 font-body font-light">Local</p>
-                  <p className="text-slate-800 font-body font-light">Clínica Integrativa Med Odonto, Rua Rosa Vermelha, nº 763, Aeroporto Velho. Entre Av Sergio Henn e Tv. Dália</p>
+                  <p className="text-slate-800 font-body font-light mb-3">Clínica Integrativa Med Odonto, Rua Rosa Vermelha, nº 763, Aeroporto Velho. Entre Av Sergio Henn e Tv. Dália</p>
+                  <a
+                    href="https://maps.app.goo.gl/F7NXF3mNzsWbx8qeA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white text-sm transition-colors font-body font-light"
+                    data-testid="link-map"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    Ver no Mapa
+                  </a>
                 </div>
               </div>
             </div>
