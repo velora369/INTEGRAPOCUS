@@ -1,4 +1,3 @@
-import { BookOpen, Calendar, Clock, MapPin } from 'lucide-react';
 
 export function FormatDate() {
   return (
@@ -21,10 +20,7 @@ export function FormatDate() {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Format Column */}
           <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-50 to-purple-50 border border-purple-100 shadow-lg">
-            <div className="flex items-center gap-3 mb-6">
-              <BookOpen className="w-8 h-8 text-purple-600" />
-              <h3 className="text-2xl text-slate-800 font-body font-light">Formato</h3>
-            </div>
+            <h3 className="text-2xl text-slate-800 font-body font-light mb-6">Formato</h3>
             
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -61,30 +57,27 @@ export function FormatDate() {
 
           {/* Agenda Column */}
           <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-50 to-blue-50 border border-blue-100 shadow-lg">
-            <div className="flex items-center gap-3 mb-6">
-              <Calendar className="w-8 h-8 text-blue-600" />
-              <h3 className="text-2xl text-slate-800 font-body font-light">Agenda</h3>
-            </div>
+            <h3 className="text-2xl text-slate-800 font-body font-light mb-6">Agenda</h3>
             
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <Calendar className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-slate-600 mb-1 font-body font-light">Data da Imersão</p>
                   <p className="text-slate-800 text-lg font-body font-light">29 de novembro de 2025</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <Clock className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-slate-600 mb-1 font-body font-light">Carga Horária</p>
                   <p className="text-slate-800 font-body font-light">A definir</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-slate-600 mb-1 font-body font-light">Local</p>
                   <p className="text-slate-800 font-body font-light">A definir</p>
