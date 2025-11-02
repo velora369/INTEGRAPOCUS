@@ -61,7 +61,7 @@ export function PartnersCarousel() {
     >
       <div className="container-custom">
         <div className="text-center mb-10">
-          <h2 className="text-xl md:text-2xl font-heading text-white/90">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-gradient-heading mb-6 font-title font-bold">
             Parceiros e Apoiadores
           </h2>
         </div>
