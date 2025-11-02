@@ -73,7 +73,7 @@ export function FAQ() {
                 }`}
               >
                 <div className="px-6 pb-6">
-                  <p className="text-white/70 leading-relaxed font-body font-light">{faq.answer}</p>
+                  <p className="text-white/70 leading-relaxed font-body font-bold">{faq.answer}</p>
                 </div>
               </div>
             </div>
