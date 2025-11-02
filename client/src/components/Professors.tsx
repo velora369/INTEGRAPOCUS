@@ -54,7 +54,7 @@ export function Professors() {
           {professors.map((professor, index) => (
             <motion.div
               key={index}
-              className="relative"
+              className="relative group"
               data-testid={`card-professor-${index}`}
               initial="rest"
               whileHover="hover"
