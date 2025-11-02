@@ -72,7 +72,7 @@ export function FormatDate() {
                 <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-slate-600 mb-1 font-body font-light">Carga Horária</p>
-                  <p className="text-slate-800 font-body font-light">A definir</p>
+                  <p className="text-slate-800 font-body font-light">8 horas</p>
                 </div>
               </div>
               
@@ -80,7 +80,7 @@ export function FormatDate() {
                 <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-slate-600 mb-1 font-body font-light">Local</p>
-                  <p className="text-slate-800 font-body font-light">A definir</p>
+                  <p className="text-slate-800 font-body font-light">Clínica Integrativa Med Odonto, Rua Rosa Vermelha, nº 763, Aeroporto Velho. Entre Av Sergio Henn e Tv. Dália</p>
                 </div>
               </div>
             </div>

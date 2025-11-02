@@ -10,9 +10,9 @@ export function Notices() {
     },
     {
       icon: MapPin,
-      title: 'Local em Definição',
-      description: 'O local exato da imersão será confirmado nas próximas semanas. Todos os inscritos serão notificados.',
-      date: 'Em breve'
+      title: 'Local Confirmado',
+      description: 'O endereço fica na clínica Integrativa Med Odonto, Rua Rosa Vermelha, número 763, Aeroporto Velho. Entre Av Sergio Henn e Tv. Dália.',
+      date: 'Confirmado'
     },
     {
       icon: Bell,
