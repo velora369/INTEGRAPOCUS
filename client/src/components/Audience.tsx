@@ -54,11 +54,10 @@ export function Audience() {
     },
     {
       icon: () => (
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="0 0 24 24">
-          <g fill="currentColor">
-            <path d="M3 10a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm2 1v6h14v-6z"/>
-            <path d="M8 14a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-1-4a1 1 0 1 1 2 0a1 1 0 0 1-2 0m10 4a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-1-4a1 1 0 1 1 2 0a1 1 0 0 1-2 0"/>
-            <path fillRule="evenodd" d="M2 6a1 1 0 0 1 1-1h1V4a1 1 0 1 1 2 0v1h12V4a1 1 0 1 1 2 0v1h1a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m12 13a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1M3 19a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2z" clipRule="evenodd"/>
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="0 0 48 48">
+          <g fill="currentColor" fillRule="evenodd" clipRule="evenodd">
+            <path d="M24 6c-2.806 0-6.238 1.026-8.264 1.731c-.988.344-1.483 1.417-1.156 2.41l2.148 6.521a8 8 0 1 0 14.544 0l2.148-6.52c.327-.994-.168-2.067-1.156-2.41C30.237 7.025 26.806 6 24 6m-5.62 12.425c3.757-1.543 7.483-1.543 11.24 0q.09.037.186.056a6 6 0 1 1-11.613 0q.096-.019.187-.056M25 11h2v2h-2v2h-2v-2h-2v-2h2V9h2z"/>
+            <path d="M22.85 32.193L16.88 28S6 31.393 6 35.467V42h36v-6.533C42 31.393 31.121 28 31.121 28l-5.972 4.193a2 2 0 0 1-2.298 0M32 32h2v2h2v2h-2v2h-2v-2h-2v-2h2z"/>
           </g>
         </svg>
       ),
