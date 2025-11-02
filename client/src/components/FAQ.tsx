@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { motion } from 'framer-motion';
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -46,37 +47,70 @@ export function FAQ() {
 
         <div className="max-w-3xl mx-auto space-y-4">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
-              className="card-glass"
+              className="card-glass overflow-hidden"
               data-testid={`faq-item-${index}`}
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
+              variants={{
+                rest: { 
+                  y: 0, 
+                  scale: 1,
+                  boxShadow: "0 4px 20px rgba(124, 109, 255, 0.1)"
+                },
+                hover: { 
+                  y: -4,
+                  scale: 1.01,
+                  boxShadow: "0 8px 30px rgba(124, 109, 255, 0.2), 0 0 20px rgba(61, 163, 255, 0.1)",
+                  transition: { 
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }
+                },
+                tap: { 
+                  scale: 0.99,
+                  transition: { 
+                    duration: 0.1,
+                    ease: "easeOut"
+                  }
+                }
+              }}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full text-left p-6 flex items-center justify-between gap-4 hover-elevate active-elevate-2"
+                className="w-full text-left p-6 flex items-center justify-between gap-4"
                 aria-expanded={openIndex === index}
                 data-testid={`button-faq-${index}`}
               >
                 <h3 className="text-lg text-white pr-4 font-body font-light">
                   {faq.question}
                 </h3>
-                <ChevronDown
-                  className={`w-6 h-6 text-white/60 flex-shrink-0 transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                />
+                <motion.div
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  <ChevronDown
+                    className="w-6 h-6 text-white/60 flex-shrink-0"
+                  />
+                </motion.div>
               </button>
 
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? "max-h-96" : "max-h-0"
-                }`}
+              <motion.div
+                initial={false}
+                animate={{ 
+                  height: openIndex === index ? "auto" : 0,
+                  opacity: openIndex === index ? 1 : 0
+                }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="overflow-hidden"
               >
                 <div className="px-6 pb-6">
                   <p className="text-white/70 leading-relaxed font-body font-bold">{faq.answer}</p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 export function Professors() {
   const professors = [
     {
@@ -50,12 +52,52 @@ export function Professors() {
 
         <div className="space-y-12 max-w-6xl mx-auto">
           {professors.map((professor, index) => (
-            <div
+            <motion.div
               key={index}
-              className="relative group"
+              className="relative"
               data-testid={`card-professor-${index}`}
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
+              variants={{
+                rest: { 
+                  y: 0, 
+                  scale: 1
+                },
+                hover: { 
+                  y: -8,
+                  scale: 1.01,
+                  transition: { 
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }
+                },
+                tap: { 
+                  scale: 0.99,
+                  transition: { 
+                    duration: 0.1,
+                    ease: "easeOut"
+                  }
+                }
+              }}
             >
-              <div className="relative card-glass overflow-hidden border border-white/10 hover:border-blue-400/30 transition-all duration-500">
+              <motion.div 
+                className="relative card-glass overflow-hidden border border-white/10"
+                variants={{
+                  rest: {
+                    borderColor: "rgba(255, 255, 255, 0.1)",
+                    boxShadow: "0 4px 20px rgba(124, 109, 255, 0.1)"
+                  },
+                  hover: {
+                    borderColor: "rgba(96, 165, 250, 0.3)",
+                    boxShadow: "0 12px 40px rgba(124, 109, 255, 0.25), 0 0 30px rgba(61, 163, 255, 0.15)",
+                    transition: { 
+                      duration: 0.3,
+                      ease: "easeOut"
+                    }
+                  }
+                }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 <div className="relative grid md:grid-cols-[1fr,1.2fr] gap-8 p-6 md:p-10">
@@ -108,8 +150,8 @@ export function Professors() {
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
