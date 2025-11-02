@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 // Custom SVG Icons
 function SmartphoneIcon() {
   return (
@@ -121,49 +123,172 @@ export function EquipmentShowcase() {
           <div className="grid md:grid-cols-3 gap-6 mt-12" data-testid="container-equipment-features">
             
             {/* Feature 1: Portátil */}
-            <div className="card-glass p-6">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 p-3 sm:p-3.5">
+            <motion.div 
+              className="card-glass p-6"
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
+              variants={{
+                rest: { 
+                  y: 0, 
+                  scale: 1,
+                  boxShadow: "0 4px 20px rgba(124, 109, 255, 0.1)"
+                },
+                hover: { 
+                  y: -8,
+                  scale: 1.02,
+                  boxShadow: "0 12px 40px rgba(124, 109, 255, 0.25), 0 0 30px rgba(61, 163, 255, 0.15)",
+                  transition: { 
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }
+                },
+                tap: { 
+                  scale: 0.98,
+                  transition: { 
+                    duration: 0.1,
+                    ease: "easeOut"
+                  }
+                }
+              }}
+            >
+              <motion.div 
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 p-3 sm:p-3.5"
+                variants={{
+                  rest: { scale: 1, rotate: 0 },
+                  hover: { 
+                    scale: 1.1,
+                    rotate: 5,
+                    transition: { 
+                      duration: 0.3,
+                      ease: "easeOut"
+                    }
+                  }
+                }}
+              >
                 <div className="text-white w-full h-full">
                   <SmartphoneIcon />
                 </div>
-              </div>
+              </motion.div>
               <h3 className="text-lg text-white mb-2 font-body font-light" data-testid="text-feature-portable-title">
                 Ultra Portátil
               </h3>
               <p className="text-white/70 text-sm leading-relaxed font-body font-light" data-testid="text-feature-portable-description">
                 Conecta diretamente ao smartphone ou tablet, permitindo mobilidade total durante as práticas.
               </p>
-            </div>
+            </motion.div>
 
             {/* Feature 2: Qualidade */}
-            <div className="card-glass p-6">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 p-3 sm:p-3.5">
+            <motion.div 
+              className="card-glass p-6"
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
+              variants={{
+                rest: { 
+                  y: 0, 
+                  scale: 1,
+                  boxShadow: "0 4px 20px rgba(124, 109, 255, 0.1)"
+                },
+                hover: { 
+                  y: -8,
+                  scale: 1.02,
+                  boxShadow: "0 12px 40px rgba(124, 109, 255, 0.25), 0 0 30px rgba(61, 163, 255, 0.15)",
+                  transition: { 
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }
+                },
+                tap: { 
+                  scale: 0.98,
+                  transition: { 
+                    duration: 0.1,
+                    ease: "easeOut"
+                  }
+                }
+              }}
+            >
+              <motion.div 
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 p-3 sm:p-3.5"
+                variants={{
+                  rest: { scale: 1, rotate: 0 },
+                  hover: { 
+                    scale: 1.1,
+                    rotate: 5,
+                    transition: { 
+                      duration: 0.3,
+                      ease: "easeOut"
+                    }
+                  }
+                }}
+              >
                 <div className="text-white w-full h-full">
                   <MagnifyingGlassIcon />
                 </div>
-              </div>
+              </motion.div>
               <h3 className="text-lg text-white mb-2 font-body font-light" data-testid="text-feature-quality-title">
                 Alta Resolução
               </h3>
               <p className="text-white/70 text-sm leading-relaxed font-body font-light" data-testid="text-feature-quality-description">
                 Imagens de qualidade clínica com tecnologia de última geração para diagnósticos precisos.
               </p>
-            </div>
+            </motion.div>
 
             {/* Feature 3: Fácil Uso */}
-            <div className="card-glass p-6">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 p-3 sm:p-3.5">
+            <motion.div 
+              className="card-glass p-6"
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
+              variants={{
+                rest: { 
+                  y: 0, 
+                  scale: 1,
+                  boxShadow: "0 4px 20px rgba(124, 109, 255, 0.1)"
+                },
+                hover: { 
+                  y: -8,
+                  scale: 1.02,
+                  boxShadow: "0 12px 40px rgba(124, 109, 255, 0.25), 0 0 30px rgba(61, 163, 255, 0.15)",
+                  transition: { 
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }
+                },
+                tap: { 
+                  scale: 0.98,
+                  transition: { 
+                    duration: 0.1,
+                    ease: "easeOut"
+                  }
+                }
+              }}
+            >
+              <motion.div 
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 p-3 sm:p-3.5"
+                variants={{
+                  rest: { scale: 1, rotate: 0 },
+                  hover: { 
+                    scale: 1.1,
+                    rotate: 5,
+                    transition: { 
+                      duration: 0.3,
+                      ease: "easeOut"
+                    }
+                  }
+                }}
+              >
                 <div className="text-white w-full h-full">
                   <ChecklistIcon />
                 </div>
-              </div>
+              </motion.div>
               <h3 className="text-lg text-white mb-2 font-body font-light" data-testid="text-feature-easy-title">
                 Intuitivo
               </h3>
               <p className="text-white/70 text-sm leading-relaxed font-body font-light" data-testid="text-feature-easy-description">
                 Interface amigável que facilita o aprendizado e permite foco total na técnica de exame.
               </p>
-            </div>
+            </motion.div>
 
           </div>
 
