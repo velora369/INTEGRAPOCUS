@@ -72,12 +72,12 @@ export function EquipmentShowcase() {
               {/* 3D Embed */}
               <div className="aspect-[16/10] w-full">
                 <iframe 
-                  title="Butterfly IQ - Modelo 3D Interativo" 
+                  title="Butterfly IQ" 
                   className="w-full h-full"
                   frameBorder="0" 
                   allowFullScreen 
                   allow="autoplay; fullscreen; xr-spatial-tracking" 
-                  src="https://sketchfab.com/models/c8b00e87bc5f4b12a3e8f853f7f10ac9/embed?autostart=1&ui_theme=dark"
+                  src="https://sketchfab.com/models/c8b00e87bc5f4b12a3e8f853f7f10ac9/embed?autospin=1&autostart=1&preload=1&transparent=1&ui_hint=0"
                   data-testid="iframe-equipment-3d"
                 />
               </div>
@@ -86,9 +86,9 @@ export function EquipmentShowcase() {
               <div className="px-4 py-3 bg-black/30 backdrop-blur-sm border-t border-white/5">
                 <p className="text-xs text-white/50 text-center font-body font-light">
                   <a 
-                    href="https://sketchfab.com/3d-models/butterfly-iq-c8b00e87bc5f4b12a3e8f853f7f10ac9" 
+                    href="https://sketchfab.com/3d-models/butterfly-iq-c8b00e87bc5f4b12a3e8f853f7f10ac9?utm_medium=embed&utm_campaign=share-popup&utm_content=c8b00e87bc5f4b12a3e8f853f7f10ac9" 
                     target="_blank" 
-                    rel="noopener noreferrer" 
+                    rel="nofollow noopener noreferrer" 
                     className="text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
                     data-testid="link-equipment-sketchfab"
                   >
@@ -96,14 +96,22 @@ export function EquipmentShowcase() {
                   </a>
                   {' '}por{' '}
                   <a 
-                    href="https://sketchfab.com/dcwaltman" 
+                    href="https://sketchfab.com/dcwaltman?utm_medium=embed&utm_campaign=share-popup&utm_content=c8b00e87bc5f4b12a3e8f853f7f10ac9" 
                     target="_blank" 
-                    rel="noopener noreferrer" 
+                    rel="nofollow noopener noreferrer" 
                     className="text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
                   >
                     Daniel Waltman
                   </a>
-                  {' '}no Sketchfab
+                  {' '}no{' '}
+                  <a 
+                    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=c8b00e87bc5f4b12a3e8f853f7f10ac9" 
+                    target="_blank" 
+                    rel="nofollow noopener noreferrer" 
+                    className="text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
+                  >
+                    Sketchfab
+                  </a>
                 </p>
               </div>
             </div>
