@@ -57,7 +57,7 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white transition-transform hover:scale-110 cursor-pointer"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white transition-transform hover:scale-110 cursor-pointer"
                 data-testid="button-newsletter-submit"
                 aria-label="Inscrever"
               >
