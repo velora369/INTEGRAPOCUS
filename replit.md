@@ -114,6 +114,29 @@ Preferred communication style: Simple, everyday language.
     - Added prefers-reduced-motion support for shimmer animation to respect user accessibility preferences
     - Responsive scaling maintains visual hierarchy across all breakpoints (mobile to 4K)
     - Architect review confirmed: HTML semantically correct, all effects functional, fully responsive, accessibility preserved
+  - **CTA Enhancements for Better Conversion**:
+    - Added vibrant CTA button to "Avisos e Atualizações" section (Notices.tsx):
+      - "Garantir Minha Vaga Agora" button with purple-blue gradient (purple-500 → purple-400 → blue-500)
+      - Animated arrow icon with continuous horizontal movement (Framer Motion)
+      - Layered glow effect using blur-xl backdrop with opacity transitions
+      - Hover animations: scale (1.05), gradient overlay, enhanced shadow
+      - Fade-in entrance animation with viewport detection
+    - Added vibrant CTA button to "O que você vai desenvolver?" section (Outcomes.tsx):
+      - "Quero Me Inscrever Agora" button matching the same visual style
+      - Same gradient pattern, animations, and glow effects for consistency
+      - Strategic placement after showcasing all course benefits
+    - Enhanced existing CTAs in Pricing section (Pricing.tsx):
+      - Upgraded both PIX and credit card buttons with vibrant gradients
+      - Added animated arrow icons with hover translate effects
+      - Implemented multi-layer visual effects: gradient overlay + glow backdrop + shadow
+      - Scale animation on hover (1.05) with colored shadow (purple-500/40)
+      - Maintained responsive behavior (w-full sm:w-auto)
+    - Enhanced CTA in mobile menu (Header.tsx):
+      - "Inscrever-se Agora" button now uses same vibrant gradient pattern
+      - Added animated arrow icon for visual consistency across all CTAs
+      - Glow and scale effects match other CTAs throughout the site
+    - All CTAs maintain minimalismo while being significantly more eye-catching
+    - Architect review confirmed: gradients render consistently, Framer Motion usage is idiomatic, all data-testid attributes present, scrolling behavior preserved
 
 ## System Architecture
 
