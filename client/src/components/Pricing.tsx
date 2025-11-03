@@ -276,6 +276,11 @@ export function Pricing() {
                   * Política de cancelamento e reembolso disponível mediante solicitação.
                   <br />
                   Entre em contato para mais informações sobre condições e prazos.
+                  {selectedPayment === 'cartao' && (
+                    <>
+                      {' '}O valor parcelado possui acréscimo.
+                    </>
+                  )}
                 </p>
               </div>
             </div>
