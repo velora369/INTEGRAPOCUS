@@ -85,7 +85,7 @@ export function EquipmentShowcase() {
                   frameBorder="0" 
                   allowFullScreen 
                   allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
-                  src="https://player.cloudinary.com/embed/?cloud_name=dgu5xgx7q&public_id=video_propaganda_butterfly_jkbbeb&profile=cld-default"
+                  src="https://player.cloudinary.com/embed/?cloud_name=dgu5xgx7q&public_id=video_propaganda_butterfly_jkbbeb&profile=cld-default&autoplay=true&loop=true&muted=true"
                   data-testid="iframe-equipment-video"
                   loading="lazy"
                 />
