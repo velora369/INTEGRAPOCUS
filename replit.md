@@ -7,7 +7,14 @@ This project is a single-page marketing website for Integra POCUS, a hands-on me
 Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
-- **November 3, 2025**: 
+- **November 3, 2025**:
+  - **Typography System Overhaul for Improved Readability**:
+    - Added NeueMontreal-Medium (font-weight 500) to typography system
+    - Replaced all body text and subheadlines from NeueMontreal-Light to NeueMontreal-Medium for significantly better legibility
+    - Updated default body font-weight from 300 to 500 across entire site
+    - Maintained headline typography (Bodoni Moda) for brand consistency
+    - All component text (cards, descriptions, labels, buttons) now use medium weight for easier reading
+    - Improvement particularly important for sales conversion as users can now easily read course information
   - Increased font sizes across key sections for improved readability, including:
     - "O que você vai desenvolver?" (Outcomes)
     - "Conheça o Equipamento Usado nas Aulas" (EquipmentShowcase)
@@ -61,7 +68,7 @@ Preferred communication style: Simple, everyday language.
 ## System Architecture
 
 ### Frontend
-The frontend is built with **React 18** and **TypeScript**, using **Vite** for tooling. **Wouter** handles client-side routing. The UI is constructed using **Radix UI** primitives and **shadcn/ui** components, styled with **Tailwind CSS** using custom design tokens and `class-variance-authority` for variant management. The design emphasizes a dark theme with blue/violet accents, gradient backgrounds with grain texture overlays, and a dual-font typography system using NeueMontreal-Bold for titles and NeueMontreal-Light for body text. It features a modular component architecture (Header, Hero, Audience, Outcomes, Professors, Pricing, FAQ, Contact, Footer) and is fully responsive with a mobile-first approach. JSON-LD schema markup is included for SEO.
+The frontend is built with **React 18** and **TypeScript**, using **Vite** for tooling. **Wouter** handles client-side routing. The UI is constructed using **Radix UI** primitives and **shadcn/ui** components, styled with **Tailwind CSS** using custom design tokens and `class-variance-authority` for variant management. The design emphasizes a dark theme with blue/violet accents, gradient backgrounds with grain texture overlays, and a dual-font typography system using Bodoni Moda for headlines and NeueMontreal-Medium (previously Light) for body text and subheadlines. It features a modular component architecture (Header, Hero, Audience, Outcomes, Professors, Pricing, FAQ, Contact, Footer) and is fully responsive with a mobile-first approach. JSON-LD schema markup is included for SEO.
 
 ### Backend
 A minimal **Express.js** server is used primarily for serving static files in production. While **Drizzle ORM** is configured for PostgreSQL with a basic users table and Zod for schema validation, these are currently unused for this static landing page but prepared for future expansion. In-memory storage is implemented as a placeholder.
@@ -88,7 +95,7 @@ A minimal **Express.js** server is used primarily for serving static files in pr
 - **PostCSS with Autoprefixer**: For CSS processing.
 
 ### External Assets
-- **Custom Fonts**: NeueMontreal-Bold and NeueMontreal-Light (OTF format) from `attached_assets/`.
+- **Custom Fonts**: NeueMontreal-Bold, NeueMontreal-Medium, and NeueMontreal-Light (OTF format) from `attached_assets/`.
 - **Professor Images**: Hosted on WordPress CDN (`yungwizzeprod2.wordpress.com`).
 
 ### Deployment Configuration
