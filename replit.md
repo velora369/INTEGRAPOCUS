@@ -1,6 +1,9 @@
 ## Overview
 This project is a single-page marketing website for Integra POCUS, a hands-on medical ultrasound (Point-of-Care Ultrasound) training course. Built with React and TypeScript, it features a modern, minimalist, and futuristic design. The landing page showcases course details, faculty, pricing, and contact information for an immersion event scheduled for November 29, 2025. The business vision is to effectively market this specialized medical training, reaching a professional audience and facilitating registrations.
 
+## Recent Changes
+- **November 3, 2025**: Fixed mobile responsiveness issue in pricing section CTAs. Buttons now display text in a single line on mobile devices using `whitespace-nowrap` and optimized spacing/font sizes.
+
 ## User Preferences
 Preferred communication style: Simple, everyday language.
 
