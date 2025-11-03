@@ -221,7 +221,7 @@ export function Pricing() {
                       href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center"
+                      className="group relative inline-flex items-center gap-2 px-6 sm:px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-base sm:text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center whitespace-nowrap"
                       data-testid="button-pricing-main-cta"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -235,7 +235,7 @@ export function Pricing() {
                         strokeWidth="2.5" 
                         strokeLinecap="round" 
                         strokeLinejoin="round"
-                        className="relative z-10 group-hover:translate-x-1 transition-transform"
+                        className="relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0"
                       >
                         <line x1="5" y1="12" x2="19" y2="12"/>
                         <polyline points="12 5 19 12 12 19"/>
@@ -247,7 +247,7 @@ export function Pricing() {
                       href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center"
+                      className="group relative inline-flex items-center gap-2 px-6 sm:px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-base sm:text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center whitespace-nowrap"
                       data-testid="button-pricing-main-cta"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -261,7 +261,7 @@ export function Pricing() {
                         strokeWidth="2.5" 
                         strokeLinecap="round" 
                         strokeLinejoin="round"
-                        className="relative z-10 group-hover:translate-x-1 transition-transform"
+                        className="relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0"
                       >
                         <line x1="5" y1="12" x2="19" y2="12"/>
                         <polyline points="12 5 19 12 12 19"/>
