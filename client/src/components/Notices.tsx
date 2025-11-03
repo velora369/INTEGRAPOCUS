@@ -127,6 +127,49 @@ export function Notices() {
             );
           })}
         </div>
+
+        <motion.div 
+          className="max-w-3xl mx-auto mt-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <p className="text-white/90 text-lg md:text-xl mb-8 font-body font-medium">
+            Não perca a oportunidade de fazer parte desta experiência transformadora!
+          </p>
+          <motion.a
+            href="#preco"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+            data-testid="button-notices-cta"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="relative z-10">Garantir Minha Vaga Agora</span>
+            <motion.svg 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="relative z-10"
+              animate={{ x: [0, 5, 0] }}
+              transition={{ 
+                repeat: Infinity, 
+                duration: 1.5,
+                ease: "easeInOut"
+              }}
+            >
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </motion.svg>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-400/50 to-blue-400/50 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

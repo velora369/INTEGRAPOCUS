@@ -221,26 +221,52 @@ export function Pricing() {
                       href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-primary-modern group/btn w-full sm:w-auto font-body font-medium"
+                      className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center"
                       data-testid="button-pricing-main-cta"
                     >
-                      <span className="relative z-10">
-                        Garantir minha vaga no PIX
-                      </span>
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <span className="relative z-10">Garantir minha vaga no PIX</span>
+                      <svg 
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2.5" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        className="relative z-10 group-hover:translate-x-1 transition-transform"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                      </svg>
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-400/50 to-blue-400/50 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
                     </a>
                   ) : (
                     <a
                       href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-primary-modern group/btn w-full sm:w-auto font-body font-medium"
+                      className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center"
                       data-testid="button-pricing-main-cta"
                     >
-                      <span className="relative z-10">
-                        Garantir minha vaga no cartão
-                      </span>
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <span className="relative z-10">Garantir minha vaga no cartão</span>
+                      <svg 
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2.5" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        className="relative z-10 group-hover:translate-x-1 transition-transform"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                      </svg>
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-400/50 to-blue-400/50 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
                     </a>
                   )}
                 </div>
