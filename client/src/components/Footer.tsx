@@ -55,15 +55,14 @@ export function Footer() {
                 required
                 data-testid="input-newsletter-email"
               />
-              <Button
+              <button
                 type="submit"
-                size="icon"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 bg-primary text-white transition-transform hover:scale-105"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white transition-transform hover:scale-110 cursor-pointer"
                 data-testid="button-newsletter-submit"
+                aria-label="Inscrever"
               >
-                <Send className="h-4 w-4" />
-                <span className="sr-only">Inscrever</span>
-              </Button>
+                <Send className="h-5 w-5" />
+              </button>
             </form>
             <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" aria-hidden="true" />
           </div>
