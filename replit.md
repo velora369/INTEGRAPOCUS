@@ -37,6 +37,10 @@ Preferred communication style: Simple, everyday language.
     - Updated both "Garantir minha vaga no PIX" and "Garantir minha vaga no cartão" buttons to redirect to checkout URL
     - Both buttons now open https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117 in new tab
     - Changed cartão button from internal scroll link to external checkout link for unified conversion funnel
+  - Hero section typography enhancement:
+    - Increased "Integra POCUS" title size from default to text-5xl md:text-7xl lg:text-8xl
+    - Created stronger visual hierarchy with main brand title significantly larger than subtitle
+    - Maintains responsive scaling across all breakpoints for optimal readability
 
 ## System Architecture
 
