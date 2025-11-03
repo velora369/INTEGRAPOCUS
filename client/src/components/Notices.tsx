@@ -39,7 +39,7 @@ export function Notices() {
     {
       icon: WarningIcon,
       title: 'Vagas Limitadas',
-      description: 'Para garantir a qualidade do hands-on, o número de participantes é restrito. Garanta sua vaga o quanto antes.',
+      description: 'Para garantir a qualidade do hands-on, o número de participantes é restrito a 9 alunos. Garanta sua vaga o quanto antes.',
       date: 'Importante'
     }
   ];
