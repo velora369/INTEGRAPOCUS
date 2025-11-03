@@ -67,56 +67,37 @@ export function EquipmentShowcase() {
             </p>
           </div>
 
-          {/* 3D Model Container */}
-          <div className="relative" data-testid="container-equipment-3d">
-            <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl">
+          {/* Video Container */}
+          <div className="relative" data-testid="container-equipment-video">
+            <motion.div 
+              className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               
-              {/* 3D Embed */}
-              <div className="aspect-[16/10] w-full">
+              {/* Video Embed */}
+              <div className="aspect-video w-full relative bg-gradient-to-br from-purple-900/20 to-blue-900/20">
                 <iframe 
-                  title="Butterfly IQ" 
-                  className="w-full h-full"
+                  title="Vídeo de Apresentação do Butterfly" 
+                  className="w-full h-full absolute inset-0"
                   frameBorder="0" 
                   allowFullScreen 
-                  allow="autoplay; fullscreen; xr-spatial-tracking" 
-                  src="https://sketchfab.com/models/c8b00e87bc5f4b12a3e8f853f7f10ac9/embed?autospin=1&autostart=1&preload=1&transparent=1&ui_hint=0"
-                  data-testid="iframe-equipment-3d"
+                  allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
+                  src="https://player.cloudinary.com/embed/?cloud_name=dgu5xgx7q&public_id=video_propaganda_butterfly_jkbbeb&profile=cld-default"
+                  data-testid="iframe-equipment-video"
+                  loading="lazy"
                 />
               </div>
 
-              {/* Attribution Footer */}
-              <div className="px-4 py-3 bg-black/30 backdrop-blur-sm border-t border-white/5">
-                <p className="text-xs text-white/50 text-center font-body font-light">
-                  <a 
-                    href="https://sketchfab.com/3d-models/butterfly-iq-c8b00e87bc5f4b12a3e8f853f7f10ac9?utm_medium=embed&utm_campaign=share-popup&utm_content=c8b00e87bc5f4b12a3e8f853f7f10ac9" 
-                    target="_blank" 
-                    rel="nofollow noopener noreferrer" 
-                    className="text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
-                    data-testid="link-equipment-sketchfab"
-                  >
-                    Butterfly IQ
-                  </a>
-                  {' '}por{' '}
-                  <a 
-                    href="https://sketchfab.com/dcwaltman?utm_medium=embed&utm_campaign=share-popup&utm_content=c8b00e87bc5f4b12a3e8f853f7f10ac9" 
-                    target="_blank" 
-                    rel="nofollow noopener noreferrer" 
-                    className="text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
-                  >
-                    Daniel Waltman
-                  </a>
-                  {' '}no{' '}
-                  <a 
-                    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=c8b00e87bc5f4b12a3e8f853f7f10ac9" 
-                    target="_blank" 
-                    rel="nofollow noopener noreferrer" 
-                    className="text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
-                  >
-                    Sketchfab
-                  </a>
+              {/* Video Caption */}
+              <div className="px-6 py-4 bg-gradient-to-r from-black/40 via-black/30 to-black/40 backdrop-blur-sm border-t border-white/5">
+                <p className="text-sm text-white/70 text-center font-body font-light">
+                  Veja o Butterfly IQ em ação: portabilidade e qualidade clínica ao seu alcance
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Features Grid */}
