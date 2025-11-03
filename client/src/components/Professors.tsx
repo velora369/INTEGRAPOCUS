@@ -6,10 +6,10 @@ export function Professors() {
       name: 'Dr. Emanuel Esposito',
       credentials: [
         'Nefrologista com mais de 24 anos de experiência',
-        'Responsável técnico em nefrologia e transplante em hospital terciário',
-        'Professor da UEPA',
+        'Responsável Técnico há mais de 16 anos pelo Serviço de Nefrologia e Transplante',
+        'Professor efetivo da UEPA (Universidade do Estado do Pará)',
         'Membro do comitê de POCUS da Sociedade Brasileira de Nefrologia',
-        'Mestrando pela UFOPA',
+        'Mestrando pela UFOPA (Universidade Federal do Oeste do Pará)',
         'Utiliza POCUS diariamente na prática clínica'
       ],
       images: [
@@ -20,9 +20,9 @@ export function Professors() {
     {
       name: 'Dr. Luan Moraes',
       credentials: [
-        'Médico formado pela UEPA',
-        'Coordenador de Clínica Médica do HRBA',
-        'Plantonista de emergência do HRBA',
+        'Médico formado pela UEPA (Universidade do Estado do Pará)',
+        'Coordenador de Clínica Médica do HRBA (Hospital Regional do Baixo Amazonas)',
+        'Plantonista de Emergência do HRBA (Hospital Regional do Baixo Amazonas)',
         'Atuação em Trauma e Estabilização de Pacientes Adultos (HMS)',
         'Experiência em pesquisa e ensino de POCUS'
       ],
