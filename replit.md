@@ -49,6 +49,11 @@ Preferred communication style: Simple, everyday language.
     - Increased vertical padding to py-20 md:py-28 lg:py-36 for better spacing
     - Added pb-2 to h1 element to ensure descenders display properly
     - Fixed issue where "g" in "Integra" was being cut off at bottom
+  - FAQ section responsiveness fixes:
+    - Added pt-2 pb-2 to FAQ heading container for vertical breathing room
+    - Increased h2 padding from pb-2 to pb-3 for better descender accommodation
+    - Increased h2 margin-bottom from mb-6 to mb-8 for improved vertical spacing
+    - Fixed issue where "g" in "Perguntas Frequentes" was being clipped
 
 ## System Architecture
 
