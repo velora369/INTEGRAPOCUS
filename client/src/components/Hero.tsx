@@ -128,10 +128,7 @@ export function Hero() {
               data-testid="text-hero-subtitle"
               variants={itemVariants}
             >
-              <span className="text-2xl md:text-3xl lg:text-4xl font-title font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-blue-400 bg-clip-text text-transparent block mb-3">
-                Imersão Hands-on em POCUS
-              </span>
-              Formação 100% presencial para integrar imagem e clínica no dia a dia: teoria objetiva em sala, estações práticas supervisionadas e checklists de decisão.
+              Imersão Hands-on em POCUS. Formação 100% presencial para integrar imagem e clínica no dia a dia: teoria objetiva em sala, estações práticas supervisionadas e checklists de decisão.
             </motion.p>
 
             {/* Pills - Proof Points */}
