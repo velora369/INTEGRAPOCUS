@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import mascoteUrl from '@assets/mascote-integra-pocus.webp';
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -92,16 +93,19 @@ export function Hero() {
       role="region"
       aria-label="Hero principal"
     >
-      <div className="container-custom py-20 md:py-28 lg:py-36 w-full">
+      <div className="container-custom py-20 md:py-28 lg:py-40 w-full">
         <motion.div 
-          className="max-w-4xl mx-auto"
+          className="max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           
-          {/* Content */}
-          <div className="relative z-10">
+          {/* Two Column Layout */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            {/* Left Column - Content */}
+            <div className="relative z-10">
             
             {/* H1 - Main Brand */}
             <motion.h1 
@@ -118,22 +122,15 @@ export function Hero() {
               />
             </motion.h1>
 
-            {/* Subheadline - Course Name */}
-            <motion.h2 
-              className="text-3xl md:text-4xl lg:text-5xl font-title font-bold mb-6 bg-gradient-to-r from-blue-300 via-purple-300 to-blue-400 bg-clip-text text-transparent"
-              data-testid="text-hero-subheadline"
-              variants={itemVariants}
-            >
-              Imersão Hands-on em POCUS
-            </motion.h2>
-
-            {/* Subtitle */}
+            {/* Subheadline - Combined */}
             <motion.p 
-              className="text-xl md:text-2xl lg:text-[1.6rem] text-white/90 mb-8 max-w-prose leading-relaxed font-body font-medium"
+              className="text-xl md:text-2xl lg:text-[1.7rem] text-white/90 mb-8 leading-relaxed font-body font-medium"
               data-testid="text-hero-subtitle"
-              style={{ maxWidth: '70ch' }}
               variants={itemVariants}
             >
+              <span className="text-2xl md:text-3xl lg:text-4xl font-title font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-blue-400 bg-clip-text text-transparent block mb-3">
+                Imersão Hands-on em POCUS
+              </span>
               Formação 100% presencial para integrar imagem e clínica no dia a dia: teoria objetiva em sala, estações práticas supervisionadas e checklists de decisão.
             </motion.p>
 
@@ -276,7 +273,41 @@ export function Hero() {
                 Falar no WhatsApp
               </a>
             </motion.div>
+
+            </div>
+            {/* End Left Column */}
+
+            {/* Right Column - Mascote */}
+            <motion.div 
+              className="relative flex items-center justify-center mt-12 lg:mt-0"
+              variants={itemVariants}
+            >
+              <motion.img
+                src={mascoteUrl}
+                alt="Mascote Integra POCUS"
+                className="w-full max-w-md xl:max-w-lg h-auto object-contain"
+                data-testid="img-hero-mascote"
+                initial={{ opacity: 0, x: 50, scale: 0.9 }}
+                animate={{ 
+                  opacity: 1, 
+                  x: 0,
+                  scale: 1,
+                  transition: {
+                    duration: 0.8,
+                    ease: [0.22, 1, 0.36, 1],
+                    delay: 0.4
+                  }
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  transition: { duration: 0.3 }
+                }}
+              />
+            </motion.div>
+            {/* End Right Column */}
+
           </div>
+          {/* End Two Column Layout */}
 
         </motion.div>
       </div>
