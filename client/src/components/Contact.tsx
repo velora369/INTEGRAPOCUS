@@ -27,10 +27,10 @@ export function Contact() {
     >
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 id="contact-heading" className="text-3xl md:text-4xl lg:text-5xl text-gradient-heading mb-6 font-title font-bold">
+          <h2 id="contact-heading" className="text-4xl md:text-5xl lg:text-6xl text-gradient-heading mb-6 font-title font-bold">
             Fale Conosco
           </h2>
-          <p className="text-lg text-white/80 font-body font-light">
+          <p className="text-xl text-white/80 font-body font-light">
             Tire suas dúvidas ou garanta sua vaga entrando em contato.
           </p>
         </div>
@@ -41,7 +41,7 @@ export function Contact() {
             <div className="card-glass p-6">
               <div className="flex items-center gap-3 mb-4">
                 <SiWhatsapp className="w-6 h-6 text-[#25D366]" />
-                <h3 className="text-xl text-white font-body font-light">Suporte WhatsApp</h3>
+                <h3 className="text-2xl text-white font-body font-light">Suporte WhatsApp</h3>
               </div>
               
               <div className="space-y-3">
@@ -52,7 +52,7 @@ export function Contact() {
                   className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2 text-center"
                   data-testid="link-whatsapp-support-1"
                 >
-                  <p className="text-white/80 text-base font-body font-light">(93) 99167-4540 - Maria</p>
+                  <p className="text-white/80 text-lg font-body font-light">(93) 99167-4540 - Maria</p>
                 </a>
 
                 <a
@@ -62,7 +62,7 @@ export function Contact() {
                   className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2 text-center"
                   data-testid="link-whatsapp-support-2"
                 >
-                  <p className="text-white/80 text-base font-body font-light">(93) 998116-0181 - Vanessa</p>
+                  <p className="text-white/80 text-lg font-body font-light">(93) 998116-0181 - Vanessa</p>
                 </a>
               </div>
             </div>
@@ -70,7 +70,7 @@ export function Contact() {
             <div className="card-glass p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Instagram className="w-6 h-6 text-white/70" />
-                <h3 className="text-xl text-white font-body font-light">Instagram</h3>
+                <h3 className="text-2xl text-white font-body font-light">Instagram</h3>
               </div>
               
               <a
@@ -80,7 +80,7 @@ export function Contact() {
                 className="block p-4 rounded-lg bg-white/5 border border-white/10 hover-elevate active-elevate-2"
                 data-testid="link-instagram"
               >
-                <p className="text-white font-body font-light">@integrapocus</p>
+                <p className="text-white text-lg font-body font-light">@integrapocus</p>
               </a>
             </div>
           </div>
@@ -89,7 +89,7 @@ export function Contact() {
           <div className="card-glass p-6">
             <div className="flex items-center gap-3 mb-6">
               <Mail className="w-6 h-6 text-white/70" />
-              <h3 className="text-xl text-white font-body font-light">Envie uma Mensagem</h3>
+              <h3 className="text-2xl text-white font-body font-light">Envie uma Mensagem</h3>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">

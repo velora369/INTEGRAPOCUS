@@ -53,10 +53,10 @@ export function Notices() {
     >
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 id="notices-heading" className="text-3xl md:text-4xl lg:text-5xl text-gradient-heading mb-6 font-title font-bold">
+          <h2 id="notices-heading" className="text-4xl md:text-5xl lg:text-6xl text-gradient-heading mb-6 font-title font-bold">
             Avisos e Atualizações
           </h2>
-          <p className="text-lg text-white/80 font-body font-light">
+          <p className="text-xl text-white/80 font-body font-light">
             Fique por dentro das últimas novidades sobre a imersão.
           </p>
         </div>
@@ -117,10 +117,10 @@ export function Notices() {
                     {notice.date}
                   </p>
                 </div>
-                <h3 className="text-xl text-white mb-3 font-body font-light">
+                <h3 className="text-2xl text-white mb-3 font-body font-light">
                   {notice.title}
                 </h3>
-                <p className="text-sm text-white/70 leading-relaxed font-body font-light">
+                <p className="text-base text-white/70 leading-relaxed font-body font-light">
                   {notice.description}
                 </p>
               </motion.div>

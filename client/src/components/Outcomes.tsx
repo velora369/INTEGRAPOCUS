@@ -74,10 +74,10 @@ export function Outcomes() {
     >
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 id="outcomes-heading" className="text-3xl md:text-4xl lg:text-5xl text-gradient-heading mb-6 font-title font-bold">
+          <h2 id="outcomes-heading" className="text-4xl md:text-5xl lg:text-6xl text-gradient-heading mb-6 font-title font-bold">
             O que você vai desenvolver?
           </h2>
-          <p className="text-lg text-white/80 font-body font-light">
+          <p className="text-xl text-white/80 font-body font-light">
             Habilidades práticas e teóricas para aplicar o ultrassom point-of-care 
             com confiança em qualquer cenário clínico.
           </p>
@@ -136,10 +136,10 @@ export function Outcomes() {
                     <IconComponent />
                   </motion.div>
                 </div>
-                <h3 className="text-xl text-white mb-3 font-body font-light">
+                <h3 className="text-2xl text-white mb-3 font-body font-light">
                   {outcome.title}
                 </h3>
-                <p className="text-sm text-white/70 leading-relaxed font-body font-light">
+                <p className="text-base text-white/70 leading-relaxed font-body font-light">
                   {outcome.description}
                 </p>
               </motion.div>
