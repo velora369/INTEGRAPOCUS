@@ -129,7 +129,7 @@ export function Hero() {
 
             {/* Subtitle */}
             <motion.p 
-              className="text-xl md:text-2xl lg:text-[1.6rem] text-white/90 mb-8 max-w-prose leading-relaxed font-body font-light"
+              className="text-xl md:text-2xl lg:text-[1.6rem] text-white/90 mb-8 max-w-prose leading-relaxed font-body font-medium"
               data-testid="text-hero-subtitle"
               style={{ maxWidth: '70ch' }}
               variants={itemVariants}
@@ -157,7 +157,7 @@ export function Hero() {
                     <path d="M12.684 10.287C13.558 11.212 14.303 12 16 12h2a2 2 0 0 1 2 2v1a2 2 0 0 1-1 1.732V22h-3v-8c-2.617 0-3.956-1.45-4.84-2.405a14 14 0 0 0-.367-.388l1.414-1.414q.249.25.477.494M19 9.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0"/>
                   </g>
                 </svg>
-                <span className="font-body font-light">Presencial — teoria + hands-on</span>
+                <span className="font-body font-medium">Presencial — teoria + hands-on</span>
               </motion.div>
 
               {/* Pill 2: Raciocínio clínico */}
@@ -174,7 +174,7 @@ export function Hero() {
                     <path fillRule="evenodd" d="M14.778 4H18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3.152a2.99 2.99 0 0 1 2.813-2c1.296 0 2.399.834 2.813 2M6 6v14h12V6zm5.965-.751s-.747-.017-.747-.782c0 0 0-.73.747-.73c0 0 .747 0 .747.782c0 0-.017.73-.747.73" clipRule="evenodd"/>
                   </g>
                 </svg>
-                <span className="font-body font-light">Foco no raciocínio clínico</span>
+                <span className="font-body font-medium">Foco no raciocínio clínico</span>
               </motion.div>
 
               {/* Pill 3: Apenas 9 vagas */}
@@ -191,7 +191,7 @@ export function Hero() {
                     <animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
                   </path>
                 </svg>
-                <span className="font-body font-light">Apenas 9 vagas</span>
+                <span className="font-body font-medium">Apenas 9 vagas</span>
               </motion.div>
             </motion.div>
 
@@ -218,8 +218,8 @@ export function Hero() {
                     </g>
                   </svg>
                   <div>
-                    <p className="text-sm text-white/60 mb-1 font-body font-light">Data</p>
-                    <p className="text-white font-body font-light" data-testid="text-event-date">29 de novembro de 2025</p>
+                    <p className="text-sm text-white/60 mb-1 font-body font-medium">Data</p>
+                    <p className="text-white font-body font-medium" data-testid="text-event-date">29 de novembro de 2025</p>
                   </div>
                 </div>
 
@@ -235,8 +235,8 @@ export function Hero() {
                     <path fill="currentColor" d="M12 4c2.2 0 4 1.8 4 4c0 2.1-2.1 5.5-4 7.9c-1.9-2.5-4-5.8-4-7.9c0-2.2 1.8-4 4-4m0-2C8.7 2 6 4.7 6 8c0 4.5 6 11 6 11s6-6.6 6-11c0-3.3-2.7-6-6-6m0 4c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m8 13c0 2.2-3.6 4-8 4s-8-1.8-8-4c0-1.3 1.2-2.4 3.1-3.2l.6.9c-1 .5-1.7 1.1-1.7 1.8c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5c0-.7-.7-1.3-1.8-1.8l.6-.9c2 .8 3.2 1.9 3.2 3.2"/>
                   </svg>
                   <div>
-                    <p className="text-sm text-white/60 mb-1 font-body font-light">Local</p>
-                    <p className="text-white font-body font-light" data-testid="text-event-location">Santarém, Pará</p>
+                    <p className="text-sm text-white/60 mb-1 font-body font-medium">Local</p>
+                    <p className="text-white font-body font-medium" data-testid="text-event-location">Santarém, Pará</p>
                   </div>
                 </div>
               </div>
@@ -245,7 +245,7 @@ export function Hero() {
               <div className="mt-5 pt-5 border-t border-white/10">
                 <a
                   href="#preco"
-                  className="text-white/80 hover:text-white text-sm underline-offset-4 hover:underline transition-all inline-block font-body font-light"
+                  className="text-white/80 hover:text-white text-sm underline-offset-4 hover:underline transition-all inline-block font-body font-medium"
                   data-testid="link-hero-pricing"
                 >
                   Ver valores e formas de pagamento →
@@ -261,7 +261,7 @@ export function Hero() {
             >
               <button
                 onClick={() => scrollToSection('preco')}
-                className="btn-primary-hero text-lg px-8 font-body font-light"
+                className="btn-primary-hero text-lg px-8 font-body font-medium"
                 data-testid="button-hero-main-cta"
               >
                 Garantir minha vaga
@@ -270,7 +270,7 @@ export function Hero() {
                 href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre o Hands-on Integra POCUS."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary text-lg px-8 font-body font-light"
+                className="btn-secondary text-lg px-8 font-body font-medium"
                 data-testid="button-hero-whatsapp"
               >
                 Falar no WhatsApp

@@ -175,7 +175,7 @@ export function Header() {
               className="w-[300px] sm:w-[400px] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border-l border-white/10 backdrop-blur-xl flex flex-col p-0"
             >
               <SheetHeader className="border-b border-white/10 pb-3 px-6 pt-5 flex-shrink-0">
-                <SheetTitle className="text-xl text-white text-left font-body font-light">
+                <SheetTitle className="text-xl text-white text-left font-body font-medium">
                   Integra <span className="text-gradient-primary">POCUS</span>
                 </SheetTitle>
                 <SheetDescription className="sr-only">
@@ -191,7 +191,7 @@ export function Header() {
                       <button
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
-                        className="w-full text-left px-3 py-2 rounded-lg text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-white/10 font-body font-light text-[15px]"
+                        className="w-full text-left px-3 py-2 rounded-lg text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-white/10 font-body font-medium text-[15px]"
                         data-testid={`nav-link-${item.id}`}
                       >
                         {item.label}
@@ -201,7 +201,7 @@ export function Header() {
 
                   {/* Social Links Icons */}
                   <div className="pt-3 border-t border-white/10">
-                    <h3 className="text-xs text-white/60 uppercase tracking-wider mb-2 px-3 font-body font-light">
+                    <h3 className="text-xs text-white/60 uppercase tracking-wider mb-2 px-3 font-body font-medium">
                       Conecte-se conosco
                     </h3>
                     <div className="flex items-center gap-3 px-3">
@@ -228,7 +228,7 @@ export function Header() {
                   <div className="pt-3">
                     <button
                       onClick={() => scrollToSection('preco')}
-                      className="w-full btn-primary justify-center shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all font-body font-light text-sm py-2.5"
+                      className="w-full btn-primary justify-center shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all font-body font-medium text-sm py-2.5"
                       data-testid="button-header-cta"
                     >
                       Inscrever-se Agora

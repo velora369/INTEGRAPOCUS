@@ -57,7 +57,7 @@ export function Pricing() {
             <h2 id="pricing-heading" className="text-4xl md:text-5xl lg:text-6xl mb-4 font-title font-bold bg-gradient-to-r from-[#7C6DFF] via-[#3DA3FF] to-[#7C6DFF] bg-clip-text text-transparent">
               Investimento
             </h2>
-            <p className="text-xl text-slate-700 mb-8 font-body font-light">
+            <p className="text-xl text-slate-700 mb-8 font-body font-medium">
               Garanta sua vaga nesta experiência transformadora de aprendizado.
             </p>
 
@@ -75,7 +75,7 @@ export function Pricing() {
                   {selectedPayment === 'cartao' && (
                     <div className="absolute inset-0 rounded-full bg-white border border-slate-300 shadow-sm" />
                   )}
-                  <span className="relative z-10 flex items-center gap-2 font-body font-light">
+                  <span className="relative z-10 flex items-center gap-2 font-body font-medium">
                     <CreditCard className="w-4 h-4" />
                     Cartão
                   </span>
@@ -91,7 +91,7 @@ export function Pricing() {
                   {selectedPayment === 'pix' && (
                     <div className="absolute inset-0 rounded-full bg-white border border-slate-300 shadow-sm" />
                   )}
-                  <span className="relative z-10 flex items-center gap-2 font-body font-light">
+                  <span className="relative z-10 flex items-center gap-2 font-body font-medium">
                     <PixIcon className="w-4 h-4" />
                     PIX
                   </span>
@@ -136,7 +136,7 @@ export function Pricing() {
                     )}
                   </div>
                   <div>
-                    <p className="text-sm text-slate-600 uppercase tracking-wide font-body font-light">
+                    <p className="text-sm text-slate-600 uppercase tracking-wide font-body font-medium">
                       {selectedPayment === 'pix' ? 'À vista no Pix' : 'Cartão de Crédito'}
                     </p>
                     <div className={`h-0.5 w-12 rounded-full mt-1 bg-gradient-to-r ${
@@ -151,15 +151,15 @@ export function Pricing() {
                   {selectedPayment === 'pix' ? (
                     <>
                       <div className="flex items-baseline gap-2 mb-2">
-                        <span className="text-5xl md:text-6xl font-extralight text-slate-900 font-body font-light">R$ 2.497</span>
+                        <span className="text-5xl md:text-6xl font-medium text-slate-900 font-body font-medium">R$ 2.497</span>
                       </div>
-                      <p className="text-sm text-slate-600 font-body font-light">Pagamento único</p>
+                      <p className="text-sm text-slate-600 font-body font-medium">Pagamento único</p>
                     </>
                   ) : (
                     <>
                       <div className="flex items-baseline gap-2 mb-2">
-                        <span className="text-3xl font-extralight text-slate-600 font-body font-light">12x de</span>
-                        <span className="text-5xl md:text-6xl font-extralight text-slate-900 font-light">R$ 267,41</span>
+                        <span className="text-3xl font-medium text-slate-600 font-body font-medium">12x de</span>
+                        <span className="text-5xl md:text-6xl font-medium text-slate-900 font-medium">R$ 267,41</span>
                       </div>
                     </>
                   )}
@@ -170,22 +170,22 @@ export function Pricing() {
                 <ul className="space-y-3 mb-6">
                   {selectedPayment === 'pix' ? (
                     <>
-                      <li className="flex items-center gap-2 text-sm text-slate-700 font-body font-light">
+                      <li className="flex items-center gap-2 text-sm text-slate-700 font-body font-medium">
                         <div className="w-1 h-1 rounded-full bg-[#25D366]" />
                         Economia imediata
                       </li>
-                      <li className="flex items-center gap-2 text-sm text-slate-700 font-body font-light">
+                      <li className="flex items-center gap-2 text-sm text-slate-700 font-body font-medium">
                         <div className="w-1 h-1 rounded-full bg-[#25D366]" />
                         Confirmação instantânea
                       </li>
                     </>
                   ) : (
                     <>
-                      <li className="flex items-center gap-2 text-sm text-slate-700 font-body font-light">
+                      <li className="flex items-center gap-2 text-sm text-slate-700 font-body font-medium">
                         <div className="w-1 h-1 rounded-full bg-blue-400" />
                         Parcele em 12 vezes
                       </li>
-                      <li className="flex items-center gap-2 text-sm text-slate-700 font-body font-light">
+                      <li className="flex items-center gap-2 text-sm text-slate-700 font-body font-medium">
                         <div className="w-1 h-1 rounded-full bg-blue-400" />
                         Maior flexibilidade
                       </li>
@@ -199,7 +199,7 @@ export function Pricing() {
             <div className="relative group/card">
               <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-blue-500/20 opacity-0 group-hover/card:opacity-100 blur-sm transition-opacity duration-500" />
               <div className="relative bg-white border border-slate-200 rounded-3xl shadow-lg p-8 md:p-10 mt-6">
-                <h3 className="text-2xl md:text-3xl mb-8 text-center bg-gradient-to-r from-[#7C6DFF] via-[#3DA3FF] to-[#7C6DFF] bg-clip-text text-transparent font-body font-light">
+                <h3 className="text-2xl md:text-3xl mb-8 text-center bg-gradient-to-r from-[#7C6DFF] via-[#3DA3FF] to-[#7C6DFF] bg-clip-text text-transparent font-body font-medium">
                   O que está incluído
                 </h3>
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -209,7 +209,7 @@ export function Pricing() {
                         <div className="absolute inset-0 bg-[#25D366]/30 blur-md rounded-full group-hover/item:blur-lg transition-all" />
                         <Check className="relative w-5 h-5 text-[#25D366] flex-shrink-0" />
                       </div>
-                      <span className="text-slate-700 text-base md:text-lg group-hover/item:text-slate-900 transition-colors font-body font-light">{feature}</span>
+                      <span className="text-slate-700 text-base md:text-lg group-hover/item:text-slate-900 transition-colors font-body font-medium">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -221,7 +221,7 @@ export function Pricing() {
                       href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-primary-modern group/btn w-full sm:w-auto font-body font-light"
+                      className="btn-primary-modern group/btn w-full sm:w-auto font-body font-medium"
                       data-testid="button-pricing-main-cta"
                     >
                       <span className="relative z-10">
@@ -234,7 +234,7 @@ export function Pricing() {
                       href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-primary-modern group/btn w-full sm:w-auto font-body font-light"
+                      className="btn-primary-modern group/btn w-full sm:w-auto font-body font-medium"
                       data-testid="button-pricing-main-cta"
                     >
                       <span className="relative z-10">
@@ -246,7 +246,7 @@ export function Pricing() {
                 </div>
 
                 {/* Policy Note */}
-                <p className="text-center text-xs text-slate-500 font-body font-light">
+                <p className="text-center text-xs text-slate-500 font-body font-medium">
                   * Política de cancelamento e reembolso disponível mediante solicitação.
                   <br />
                   Entre em contato para mais informações sobre condições e prazos.

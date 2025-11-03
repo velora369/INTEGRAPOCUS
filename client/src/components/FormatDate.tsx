@@ -13,7 +13,7 @@ export function FormatDate() {
           <h2 id="format-heading" className="text-4xl md:text-5xl lg:text-6xl text-gradient-heading mb-6 font-title font-bold">
             Formato e Data
           </h2>
-          <p className="text-xl text-slate-700 font-body font-light">
+          <p className="text-xl text-slate-700 font-body font-medium">
             Uma experiência imersiva que combina teoria aplicada com prática intensiva hands-on.
           </p>
         </div>
@@ -27,8 +27,8 @@ export function FormatDate() {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0" />
                 <div>
-                  <p className="text-lg text-slate-800 mb-1 font-body font-light">Teoria presencial</p>
-                  <p className="text-base text-slate-600 font-body font-light">
+                  <p className="text-lg text-slate-800 mb-1 font-body font-medium">Teoria presencial</p>
+                  <p className="text-base text-slate-600 font-body font-medium">
                     Conceitos fundamentais e aplicações clínicas apresentados de forma clara e objetiva.
                   </p>
                 </div>
@@ -37,8 +37,8 @@ export function FormatDate() {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0" />
                 <div>
-                  <p className="text-lg text-slate-800 mb-1 font-body font-light">Hands-on presencial</p>
-                  <p className="text-base text-slate-600 font-body font-light">
+                  <p className="text-lg text-slate-800 mb-1 font-body font-medium">Hands-on presencial</p>
+                  <p className="text-base text-slate-600 font-body font-medium">
                     Estações práticas com equipamentos profissionais e supervisão direta dos instrutores.
                   </p>
                 </div>
@@ -47,8 +47,8 @@ export function FormatDate() {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0" />
                 <div>
-                  <p className="text-lg text-slate-800 mb-1 font-body font-light">Integração imagem + clínica + decisão</p>
-                  <p className="text-base text-slate-600 font-body font-light">
+                  <p className="text-lg text-slate-800 mb-1 font-body font-medium">Integração imagem + clínica + decisão</p>
+                  <p className="text-base text-slate-600 font-body font-medium">
                     Aprenda a transformar achados ultrassonográficos em condutas que fazem diferença.
                   </p>
                 </div>
@@ -64,29 +64,29 @@ export function FormatDate() {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
                 <div>
-                  <p className="text-base text-slate-600 mb-1 font-body font-light">Data da Imersão</p>
-                  <p className="text-slate-800 text-xl font-body font-light">29 de novembro de 2025</p>
+                  <p className="text-base text-slate-600 mb-1 font-body font-medium">Data da Imersão</p>
+                  <p className="text-slate-800 text-xl font-body font-medium">29 de novembro de 2025</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
                 <div>
-                  <p className="text-base text-slate-600 mb-1 font-body font-light">Carga Horária</p>
-                  <p className="text-slate-800 text-lg font-body font-light">8 horas</p>
+                  <p className="text-base text-slate-600 mb-1 font-body font-medium">Carga Horária</p>
+                  <p className="text-slate-800 text-lg font-body font-medium">8 horas</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
                 <div className="w-full">
-                  <p className="text-base text-slate-600 mb-1 font-body font-light">Local</p>
-                  <p className="text-slate-800 text-lg font-body font-light mb-3">Clínica Integrativa Med Odonto, Rua Rosa Vermelha, nº 763, Aeroporto Velho. Entre Av Sergio Henn e Tv. Dália</p>
+                  <p className="text-base text-slate-600 mb-1 font-body font-medium">Local</p>
+                  <p className="text-slate-800 text-lg font-body font-medium mb-3">Clínica Integrativa Med Odonto, Rua Rosa Vermelha, nº 763, Aeroporto Velho. Entre Av Sergio Henn e Tv. Dália</p>
                   <a
                     href="https://maps.app.goo.gl/F7NXF3mNzsWbx8qeA"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white text-sm transition-colors font-body font-light"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white text-sm transition-colors font-body font-medium"
                     data-testid="link-map"
                   >
                     <MapPin className="w-4 h-4" />
@@ -127,7 +127,7 @@ export function FormatDate() {
                 </path>
               </g>
             </svg>
-            <p className="text-slate-800 font-body font-light">
+            <p className="text-slate-800 font-body font-medium">
               Vagas limitadas! Garanta sua participação o quanto antes.
             </p>
           </div>

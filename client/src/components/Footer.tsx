@@ -43,7 +43,7 @@ export function Footer() {
             <h2 className="mb-4 text-3xl font-title font-bold tracking-tight text-white">
               Fique por dentro
             </h2>
-            <p className="mb-6 text-white/70 text-sm leading-relaxed font-body font-light">
+            <p className="mb-6 text-white/70 text-sm leading-relaxed font-body font-medium">
               Receba atualizações sobre a imersão, vagas e novidades exclusivas.
             </p>
             <form className="relative" onSubmit={handleNewsletterSubmit} data-testid="form-newsletter">
@@ -73,7 +73,7 @@ export function Footer() {
             <h3 className="mb-4 text-lg font-title font-semibold text-white">
               Navegação
             </h3>
-            <nav className="space-y-2 text-sm font-body font-light">
+            <nav className="space-y-2 text-sm font-body font-medium">
               <button
                 onClick={() => scrollToSection('inicio')}
                 className="block text-white/70 transition-colors hover:text-primary"
@@ -117,7 +117,7 @@ export function Footer() {
             <h3 className="mb-4 text-lg font-title font-semibold text-white">
               Entre em contato
             </h3>
-            <address className="space-y-2 text-sm not-italic text-white/70 font-body font-light">
+            <address className="space-y-2 text-sm not-italic text-white/70 font-body font-medium">
               <p className="font-medium text-white/90">Integra POCUS</p>
               <p>Santarém, Pará</p>
             </address>
@@ -181,7 +181,7 @@ export function Footer() {
                 </Tooltip>
               </TooltipProvider>
             </div>
-            <p className="text-xs text-white/60 leading-relaxed font-body font-light">
+            <p className="text-xs text-white/60 leading-relaxed font-body font-medium">
               Imersão 100% presencial em ultrassom point-of-care. Teoria objetiva + estações práticas supervisionadas.
             </p>
           </div>
@@ -189,7 +189,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t border-white/10 pt-8 text-center">
-          <p className="text-sm text-white/60 font-body font-light">
+          <p className="text-sm text-white/60 font-body font-medium">
             © {currentYear} Integra POCUS. Todos os direitos reservados.
           </p>
         </div>

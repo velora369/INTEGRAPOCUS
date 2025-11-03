@@ -46,7 +46,7 @@ export function EquipmentShowcase() {
                 className="px-4 py-2 rounded-full backdrop-blur-md border border-white/10 bg-white/5"
                 style={{ backdropFilter: 'blur(12px)' }}
               >
-                <span className="text-white/85 text-sm tracking-wide font-body font-light">
+                <span className="text-white/85 text-sm tracking-wide font-body font-medium">
                   Tecnologia de ponta
                 </span>
               </div>
@@ -60,10 +60,10 @@ export function EquipmentShowcase() {
             </h2>
 
             <p 
-              className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-body font-light"
+              className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-body font-medium"
               data-testid="text-equipment-subtitle"
             >
-              Utilizamos os aparelhos da <strong className="text-white font-body font-light">Butterfly</strong>, um ultrassom portátil revolucionário da Butterfly Network que conecta diretamente ao seu smartphone ou tablet, permitindo exames de alta qualidade em qualquer lugar.
+              Utilizamos os aparelhos da <strong className="text-white font-body font-medium">Butterfly</strong>, um ultrassom portátil revolucionário da Butterfly Network que conecta diretamente ao seu smartphone ou tablet, permitindo exames de alta qualidade em qualquer lugar.
             </p>
           </div>
 
@@ -93,7 +93,7 @@ export function EquipmentShowcase() {
 
               {/* Video Caption */}
               <div className="px-6 py-4 bg-gradient-to-r from-black/40 via-black/30 to-black/40 backdrop-blur-sm border-t border-white/5">
-                <p className="text-sm text-white/70 text-center font-body font-light">
+                <p className="text-sm text-white/70 text-center font-body font-medium">
                   Veja o Butterfly IQ em ação: portabilidade e qualidade clínica ao seu alcance
                 </p>
               </div>
@@ -151,10 +151,10 @@ export function EquipmentShowcase() {
                   <SmartphoneIcon />
                 </div>
               </motion.div>
-              <h3 className="text-xl text-white mb-2 font-body font-light" data-testid="text-feature-portable-title">
+              <h3 className="text-xl text-white mb-2 font-body font-medium" data-testid="text-feature-portable-title">
                 Ultra Portátil
               </h3>
-              <p className="text-white/70 text-base leading-relaxed font-body font-light" data-testid="text-feature-portable-description">
+              <p className="text-white/70 text-base leading-relaxed font-body font-medium" data-testid="text-feature-portable-description">
                 Conecta diretamente ao smartphone ou tablet, permitindo mobilidade total durante as práticas.
               </p>
             </motion.div>
@@ -207,10 +207,10 @@ export function EquipmentShowcase() {
                   <MagnifyingGlassIcon />
                 </div>
               </motion.div>
-              <h3 className="text-xl text-white mb-2 font-body font-light" data-testid="text-feature-quality-title">
+              <h3 className="text-xl text-white mb-2 font-body font-medium" data-testid="text-feature-quality-title">
                 Alta Resolução
               </h3>
-              <p className="text-white/70 text-base leading-relaxed font-body font-light" data-testid="text-feature-quality-description">
+              <p className="text-white/70 text-base leading-relaxed font-body font-medium" data-testid="text-feature-quality-description">
                 Imagens de qualidade clínica com tecnologia de última geração para diagnósticos precisos.
               </p>
             </motion.div>
@@ -263,10 +263,10 @@ export function EquipmentShowcase() {
                   <ChecklistIcon />
                 </div>
               </motion.div>
-              <h3 className="text-xl text-white mb-2 font-body font-light" data-testid="text-feature-easy-title">
+              <h3 className="text-xl text-white mb-2 font-body font-medium" data-testid="text-feature-easy-title">
                 Intuitivo
               </h3>
-              <p className="text-white/70 text-base leading-relaxed font-body font-light" data-testid="text-feature-easy-description">
+              <p className="text-white/70 text-base leading-relaxed font-body font-medium" data-testid="text-feature-easy-description">
                 Interface amigável que facilita o aprendizado e permite foco total na técnica de exame.
               </p>
             </motion.div>
@@ -275,12 +275,12 @@ export function EquipmentShowcase() {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-white/70 text-sm mb-4 font-body font-light" data-testid="text-equipment-footer">
+            <p className="text-white/70 text-sm mb-4 font-body font-medium" data-testid="text-equipment-footer">
               Durante o curso, você terá acesso hands-on a múltiplos aparelhos Butterfly
             </p>
             <a
               href="#preco"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-body font-light"
+              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-body font-medium"
               data-testid="link-equipment-cta"
             >
               Garantir minha vaga

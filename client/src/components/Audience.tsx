@@ -80,7 +80,7 @@ export function Audience() {
           <h2 id="audience-heading" className="text-5xl md:text-6xl lg:text-7xl text-gradient-heading mb-6 font-title font-bold">
             Para quem é esta imersão?
           </h2>
-          <p className="text-2xl text-white/80 font-body font-light">
+          <p className="text-2xl text-white/80 font-body font-medium">
             Estudantes dos anos finais, médicos recém-formados, residentes, generalistas e especialistas 
             que querem diagnosticar mais rápido e conduzir com mais segurança no PA, enfermaria, ambulatório ou UTI.
           </p>
@@ -139,10 +139,10 @@ export function Audience() {
                     <IconComponent />
                   </motion.div>
                   <div className="flex-1">
-                    <h3 className="text-3xl text-white mb-2 font-body font-light">
+                    <h3 className="text-3xl text-white mb-2 font-body font-medium">
                       {audience.title}
                     </h3>
-                    <p className="text-lg text-white/70 leading-relaxed font-body font-light">
+                    <p className="text-lg text-white/70 leading-relaxed font-body font-medium">
                       {audience.description}
                     </p>
                   </div>

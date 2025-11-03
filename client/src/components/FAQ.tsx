@@ -45,7 +45,7 @@ export function FAQ() {
           <h2 id="faq-heading" className="text-4xl md:text-5xl lg:text-6xl text-gradient-heading mb-8 font-title font-bold pb-3">
             Perguntas Frequentes
           </h2>
-          <p className="text-xl text-white/80 font-body font-light">
+          <p className="text-xl text-white/80 font-body font-medium">
             Tire suas dúvidas sobre a imersão.
           </p>
         </div>
@@ -89,7 +89,7 @@ export function FAQ() {
                 aria-expanded={openIndex === index}
                 data-testid={`button-faq-${index}`}
               >
-                <h3 className="text-xl text-white pr-4 font-body font-light">
+                <h3 className="text-xl text-white pr-4 font-body font-medium">
                   {faq.question}
                 </h3>
                 <motion.div

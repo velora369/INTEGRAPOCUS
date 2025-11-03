@@ -16,6 +16,14 @@
 
 @font-face {
   font-family: 'NeueMontreal';
+  src: url('@assets/NeueMontreal-Medium_1762143103576.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
   src: url('@assets/NeueMontreal-Light_1761939885448.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
@@ -61,6 +69,7 @@
   body {
     @apply antialiased;
     font-family: var(--font-body);
+    font-weight: 500;
     color: var(--text);
     background-color: var(--preto);
   }

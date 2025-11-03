@@ -45,7 +45,7 @@ export function Professors() {
           <h2 id="professors-heading" className="text-4xl md:text-5xl lg:text-6xl text-gradient-heading mb-6 font-title font-bold">
             Professores
           </h2>
-          <p className="text-xl text-white/80 font-body font-light">
+          <p className="text-xl text-white/80 font-body font-medium">
             Aprenda com especialistas que utilizam POCUS diariamente em sua prática clínica.
           </p>
         </div>
@@ -126,7 +126,7 @@ export function Professors() {
                   {/* Credentials with Enhanced Styling */}
                   <div className="flex flex-col justify-center">
                     <div className="mb-6">
-                      <h3 className="text-3xl md:text-4xl text-white mb-2 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text font-body font-light">
+                      <h3 className="text-3xl md:text-4xl text-white mb-2 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text font-body font-medium">
                         {professor.name}
                       </h3>
                       <div className="h-1 w-20 bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 rounded-full" />
@@ -142,7 +142,7 @@ export function Professors() {
                             <div className="w-1.5 h-1.5 rounded-full bg-blue-400/60 group-hover/item:bg-blue-400 transition-colors" />
                             <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-blue-400/40 blur-sm group-hover/item:blur group-hover/item:bg-blue-400/60 transition-all" />
                           </div>
-                          <span className="text-base md:text-lg leading-relaxed group-hover/item:text-white/90 transition-colors font-body font-light">
+                          <span className="text-base md:text-lg leading-relaxed group-hover/item:text-white/90 transition-colors font-body font-medium">
                             {credential}
                           </span>
                         </li>

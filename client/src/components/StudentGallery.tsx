@@ -71,7 +71,7 @@ export function StudentGallery() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 backdrop-blur-md mb-6">
             <Sparkles className="w-4 h-4 text-purple-600" />
-            <span className="text-sm text-slate-700 font-body font-light">
+            <span className="text-sm text-slate-700 font-body font-medium">
               Turma 2025
             </span>
           </div>
@@ -84,14 +84,14 @@ export function StudentGallery() {
           </h2>
           
           <p 
-            className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-body font-light mb-4"
+            className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-body font-medium mb-4"
             data-testid="text-gallery-subtitle"
           >
             Alunos e instrutores unidos no aprendizado
           </p>
 
           <p 
-            className="text-base text-slate-600 font-body font-light max-w-2xl mx-auto leading-relaxed"
+            className="text-base text-slate-600 font-body font-medium max-w-2xl mx-auto leading-relaxed"
             data-testid="text-gallery-description"
           >
             Veja como nossos alunos vivenciam na prática tudo que aprendem em teoria, 
@@ -136,13 +136,13 @@ export function StudentGallery() {
                 {/* Content Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                   <h3 
-                    className="text-xl font-body font-light text-white mb-2 transform group-hover:translate-y-0 translate-y-2 transition-transform duration-500"
+                    className="text-xl font-body font-medium text-white mb-2 transform group-hover:translate-y-0 translate-y-2 transition-transform duration-500"
                     data-testid={`text-student-title-${index}`}
                   >
                     {image.title}
                   </h3>
                   <p 
-                    className="text-sm text-white/70 font-body font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
+                    className="text-sm text-white/70 font-body font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
                     data-testid={`text-student-description-${index}`}
                   >
                     {image.description}
@@ -172,12 +172,12 @@ export function StudentGallery() {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <div className="inline-block p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-purple-50 border border-purple-100 shadow-lg">
-            <p className="text-slate-700 font-body font-light text-lg mb-4">
+            <p className="text-slate-700 font-body font-medium text-lg mb-4">
               Faça parte da próxima turma e viva essa experiência transformadora
             </p>
             <a 
               href="#preco" 
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-body font-light hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-body font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
               data-testid="button-join-next-class"
             >
               Inscreva-se Agora

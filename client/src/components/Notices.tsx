@@ -56,7 +56,7 @@ export function Notices() {
           <h2 id="notices-heading" className="text-4xl md:text-5xl lg:text-6xl text-gradient-heading mb-6 font-title font-bold">
             Avisos e Atualizações
           </h2>
-          <p className="text-xl text-white/80 font-body font-light">
+          <p className="text-xl text-white/80 font-body font-medium">
             Fique por dentro das últimas novidades sobre a imersão.
           </p>
         </div>
@@ -113,14 +113,14 @@ export function Notices() {
                   >
                     <Icon className="w-5 h-5 text-white" />
                   </motion.div>
-                  <p className="text-xs text-white/50 uppercase tracking-wide font-body font-light">
+                  <p className="text-xs text-white/50 uppercase tracking-wide font-body font-medium">
                     {notice.date}
                   </p>
                 </div>
-                <h3 className="text-2xl text-white mb-3 font-body font-light">
+                <h3 className="text-2xl text-white mb-3 font-body font-medium">
                   {notice.title}
                 </h3>
-                <p className="text-base text-white/70 leading-relaxed font-body font-light">
+                <p className="text-base text-white/70 leading-relaxed font-body font-medium">
                   {notice.description}
                 </p>
               </motion.div>
