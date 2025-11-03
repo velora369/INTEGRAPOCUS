@@ -21,6 +21,10 @@ Preferred communication style: Simple, everyday language.
   - Updated FAQ section:
     - Corrected first question answer to say "aplicações mais avançadas" (added "mais")
     - Added new question about certificate of completion with professional, detailed answer
+  - Improved pricing badge visibility:
+    - Changed "Economize 22%" badge font from light to semibold for better readability
+    - Changed "Melhor oferta" badge from light background to solid dark green (#0B5E30) with white text in semibold font
+    - Ensured WCAG AA accessibility compliance with 7.8:1 contrast ratio on both badges
 
 ## System Architecture
 
