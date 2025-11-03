@@ -23,8 +23,13 @@ Preferred communication style: Simple, everyday language.
     - Added new question about certificate of completion with professional, detailed answer
   - Improved pricing badge visibility:
     - Changed "Economize 22%" badge font from light to semibold for better readability
-    - Changed "Melhor oferta" badge from light background to solid dark green (#0B5E30) with white text in semibold font
-    - Ensured WCAG AA accessibility compliance with 7.8:1 contrast ratio on both badges
+    - Updated badge background color to #65D071 with dark green text (#0B4020) for better visibility
+    - Changed "Melhor oferta" badge to solid #65D071 background with dark green text (#0B4020) in semibold font
+    - Ensured WCAG AA accessibility compliance with 6.8:1 contrast ratio on both badges
+  - Corrected credit card installment value from R$ 267,80 to R$ 267,41
+  - Standardized Footer typography to match site-wide patterns:
+    - Updated all headings from font-heading to font-title
+    - Added font-body font-light to all body text for consistency with NeueMontreal typography
 
 ## System Architecture
 
