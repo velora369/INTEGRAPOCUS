@@ -154,7 +154,7 @@ export function Audience() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <p className="text-white/70 text-base mb-6 font-body font-medium" data-testid="text-audience-footer">
+          <p className="text-white text-xl md:text-2xl lg:text-3xl mb-8 font-body font-medium leading-relaxed" data-testid="text-audience-footer">
             Independente da sua área, esta imersão vai transformar sua prática clínica
           </p>
           <motion.a
