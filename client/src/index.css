@@ -257,31 +257,36 @@
   }
   
   .btn-secondary {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.03);
     color: var(--branco);
     padding: 14px 22px;
     border-radius: 14px;
     font-weight: 600;
     font-size: 1rem;
-    border: 1px solid var(--border);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     min-height: 44px;
     min-width: 44px;
     text-decoration: none;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
   .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
   }
   
   .btn-secondary:active {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
   }
   
   .btn-secondary:focus-visible {
@@ -747,6 +752,14 @@
     }
     
     .btn-primary-hero:hover {
+      transform: none;
+    }
+    
+    .btn-primary-hero::before {
+      display: none;
+    }
+    
+    .btn-secondary:hover {
       transform: none;
     }
   }
