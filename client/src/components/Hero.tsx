@@ -119,13 +119,13 @@ export function Hero() {
               </div>
             </motion.div>
 
-            {/* H1 */}
+            {/* H1 - Main Brand */}
             <motion.h1 
-              className="text-gradient-heading mb-4 font-title font-bold relative inline-block"
+              className="text-gradient-heading mb-3 font-title font-bold relative inline-block"
               data-testid="text-hero-title"
               variants={titleVariants}
             >
-              Integra POCUS — Imersão Hands-on em POCUS
+              Integra POCUS
               
               {/* Shimmer Bar */}
               <div 
@@ -134,9 +134,18 @@ export function Hero() {
               />
             </motion.h1>
 
+            {/* Subheadline - Course Name */}
+            <motion.h2 
+              className="text-3xl md:text-4xl lg:text-5xl font-title font-bold mb-6 bg-gradient-to-r from-blue-300 via-purple-300 to-blue-400 bg-clip-text text-transparent"
+              data-testid="text-hero-subheadline"
+              variants={itemVariants}
+            >
+              Imersão Hands-on em POCUS
+            </motion.h2>
+
             {/* Subtitle */}
             <motion.p 
-              className="text-lg md:text-xl text-white/90 mb-8 max-w-prose leading-relaxed font-body font-light"
+              className="text-xl md:text-2xl lg:text-[1.6rem] text-white/90 mb-8 max-w-prose leading-relaxed font-body font-light"
               data-testid="text-hero-subtitle"
               style={{ maxWidth: '70ch' }}
               variants={itemVariants}
@@ -151,10 +160,10 @@ export function Hero() {
               variants={pillContainerVariants}
             >
               {/* Pill 1: Presencial */}
-              <motion.div className="pill-glass" variants={pillVariants}>
+              <motion.div className="pill-glass text-base md:text-lg" variants={pillVariants}>
                 <svg 
-                  width="20" 
-                  height="20" 
+                  width="22" 
+                  height="22" 
                   viewBox="0 0 24 24"
                   className="flex-shrink-0"
                   aria-hidden="true"
@@ -168,10 +177,10 @@ export function Hero() {
               </motion.div>
 
               {/* Pill 2: Raciocínio clínico */}
-              <motion.div className="pill-glass" variants={pillVariants}>
+              <motion.div className="pill-glass text-base md:text-lg" variants={pillVariants}>
                 <svg 
-                  width="20" 
-                  height="20" 
+                  width="22" 
+                  height="22" 
                   viewBox="0 0 24 24"
                   className="flex-shrink-0"
                   aria-hidden="true"
@@ -184,18 +193,18 @@ export function Hero() {
                 <span className="font-body font-light">Foco no raciocínio clínico</span>
               </motion.div>
 
-              {/* Pill 3: Vagas limitadas */}
-              <motion.div className="pill-glass" variants={pillVariants}>
+              {/* Pill 3: Apenas 9 vagas */}
+              <motion.div className="pill-glass text-base md:text-lg" variants={pillVariants}>
                 <svg 
-                  width="20" 
-                  height="20" 
+                  width="22" 
+                  height="22" 
                   viewBox="0 0 48 48"
                   className="flex-shrink-0"
                   aria-hidden="true"
                 >
                   <path fill="currentColor" fillRule="evenodd" d="M4 24C4 12.954 12.954 4 24 4s20 8.954 20 20s-8.954 20-20 20S4 35.046 4 24m22-11a2 2 0 1 0-4 0v14a2 2 0 1 0 4 0zm-2 20a2 2 0 1 1 0 4a2 2 0 0 1 0-4" clipRule="evenodd"/>
                 </svg>
-                <span className="font-body font-light">Vagas limitadas</span>
+                <span className="font-body font-light">Apenas 9 vagas</span>
               </motion.div>
             </motion.div>
 
