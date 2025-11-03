@@ -58,7 +58,7 @@ export function Footer() {
               <Button
                 type="submit"
                 size="icon"
-                className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-white transition-transform hover:scale-105"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 rounded-full bg-primary text-white transition-transform hover:scale-105"
                 data-testid="button-newsletter-submit"
               >
                 <Send className="h-4 w-4" />
@@ -120,7 +120,6 @@ export function Footer() {
             <address className="space-y-2 text-sm not-italic text-white/70 font-body font-light">
               <p className="font-medium text-white/90">Integra POCUS</p>
               <p>Santarém, Pará</p>
-              <p>29 de novembro de 2025</p>
             </address>
           </div>
 
