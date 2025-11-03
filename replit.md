@@ -41,6 +41,14 @@ Preferred communication style: Simple, everyday language.
     - Increased "Integra POCUS" title size from default to text-5xl md:text-7xl lg:text-8xl
     - Created stronger visual hierarchy with main brand title significantly larger than subtitle
     - Maintains responsive scaling across all breakpoints for optimal readability
+  - Updated "Vagas Limitadas" notice card:
+    - Changed description to specify "restrito a 9 alunos" for clarity on participant limit
+  - Hero section responsiveness fixes:
+    - Reduced "Integra POCUS" title from text-8xl to text-7xl on large screens for better proportions
+    - Removed overflow-hidden from section to prevent clipping of descender letters (like "g")
+    - Increased vertical padding to py-20 md:py-28 lg:py-36 for better spacing
+    - Added pb-2 to h1 element to ensure descenders display properly
+    - Fixed issue where "g" in "Integra" was being cut off at bottom
 
 ## System Architecture
 
