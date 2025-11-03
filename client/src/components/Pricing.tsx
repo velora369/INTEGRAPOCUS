@@ -95,7 +95,7 @@ export function Pricing() {
                     <PixIcon className="w-4 h-4" />
                     PIX
                   </span>
-                  <div className="absolute -top-2 -right-4 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#25D366] text-white text-xs whitespace-nowrap font-body font-light">
+                  <div className="absolute -top-2 -right-4 flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#0B5E30] text-white text-xs whitespace-nowrap font-body font-semibold">
                     Economize 22%
                   </div>
                 </button>
@@ -117,9 +117,9 @@ export function Pricing() {
                   : 'border-slate-200 group-hover:border-blue-400/30 group-hover:shadow-blue-400/10'
               }`}>
                 {selectedPayment === 'pix' && (
-                  <div className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 rounded-full bg-[#25D366]/10 border border-[#25D366]/20">
-                    <Sparkles className="w-3 h-3 text-[#25D366]" />
-                    <span className="text-xs text-[#25D366] font-body font-light">Melhor oferta</span>
+                  <div className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 rounded-full bg-[#0B5E30]">
+                    <Sparkles className="w-3 h-3 text-white" />
+                    <span className="text-xs text-white font-body font-semibold">Melhor oferta</span>
                   </div>
                 )}
                 
