@@ -103,22 +103,6 @@ export function Hero() {
           {/* Content */}
           <div className="relative z-10">
             
-            {/* Eyebrow Badge */}
-            <motion.div 
-              className="inline-flex items-center mb-6" 
-              data-testid="badge-hero-eyebrow"
-              variants={itemVariants}
-            >
-              <div 
-                className="px-4 py-2 rounded-full backdrop-blur-md border border-white/10 bg-white/5"
-                style={{ backdropFilter: 'blur(12px)' }}
-              >
-                <span className="text-white/85 text-sm tracking-wide font-body font-light">
-                  Imersão presencial — Santarém, PA — 29 NOV 2025
-                </span>
-              </div>
-            </motion.div>
-
             {/* H1 - Main Brand */}
             <motion.h1 
               className="text-gradient-heading mb-3 font-title font-bold relative inline-block"
