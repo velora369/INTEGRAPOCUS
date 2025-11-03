@@ -244,7 +244,7 @@ export function Pricing() {
                     </a>
                   ) : (
                     <a
-                      href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117"
+                      href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7220/?add-to-cart=7220"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group relative inline-flex items-center gap-2 px-6 sm:px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-base sm:text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center whitespace-nowrap"
