@@ -6,6 +6,18 @@ This project is a single-page marketing website for Integra POCUS, a hands-on me
 ## User Preferences
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+- **November 3, 2025**: Increased font sizes across key sections for improved readability, including:
+  - "O que você vai desenvolver?" (Outcomes)
+  - "Conheça o Equipamento Usado nas Aulas" (EquipmentShowcase)
+  - "Equipe e alunos" (Audience)
+  - "Formato e Data" (FormatDate)
+  - "Investimento" (Pricing)
+  - "Perguntas Frequentes" (FAQ)
+  - "Avisos e Atualizações" (Notices)
+  - "Fale Conosco" (Contact)
+  - All heading, subheading, and body text sizes were proportionally increased while maintaining visual hierarchy
+
 ## System Architecture
 
 ### Frontend
