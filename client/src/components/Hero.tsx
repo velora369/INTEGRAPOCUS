@@ -105,7 +105,7 @@ export function Hero() {
             
             {/* H1 - Main Brand */}
             <motion.h1 
-              className="text-gradient-heading mb-3 font-title font-bold relative inline-block"
+              className="text-gradient-heading text-5xl md:text-7xl lg:text-8xl mb-3 font-title font-bold relative inline-block"
               data-testid="text-hero-title"
               variants={titleVariants}
             >
