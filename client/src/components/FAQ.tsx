@@ -41,8 +41,8 @@ export function FAQ() {
       aria-labelledby="faq-heading"
     >
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 id="faq-heading" className="text-4xl md:text-5xl lg:text-6xl text-gradient-heading mb-6 font-title font-bold">
+        <div className="max-w-4xl mx-auto text-center mb-16 pt-2 pb-2">
+          <h2 id="faq-heading" className="text-4xl md:text-5xl lg:text-6xl text-gradient-heading mb-8 font-title font-bold pb-3">
             Perguntas Frequentes
           </h2>
           <p className="text-xl text-white/80 font-body font-light">
