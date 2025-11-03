@@ -3,6 +3,7 @@ This project is a single-page marketing website for Integra POCUS, a hands-on me
 
 ## Recent Changes
 - **November 3, 2025**: Fixed mobile responsiveness issue in pricing section CTAs. Buttons now display text in a single line on mobile devices using `whitespace-nowrap` and optimized spacing/font sizes.
+- **November 3, 2025**: Modified Hero Section mascot visibility to show only on desktop devices (hidden on mobile using `hidden lg:flex`) for cleaner mobile layout.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
