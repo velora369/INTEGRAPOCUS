@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import mascoteUrl from '@assets/mascote-integra-pocus.webp';
+import { useState } from 'react';
+import mascoteUrl from '@assets/webpppheroo.webp';
 
 export function Hero() {
+  const [mascotClicked, setMascotClicked] = useState(false);
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -280,10 +282,20 @@ export function Hero() {
               <motion.img
                 src={mascoteUrl}
                 alt="Mascote Integra POCUS"
-                className="w-full max-w-md xl:max-w-lg h-auto object-contain"
+                className="w-full max-w-md xl:max-w-lg h-auto object-contain cursor-pointer select-none"
                 data-testid="img-hero-mascote"
                 initial={{ opacity: 0, x: 50, scale: 0.9 }}
-                animate={{ 
+                animate={mascotClicked ? { 
+                  opacity: 1, 
+                  x: 0,
+                  scale: 1,
+                  rotate: [0, -10, 10, -10, 10, 0],
+                  y: [0, -20, 0, -10, 0],
+                  transition: {
+                    duration: 0.6,
+                    ease: [0.34, 1.56, 0.64, 1]
+                  }
+                } : { 
                   opacity: 1, 
                   x: 0,
                   scale: 1,
@@ -294,8 +306,29 @@ export function Hero() {
                   }
                 }}
                 whileHover={{
-                  scale: 1.05,
-                  transition: { duration: 0.3 }
+                  scale: 1.08,
+                  rotate: [0, -3, 3, -3, 3, 0],
+                  filter: "brightness(1.15) drop-shadow(0 0 20px rgba(124, 109, 255, 0.6))",
+                  transition: { 
+                    duration: 0.5,
+                    rotate: {
+                      repeat: Infinity,
+                      duration: 2,
+                      ease: "easeInOut"
+                    }
+                  }
+                }}
+                whileTap={{
+                  scale: 0.95
+                }}
+                onClick={() => {
+                  setMascotClicked(true);
+                  setTimeout(() => setMascotClicked(false), 600);
+                }}
+                onAnimationComplete={() => {
+                  if (mascotClicked) {
+                    setMascotClicked(false);
+                  }
                 }}
               />
             </motion.div>
