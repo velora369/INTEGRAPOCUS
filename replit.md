@@ -78,6 +78,12 @@ Preferred communication style: Simple, everyday language.
     - Increased visual presence with larger padding (lg:py-40) and container width (max-w-7xl)
     - Ensured full responsive behavior across all breakpoints
     - Architect review confirmed: layout, responsiveness, hierarchy, and performance all meet requirements
+  - **Hero Section Sub-headline Unification**:
+    - Removed separate gradient-highlighted span for "Imersão Hands-on em POCUS"
+    - Unified sub-headline into single continuous paragraph: "Imersão Hands-on em POCUS. Formação 100% presencial para integrar imagem e clínica no dia a dia: teoria objetiva em sala, estações práticas supervisionadas e checklists de decisão."
+    - Simplified visual hierarchy by removing gradient effect and block display
+    - Maintains consistent typography (font-body font-medium) throughout entire paragraph
+    - Architect review confirmed: no layout, responsiveness, or accessibility issues
 
 ## System Architecture
 
