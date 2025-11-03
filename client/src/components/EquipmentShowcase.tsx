@@ -276,7 +276,7 @@ export function EquipmentShowcase() {
           {/* CTA */}
           <div className="text-center mt-12">
             <p className="text-white/70 text-base mb-6 font-body font-medium" data-testid="text-equipment-footer">
-              Durante o curso, você terá acesso hands-on a múltiplos aparelhos Butterfly
+              Durante o curso, você terá acesso hands-on a aparelhos da Butterfly
             </p>
             <motion.a
               href="#preco"
