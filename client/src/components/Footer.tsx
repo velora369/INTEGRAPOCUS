@@ -58,7 +58,7 @@ export function Footer() {
               <Button
                 type="submit"
                 size="icon"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 rounded-full bg-primary text-white transition-transform hover:scale-105"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 bg-primary text-white transition-transform hover:scale-105"
                 data-testid="button-newsletter-submit"
               >
                 <Send className="h-4 w-4" />

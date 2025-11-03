@@ -54,6 +54,9 @@ Preferred communication style: Simple, everyday language.
     - Increased h2 padding from pb-2 to pb-3 for better descender accommodation
     - Increased h2 margin-bottom from mb-6 to mb-8 for improved vertical spacing
     - Fixed issue where "g" in "Perguntas Frequentes" was being clipped
+  - Footer newsletter button styling:
+    - Removed rounded-full class from newsletter submit button (airplane icon)
+    - Button now displays with standard rounded corners instead of circular shape
 
 ## System Architecture
 
