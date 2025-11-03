@@ -274,7 +274,7 @@ export function Hero() {
 
             {/* Right Column - Mascote */}
             <motion.div 
-              className="relative flex items-center justify-center mt-12 lg:mt-0"
+              className="hidden lg:flex relative items-center justify-center lg:mt-0"
               variants={itemVariants}
             >
               <motion.img
