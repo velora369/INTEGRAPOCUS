@@ -40,10 +40,10 @@ export function Footer() {
           
           {/* Newsletter Section */}
           <div className="relative">
-            <h2 className="mb-4 text-3xl font-heading font-bold tracking-tight text-white">
+            <h2 className="mb-4 text-3xl font-title font-bold tracking-tight text-white">
               Fique por dentro
             </h2>
-            <p className="mb-6 text-white/70 text-sm leading-relaxed">
+            <p className="mb-6 text-white/70 text-sm leading-relaxed font-body font-light">
               Receba atualizações sobre a imersão, vagas e novidades exclusivas.
             </p>
             <form className="relative" onSubmit={handleNewsletterSubmit} data-testid="form-newsletter">
@@ -70,10 +70,10 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-4 text-lg font-heading font-semibold text-white">
+            <h3 className="mb-4 text-lg font-title font-semibold text-white">
               Navegação
             </h3>
-            <nav className="space-y-2 text-sm">
+            <nav className="space-y-2 text-sm font-body font-light">
               <button
                 onClick={() => scrollToSection('inicio')}
                 className="block text-white/70 transition-colors hover:text-primary"
@@ -114,10 +114,10 @@ export function Footer() {
 
           {/* Contact Information */}
           <div>
-            <h3 className="mb-4 text-lg font-heading font-semibold text-white">
+            <h3 className="mb-4 text-lg font-title font-semibold text-white">
               Entre em contato
             </h3>
-            <address className="space-y-2 text-sm not-italic text-white/70">
+            <address className="space-y-2 text-sm not-italic text-white/70 font-body font-light">
               <p className="font-medium text-white/90">Integra POCUS</p>
               <p>Santarém, Pará</p>
               <p>29 de novembro de 2025</p>
@@ -126,7 +126,7 @@ export function Footer() {
 
           {/* Social Media */}
           <div className="relative">
-            <h3 className="mb-4 text-lg font-heading font-semibold text-white">
+            <h3 className="mb-4 text-lg font-title font-semibold text-white">
               Redes sociais
             </h3>
             <div className="mb-6 flex space-x-3">
@@ -182,7 +182,7 @@ export function Footer() {
                 </Tooltip>
               </TooltipProvider>
             </div>
-            <p className="text-xs text-white/60 leading-relaxed">
+            <p className="text-xs text-white/60 leading-relaxed font-body font-light">
               Imersão 100% presencial em ultrassom point-of-care. Teoria objetiva + estações práticas supervisionadas.
             </p>
           </div>
@@ -190,7 +190,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t border-white/10 pt-8 text-center">
-          <p className="text-sm text-white/60">
+          <p className="text-sm text-white/60 font-body font-light">
             © {currentYear} Integra POCUS. Todos os direitos reservados.
           </p>
         </div>
