@@ -275,30 +275,35 @@ export function EquipmentShowcase() {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-white/70 text-sm mb-4 font-body font-medium" data-testid="text-equipment-footer">
+            <p className="text-white/70 text-base mb-6 font-body font-medium" data-testid="text-equipment-footer">
               Durante o curso, você terá acesso hands-on a múltiplos aparelhos Butterfly
             </p>
-            <a
+            <motion.a
               href="#preco"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-body font-medium"
+              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
               data-testid="link-equipment-cta"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
             >
-              Garantir minha vaga
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative z-10">Garantir minha vaga</span>
               <svg 
-                width="16" 
-                height="16" 
+                width="20" 
+                height="20" 
                 viewBox="0 0 24 24" 
                 fill="none" 
                 stroke="currentColor" 
-                strokeWidth="2" 
+                strokeWidth="2.5" 
                 strokeLinecap="round" 
                 strokeLinejoin="round"
+                className="relative z-10 group-hover:translate-x-1 transition-transform"
                 aria-hidden="true"
               >
                 <line x1="5" y1="12" x2="19" y2="12"/>
                 <polyline points="12 5 19 12 12 19"/>
               </svg>
-            </a>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400/50 to-blue-400/50 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+            </motion.a>
           </div>
 
         </div>
