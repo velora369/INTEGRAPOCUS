@@ -9,12 +9,17 @@ export function FAQ() {
     {
       question: "Preciso ter experiência prévia com ultrassom?",
       answer:
-        "Não! O curso é desenhado tanto para iniciantes quanto para quem já tem alguma familiaridade com o método. Começamos desde os fundamentos até aplicações avançadas.",
+        "Não! O curso é desenhado tanto para iniciantes quanto para quem já tem alguma familiaridade com o método. Começamos desde os fundamentos até aplicações mais avançadas.",
     },
     {
       question: "Terei acesso aos equipamentos durante a prática?",
       answer:
         "Sim! As estações práticas contam com equipamentos profissionais e grupos pequenos para garantir que todos tenham amplo acesso hands-on supervisionado.",
+    },
+    {
+      question: "O curso emite certificado de conclusão?",
+      answer:
+        "Sim! Todos os participantes que concluírem a imersão receberão certificado de conclusão, comprovando a carga horária e as competências desenvolvidas em POCUS. O certificado é emitido ao final do curso.",
     },
     {
       question: "Posso parcelar o pagamento?",
