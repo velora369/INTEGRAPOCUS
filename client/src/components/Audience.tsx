@@ -151,6 +151,39 @@ export function Audience() {
             );
           })}
         </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <p className="text-white/70 text-base mb-6 font-body font-medium" data-testid="text-audience-footer">
+            Independente da sua área, esta imersão vai transformar sua prática clínica
+          </p>
+          <motion.a
+            href="#preco"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
+            data-testid="link-audience-cta"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="relative z-10">Garantir minha vaga</span>
+            <svg 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="relative z-10 group-hover:translate-x-1 transition-transform"
+              aria-hidden="true"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-400/50 to-blue-400/50 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+          </motion.a>
+        </div>
       </div>
     </section>
   );
