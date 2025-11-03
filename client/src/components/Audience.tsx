@@ -12,7 +12,7 @@ export function Audience() {
         </svg>
       ),
       title: 'Estudantes',
-      description: 'Acadêmicos dos anos finais que buscam diferencial na formação e domínio de uma ferramenta diagnóstica moderna.'
+      description: 'Acadêmicos dos anos finais que buscam aprendizado diferencial na formação e domínio de uma ferramenta diagnóstica moderna.'
     },
     {
       icon: () => (
@@ -43,7 +43,7 @@ export function Audience() {
         </svg>
       ),
       title: 'Emergencistas',
-      description: 'Profissionais de pronto atendimento e UTI que necessitam de decisões rápidas e precisas à beira-leito.'
+      description: 'Profissionais de pronto atendimento e UTI que necessitam de decisões rápidas e precisas à beira-leito e utilizam o POCUS para guiar procedimentos com segurança.'
     },
     {
       icon: () => (
