@@ -218,7 +218,7 @@ export function Pricing() {
                 <div className="flex justify-center mb-6">
                   {selectedPayment === 'pix' ? (
                     <a
-                      href="https://wa.me/5593991674540?text=Olá! Tenho interesse em garantir meu acesso ao curso hands-on da IntegraPocus no PIX."
+                      href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-primary-modern group/btn w-full sm:w-auto font-body font-light"
@@ -230,8 +230,10 @@ export function Pricing() {
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
                     </a>
                   ) : (
-                    <button
-                      onClick={() => scrollToSection('contato')}
+                    <a
+                      href="https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="btn-primary-modern group/btn w-full sm:w-auto font-body font-light"
                       data-testid="button-pricing-main-cta"
                     >
@@ -239,7 +241,7 @@ export function Pricing() {
                         Garantir minha vaga no cartão
                       </span>
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                    </button>
+                    </a>
                   )}
                 </div>
 
