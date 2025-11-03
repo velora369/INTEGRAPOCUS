@@ -88,11 +88,11 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[clamp(68vh,82vh,92vh)] flex items-center bg-gradient-hero-waves with-grain overflow-hidden"
+      className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[clamp(68vh,82vh,92vh)] flex items-center bg-gradient-hero-waves with-grain"
       role="region"
       aria-label="Hero principal"
     >
-      <div className="container-custom py-16 md:py-24 lg:py-32 w-full">
+      <div className="container-custom py-20 md:py-28 lg:py-36 w-full">
         <motion.div 
           className="max-w-4xl mx-auto"
           variants={containerVariants}
@@ -105,7 +105,7 @@ export function Hero() {
             
             {/* H1 - Main Brand */}
             <motion.h1 
-              className="text-gradient-heading text-5xl md:text-7xl lg:text-8xl mb-3 font-title font-bold relative inline-block"
+              className="text-gradient-heading text-5xl md:text-6xl lg:text-7xl mb-4 font-title font-bold relative inline-block pb-2"
               data-testid="text-hero-title"
               variants={titleVariants}
             >
