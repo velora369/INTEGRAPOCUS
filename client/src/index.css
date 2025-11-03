@@ -490,6 +490,45 @@
     -webkit-text-fill-color: transparent;
   }
   
+  .text-gradient-heading-impact {
+    background: linear-gradient(110deg, #5BA3FF 0%, #8B7DFF 35%, #C08BFF 65%, #E9A8FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    filter: drop-shadow(0 0 30px rgba(91, 163, 255, 0.5)) drop-shadow(0 0 60px rgba(139, 125, 255, 0.4));
+  }
+  
+  .text-gradient-heading-impact::before {
+    content: '';
+    position: absolute;
+    inset: -30px;
+    background: radial-gradient(ellipse at center, rgba(91, 163, 255, 0.15), transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  .text-gradient-heading-impact::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 65%;
+    height: 4px;
+    background: linear-gradient(90deg, 
+      rgba(51, 49, 197, 0.8), 
+      rgba(124, 109, 255, 0.9), 
+      rgba(61, 163, 255, 0.7),
+      rgba(124, 109, 255, 0.9),
+      rgba(51, 49, 197, 0.8)
+    );
+    background-size: 200% 100%;
+    filter: blur(2px);
+    border-radius: 2px;
+    animation: shimmer-slide 10s ease-in-out infinite alternate;
+  }
+  
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -679,7 +718,8 @@
   
   /* Respect prefers-reduced-motion */
   @media (prefers-reduced-motion: reduce) {
-    .hero-shimmer-bar {
+    .hero-shimmer-bar,
+    .text-gradient-heading-impact::after {
       animation: none !important;
       background: linear-gradient(90deg, 
         rgba(51, 49, 197, 0.8), 

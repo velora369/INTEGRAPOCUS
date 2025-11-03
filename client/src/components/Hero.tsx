@@ -38,14 +38,18 @@ export function Hero() {
   };
 
   const titleVariants = {
-    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    hidden: { opacity: 0, y: 60, scale: 0.9, filter: "blur(10px)" },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
+      filter: "blur(0px)",
       transition: {
-        duration: 0.9,
-        ease: [0.22, 1, 0.36, 1]
+        duration: 1.2,
+        ease: [0.16, 1, 0.3, 1],
+        filter: {
+          duration: 0.8
+        }
       }
     }
   };
@@ -109,17 +113,11 @@ export function Hero() {
             
             {/* H1 - Main Brand */}
             <motion.h1 
-              className="text-gradient-heading text-5xl md:text-6xl lg:text-7xl mb-4 font-title font-bold relative inline-block pb-2"
+              className="text-gradient-heading-impact text-6xl md:text-7xl lg:text-8xl xl:text-9xl mb-6 font-title font-bold relative inline-block pb-2"
               data-testid="text-hero-title"
               variants={titleVariants}
             >
               Integra POCUS
-              
-              {/* Shimmer Bar */}
-              <div 
-                className="hero-shimmer-bar"
-                aria-hidden="true"
-              />
             </motion.h1>
 
             {/* Subheadline - Combined */}
