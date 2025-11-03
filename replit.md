@@ -30,6 +30,9 @@ Preferred communication style: Simple, everyday language.
   - Standardized Footer typography to match site-wide patterns:
     - Updated all headings from font-heading to font-title
     - Added font-body font-light to all body text for consistency with NeueMontreal typography
+  - Footer improvements:
+    - Removed event date "29 de novembro de 2025" from contact information section
+    - Fixed newsletter email input airplane icon alignment using `transform -translate-y-1/2` for perfect vertical centering
 
 ## System Architecture
 
