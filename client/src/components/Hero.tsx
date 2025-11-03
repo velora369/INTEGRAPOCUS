@@ -286,19 +286,28 @@ export function Hero() {
                 data-testid="img-hero-mascote"
                 initial={{ opacity: 0, x: 50, scale: 0.9 }}
                 animate={mascotClicked ? { 
-                  opacity: 1, 
-                  x: 0,
-                  scale: 1,
-                  rotate: [0, -10, 10, -10, 10, 0],
-                  y: [0, -20, 0, -10, 0],
+                  rotate: [0, -15, 15, -15, 15, -10, 10, 0],
+                  y: [0, -30, -25, -30, -15, 0],
+                  scale: [1, 1.15, 1.1, 1.15, 1.05, 1],
+                  filter: [
+                    "brightness(1) drop-shadow(0 0 0px rgba(124, 109, 255, 0))",
+                    "brightness(1.3) drop-shadow(0 0 30px rgba(124, 109, 255, 0.9))",
+                    "brightness(1.25) drop-shadow(0 0 25px rgba(91, 163, 255, 0.8))",
+                    "brightness(1.3) drop-shadow(0 0 30px rgba(192, 139, 255, 0.9))",
+                    "brightness(1.2) drop-shadow(0 0 20px rgba(124, 109, 255, 0.7))",
+                    "brightness(1) drop-shadow(0 0 0px rgba(124, 109, 255, 0))"
+                  ],
                   transition: {
-                    duration: 0.6,
+                    duration: 0.8,
                     ease: [0.34, 1.56, 0.64, 1]
                   }
                 } : { 
                   opacity: 1, 
                   x: 0,
                   scale: 1,
+                  rotate: 0,
+                  y: 0,
+                  filter: "brightness(1) drop-shadow(0 0 0px rgba(124, 109, 255, 0))",
                   transition: {
                     duration: 0.8,
                     ease: [0.22, 1, 0.36, 1],
@@ -323,12 +332,7 @@ export function Hero() {
                 }}
                 onClick={() => {
                   setMascotClicked(true);
-                  setTimeout(() => setMascotClicked(false), 600);
-                }}
-                onAnimationComplete={() => {
-                  if (mascotClicked) {
-                    setMascotClicked(false);
-                  }
+                  setTimeout(() => setMascotClicked(false), 850);
                 }}
               />
             </motion.div>
