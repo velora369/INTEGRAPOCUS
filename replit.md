@@ -64,6 +64,20 @@ Preferred communication style: Simple, everyday language.
   - Footer newsletter button styling:
     - Removed rounded-full class from newsletter submit button (airplane icon)
     - Button now displays with standard rounded corners instead of circular shape
+  - **Hero Section Layout Redesign**:
+    - Downloaded mascot image from WordPress CDN and saved to attached_assets/mascote-integra-pocus.webp
+    - Implemented two-column grid layout (lg:grid-cols-2) for desktop view
+    - Restructured content hierarchy:
+      - H1: "Integra POCUS" remains as main headline
+      - Combined "Imersão Hands-on em POCUS" with full description into single paragraph with highlighted span
+    - Added mascot to right column with animations (Framer Motion):
+      - Visible on all screen sizes for consistency
+      - Mobile: mascot appears below text content (stacked layout)
+      - Desktop (lg+): mascot appears alongside text in right column
+      - Implemented hover animations and entrance effects
+    - Increased visual presence with larger padding (lg:py-40) and container width (max-w-7xl)
+    - Ensured full responsive behavior across all breakpoints
+    - Architect review confirmed: layout, responsiveness, hierarchy, and performance all meet requirements
 
 ## System Architecture
 
@@ -97,6 +111,7 @@ A minimal **Express.js** server is used primarily for serving static files in pr
 ### External Assets
 - **Custom Fonts**: NeueMontreal-Bold, NeueMontreal-Medium, and NeueMontreal-Light (OTF format) from `attached_assets/`.
 - **Professor Images**: Hosted on WordPress CDN (`yungwizzeprod2.wordpress.com`).
+- **Mascot Image**: mascote-integra-pocus.webp downloaded from WordPress CDN and stored in `attached_assets/` for Hero section.
 
 ### Deployment Configuration
 - Designed for **Replit deployment**, with production builds outputting to the `dist/` directory.
