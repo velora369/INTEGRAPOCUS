@@ -33,6 +33,10 @@ Preferred communication style: Simple, everyday language.
   - Footer improvements:
     - Removed event date "29 de novembro de 2025" from contact information section
     - Fixed newsletter email input airplane icon alignment using `transform -translate-y-1/2` for perfect vertical centering
+  - Pricing component checkout integration:
+    - Updated both "Garantir minha vaga no PIX" and "Garantir minha vaga no cartão" buttons to redirect to checkout URL
+    - Both buttons now open https://seguro.checkoutintegrapocus.com.br/checkout-white-7117/?add-to-cart=7117 in new tab
+    - Changed cartão button from internal scroll link to external checkout link for unified conversion funnel
 
 ## System Architecture
 
