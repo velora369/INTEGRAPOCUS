@@ -8,6 +8,19 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 - **November 3, 2025**:
+  - **Mascot Update and Interactive Animations**:
+    - Replaced mascot image from mascote-integra-pocus.webp to webpppheroo.webp (new version from WordPress CDN)
+    - Implemented attention-grabbing interactive animations using Framer Motion:
+      - Hover effect: subtle scaling (1.08x), continuous rotation oscillation, and purple glow (drop-shadow)
+      - Click effect: dramatic bounce-and-shake sequence with:
+        - Multi-step rotation animation (-15° to 15° oscillations)
+        - Vertical bounce movement (up to -30px with multiple peaks)
+        - Dynamic scaling (up to 1.15x)
+        - Colorful glow effects cycling through blue, purple, and violet gradients
+        - 800ms duration with elastic easing for playful feel
+      - Added cursor-pointer and select-none for better UX
+      - Animations designed to capture lead attention and create memorable interaction
+    - All animations architect-reviewed and tested for performance
   - **Hero Section Button Animation Enhancements**:
     - Enhanced "Garantir minha vaga" button with more lively hover animation:
       - Added scale transform (1.05) combined with vertical lift (-3px) for dynamic effect
