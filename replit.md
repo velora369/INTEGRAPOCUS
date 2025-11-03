@@ -8,6 +8,21 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 - **November 3, 2025**:
+  - **Hero Section Button Animation Enhancements**:
+    - Enhanced "Garantir minha vaga" button with more lively hover animation:
+      - Added scale transform (1.05) combined with vertical lift (-3px) for dynamic effect
+      - Implemented shimmer sweep effect using ::before pseudo-element with gradient animation
+      - Enhanced glow with dual shadow layers (box-shadow with blur and outer glow)
+      - Improved brightness filter from 1.08 to 1.12 for stronger visual feedback
+      - Added elastic cubic-bezier easing (0.34, 1.56, 0.64, 1) for playful bounce effect
+    - Improved "Falar no WhatsApp" button (outline style):
+      - Enhanced base state with subtle background tint (rgba(255, 255, 255, 0.03)) always visible
+      - Increased border thickness from 1px to 1.5px for better definition
+      - Added subtle box-shadow for depth perception even in resting state
+      - Implemented vertical lift animation (-2px) on hover with enhanced border glow
+      - Maintains outline aesthetic throughout all states as requested
+    - Added accessibility support with prefers-reduced-motion overrides for both buttons
+    - All animations tested and architect-reviewed for performance and UX quality
   - **Typography System Overhaul for Improved Readability**:
     - Added NeueMontreal-Medium (font-weight 500) to typography system
     - Replaced all body text and subheadlines from NeueMontreal-Light to NeueMontreal-Medium for significantly better legibility
