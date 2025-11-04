@@ -1,7 +1,18 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import mascoteUrl from '@assets/sem-fundo-pngggggg-mucrinha-hero.png';
 
 export function Hero() {
+  const [availableSpots, setAvailableSpots] = useState(9);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAvailableSpots(8);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -169,7 +180,7 @@ export function Hero() {
                 <span className="font-body font-medium">Foco no raciocínio clínico</span>
               </motion.div>
 
-              {/* Pill 3: Apenas 9 vagas */}
+              {/* Pill 3: Apenas X vagas (animated) */}
               <motion.div className="pill-glass text-base md:text-lg" variants={pillVariants}>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +194,47 @@ export function Hero() {
                     <animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
                   </path>
                 </svg>
-                <span className="font-body font-medium">Apenas 9 vagas</span>
+                <span className="font-body font-medium">
+                  Apenas{' '}
+                  <span className="inline-block relative" style={{ minWidth: '1ch' }}>
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={availableSpots}
+                        initial={{ 
+                          y: -20, 
+                          opacity: 0, 
+                          filter: 'blur(4px)',
+                          color: availableSpots === 8 ? '#FFD700' : '#ffffff'
+                        }}
+                        animate={{ 
+                          y: 0, 
+                          opacity: 1, 
+                          filter: 'blur(0px)',
+                          color: '#ffffff',
+                          transition: {
+                            y: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+                            opacity: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+                            filter: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+                            color: { duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }
+                          }
+                        }}
+                        exit={{ 
+                          y: 20, 
+                          opacity: 0, 
+                          filter: 'blur(4px)',
+                          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+                        }}
+                        className="inline-block font-bold"
+                        style={{ 
+                          textShadow: availableSpots === 8 ? '0 0 20px rgba(255, 215, 0, 0.5)' : 'none'
+                        }}
+                      >
+                        {availableSpots}
+                      </motion.span>
+                    </AnimatePresence>
+                  </span>
+                  {' '}vagas
+                </span>
               </motion.div>
             </motion.div>
 
