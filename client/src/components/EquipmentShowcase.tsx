@@ -70,7 +70,7 @@ export function EquipmentShowcase() {
           {/* Video Container */}
           <div className="relative" data-testid="container-equipment-video">
             <motion.div 
-              className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl"
+              className="relative overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -78,21 +78,20 @@ export function EquipmentShowcase() {
             >
               
               {/* Video Embed */}
-              <div className="aspect-video w-full relative bg-gradient-to-br from-purple-900/20 to-blue-900/20">
+              <div className="aspect-video w-full relative">
                 <iframe 
                   title="Vídeo de Apresentação do Butterfly" 
                   className="w-full h-full absolute inset-0"
                   frameBorder="0" 
-                  allowFullScreen 
                   allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
-                  src="https://player.cloudinary.com/embed/?cloud_name=dgu5xgx7q&public_id=video_propaganda_butterfly_jkbbeb&profile=cld-default&autoplay=true&loop=true&muted=true"
+                  src="https://player.cloudinary.com/embed/?cloud_name=dgu5xgx7q&public_id=video_propaganda_butterfly_jkbbeb&profile=cld-default&autoplay=true&loop=true&muted=true&controls=false"
                   data-testid="iframe-equipment-video"
                   loading="lazy"
                 />
               </div>
 
               {/* Video Caption */}
-              <div className="px-6 py-4 bg-gradient-to-r from-black/40 via-black/30 to-black/40 backdrop-blur-sm border-t border-white/5">
+              <div className="px-6 py-4 bg-gradient-to-r from-black/40 via-black/30 to-black/40 backdrop-blur-sm mt-2">
                 <p className="text-sm text-white/70 text-center font-body font-medium">
                   Veja o Butterfly IQ em ação: portabilidade e qualidade clínica ao seu alcance
                 </p>
