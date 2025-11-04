@@ -3,7 +3,7 @@ This project is a single-page marketing website for Integra POCUS, a hands-on me
 
 ## Recent Changes
 - **November 4, 2025**: Modified EquipmentShowcase video to autoplay continuously in loop without visible controls or borders. Video now plays automatically, loops infinitely, stays muted for browser compatibility, and displays without player controls for a cleaner, more immersive experience.
-- **November 4, 2025**: Added animated "live" countdown effect in Hero section badge. Number transitions from 9 to 8 vagas with smooth Framer Motion animation, featuring a golden (#FFD700) glow effect that fades to white, creating urgency and simulating a real-time spot being filled. The animation includes scale transformation and text shadow glow for emphasis. Timer set to 3 seconds after page load.
+- **November 4, 2025**: Added animated "live" countdown effect in Hero section badge. Number transitions from 9 to 8 vagas with smooth Framer Motion animation, featuring a red (#FF3B3B) glow effect that fades to white, creating urgency and simulating a real-time spot being filled. The animation includes scale transformation and text shadow glow for emphasis. Timer set to 3 seconds after page load.
 - **November 3, 2025**: Fixed mobile responsiveness issue in pricing section CTAs. Buttons now display text in a single line on mobile devices using `whitespace-nowrap` and optimized spacing/font sizes.
 - **November 3, 2025**: Modified Hero Section mascot visibility to show only on desktop devices (hidden on mobile using `hidden lg:flex`) for cleaner mobile layout.
 - **November 3, 2025**: Updated pricing section checkout links to use separate URLs for each payment method: PIX (7117) and Credit Card (7220).

@@ -201,11 +201,11 @@ export function Hero() {
                     className="font-bold inline-block"
                     initial={{ scale: 1 }}
                     animate={availableSpots === 8 ? {
-                      color: ['#FFD700', '#FFD700', '#ffffff'],
+                      color: ['#FF3B3B', '#FF3B3B', '#ffffff'],
                       textShadow: [
-                        '0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6)',
-                        '0 0 25px rgba(255, 215, 0, 0.9), 0 0 40px rgba(255, 215, 0, 0.7)',
-                        '0 0 0px rgba(255, 215, 0, 0)'
+                        '0 0 20px rgba(255, 59, 59, 0.8), 0 0 30px rgba(255, 59, 59, 0.6)',
+                        '0 0 25px rgba(255, 59, 59, 0.9), 0 0 40px rgba(255, 59, 59, 0.7)',
+                        '0 0 0px rgba(255, 59, 59, 0)'
                       ],
                       scale: [1, 1.2, 1]
                     } : {}}
