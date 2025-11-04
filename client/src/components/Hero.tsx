@@ -1,7 +1,17 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import mascoteUrl from '@assets/sem-fundo-pngggggg-mucrinha-hero.png';
 
 export function Hero() {
+  const [availableSpots, setAvailableSpots] = useState(9);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAvailableSpots(8);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -185,7 +195,29 @@ export function Hero() {
                   </path>
                 </svg>
                 <span className="font-body font-medium">
-                  Apenas <span className="font-bold">9</span> vagas
+                  Apenas{' '}
+                  <motion.span 
+                    key={availableSpots}
+                    className="font-bold inline-block"
+                    initial={{ scale: 1 }}
+                    animate={availableSpots === 8 ? {
+                      color: ['#FFD700', '#FFD700', '#ffffff'],
+                      textShadow: [
+                        '0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6)',
+                        '0 0 25px rgba(255, 215, 0, 0.9), 0 0 40px rgba(255, 215, 0, 0.7)',
+                        '0 0 0px rgba(255, 215, 0, 0)'
+                      ],
+                      scale: [1, 1.2, 1]
+                    } : {}}
+                    transition={{
+                      duration: 2,
+                      times: [0, 0.5, 1],
+                      ease: "easeInOut"
+                    }}
+                  >
+                    {availableSpots}
+                  </motion.span>
+                  {' '}vagas
                 </span>
               </motion.div>
             </motion.div>
