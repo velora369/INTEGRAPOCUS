@@ -204,7 +204,7 @@ export function Hero() {
                           y: -20, 
                           opacity: 0, 
                           filter: 'blur(4px)',
-                          color: availableSpots === 8 ? '#FFD700' : '#ffffff'
+                          color: availableSpots === 8 ? '#FF3B3B' : '#ffffff'
                         }}
                         animate={{ 
                           y: 0, 
@@ -226,7 +226,7 @@ export function Hero() {
                         }}
                         className="inline-block font-bold"
                         style={{ 
-                          textShadow: availableSpots === 8 ? '0 0 20px rgba(255, 215, 0, 0.5)' : 'none'
+                          textShadow: availableSpots === 8 ? '0 0 20px rgba(255, 59, 59, 0.5)' : 'none'
                         }}
                       >
                         {availableSpots}
