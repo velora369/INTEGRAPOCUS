@@ -1,17 +1,7 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import mascoteUrl from '@assets/sem-fundo-pngggggg-mucrinha-hero.png';
 
 export function Hero() {
-  const [availableSpots, setAvailableSpots] = useState(9);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAvailableSpots(8);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -180,7 +170,7 @@ export function Hero() {
                 <span className="font-body font-medium">Foco no raciocínio clínico</span>
               </motion.div>
 
-              {/* Pill 3: Apenas X vagas (slot machine animated) */}
+              {/* Pill 3: Apenas X vagas */}
               <motion.div className="pill-glass text-base md:text-lg" variants={pillVariants}>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg"
@@ -195,52 +185,7 @@ export function Hero() {
                   </path>
                 </svg>
                 <span className="font-body font-medium">
-                  Apenas{' '}
-                  <span 
-                    className="inline-block relative overflow-hidden" 
-                    style={{ 
-                      width: '1.2ch', 
-                      height: '1.2em',
-                      verticalAlign: 'baseline'
-                    }}
-                  >
-                    <motion.div
-                      initial={{ y: 0 }}
-                      animate={{ 
-                        y: availableSpots === 8 ? '-50%' : 0
-                      }}
-                      transition={{
-                        duration: 1.5,
-                        ease: [0.25, 0.46, 0.45, 0.94],
-                        delay: 0
-                      }}
-                      className="flex flex-col items-center"
-                    >
-                      {[11, 10, 9, 8, 7, 6].map((num, index) => (
-                        <motion.span
-                          key={num}
-                          className="inline-block font-bold"
-                          style={{ 
-                            height: '1.2em',
-                            lineHeight: '1.2em'
-                          }}
-                          animate={{
-                            color: num === 8 && availableSpots === 8 ? ['#FF3B3B', '#ffffff'] : '#ffffff',
-                            textShadow: num === 8 && availableSpots === 8 
-                              ? ['0 0 20px rgba(255, 59, 59, 0.8)', '0 0 0px rgba(255, 59, 59, 0)']
-                              : '0 0 0px rgba(255, 59, 59, 0)'
-                          }}
-                          transition={{
-                            color: { duration: 1.0, delay: 1.5, ease: 'easeOut' },
-                            textShadow: { duration: 1.0, delay: 1.5, ease: 'easeOut' }
-                          }}
-                        >
-                          {num}
-                        </motion.span>
-                      ))}
-                    </motion.div>
-                  </span>
-                  {' '}vagas
+                  Apenas <span className="font-bold">9</span> vagas
                 </span>
               </motion.div>
             </motion.div>
