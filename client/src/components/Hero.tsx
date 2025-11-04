@@ -180,7 +180,7 @@ export function Hero() {
                 <span className="font-body font-medium">Foco no raciocínio clínico</span>
               </motion.div>
 
-              {/* Pill 3: Apenas X vagas (animated) */}
+              {/* Pill 3: Apenas X vagas (slot machine animated) */}
               <motion.div className="pill-glass text-base md:text-lg" variants={pillVariants}>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg"
@@ -196,42 +196,49 @@ export function Hero() {
                 </svg>
                 <span className="font-body font-medium">
                   Apenas{' '}
-                  <span className="inline-block relative" style={{ minWidth: '1ch' }}>
-                    <AnimatePresence mode="wait">
-                      <motion.span
-                        key={availableSpots}
-                        initial={{ 
-                          y: -20, 
-                          opacity: 0, 
-                          filter: 'blur(4px)',
-                          color: availableSpots === 8 ? '#FF3B3B' : '#ffffff'
-                        }}
-                        animate={{ 
-                          y: 0, 
-                          opacity: 1, 
-                          filter: 'blur(0px)',
-                          color: '#ffffff',
-                          transition: {
-                            y: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-                            opacity: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-                            filter: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-                            color: { duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }
-                          }
-                        }}
-                        exit={{ 
-                          y: 20, 
-                          opacity: 0, 
-                          filter: 'blur(4px)',
-                          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
-                        }}
-                        className="inline-block font-bold"
-                        style={{ 
-                          textShadow: availableSpots === 8 ? '0 0 20px rgba(255, 59, 59, 0.5)' : 'none'
-                        }}
-                      >
-                        {availableSpots}
-                      </motion.span>
-                    </AnimatePresence>
+                  <span 
+                    className="inline-block relative overflow-hidden" 
+                    style={{ 
+                      width: '1.2ch', 
+                      height: '1.2em',
+                      verticalAlign: 'baseline'
+                    }}
+                  >
+                    <motion.div
+                      initial={{ y: 0 }}
+                      animate={{ 
+                        y: availableSpots === 8 ? '-50%' : 0
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        ease: [0.25, 0.46, 0.45, 0.94],
+                        delay: 0
+                      }}
+                      className="flex flex-col items-center"
+                    >
+                      {[11, 10, 9, 8, 7, 6].map((num, index) => (
+                        <motion.span
+                          key={num}
+                          className="inline-block font-bold"
+                          style={{ 
+                            height: '1.2em',
+                            lineHeight: '1.2em'
+                          }}
+                          animate={{
+                            color: num === 8 && availableSpots === 8 ? ['#FF3B3B', '#ffffff'] : '#ffffff',
+                            textShadow: num === 8 && availableSpots === 8 
+                              ? ['0 0 20px rgba(255, 59, 59, 0.8)', '0 0 0px rgba(255, 59, 59, 0)']
+                              : '0 0 0px rgba(255, 59, 59, 0)'
+                          }}
+                          transition={{
+                            color: { duration: 1.0, delay: 1.5, ease: 'easeOut' },
+                            textShadow: { duration: 1.0, delay: 1.5, ease: 'easeOut' }
+                          }}
+                        >
+                          {num}
+                        </motion.span>
+                      ))}
+                    </motion.div>
                   </span>
                   {' '}vagas
                 </span>
