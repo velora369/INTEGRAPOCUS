@@ -1,16 +1,25 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import mascoteUrl from '@assets/sem-fundo-pngggggg-mucrinha-hero.png';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export function Hero() {
   const [availableSpots, setAvailableSpots] = useState(9);
+  const [tooltipOpen, setTooltipOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer1 = setTimeout(() => {
       setAvailableSpots(8);
     }, 3000);
 
-    return () => clearTimeout(timer);
+    const timer2 = setTimeout(() => {
+      setAvailableSpots(6);
+    }, 6000);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -181,45 +190,80 @@ export function Hero() {
               </motion.div>
 
               {/* Pill 3: Apenas X vagas */}
-              <motion.div className="pill-glass text-base md:text-lg" variants={pillVariants}>
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22" 
-                  height="22" 
-                  viewBox="0 0 24 24"
-                  className="flex-shrink-0"
-                  aria-hidden="true"
-                >
-                  <path fill="currentColor" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
-                    <animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
-                  </path>
-                </svg>
-                <span className="font-body font-medium">
-                  Apenas{' '}
-                  <motion.span 
-                    key={availableSpots}
-                    className="font-bold inline-block"
-                    initial={{ scale: 1 }}
-                    animate={availableSpots === 8 ? {
-                      color: ['#FF3B3B', '#FF3B3B', '#ffffff'],
-                      textShadow: [
-                        '0 0 20px rgba(255, 59, 59, 0.8), 0 0 30px rgba(255, 59, 59, 0.6)',
-                        '0 0 25px rgba(255, 59, 59, 0.9), 0 0 40px rgba(255, 59, 59, 0.7)',
-                        '0 0 0px rgba(255, 59, 59, 0)'
-                      ],
-                      scale: [1, 1.2, 1]
-                    } : {}}
-                    transition={{
-                      duration: 2,
-                      times: [0, 0.5, 1],
-                      ease: "easeInOut"
-                    }}
+              <TooltipProvider delayDuration={0}>
+                <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
+                  <TooltipTrigger asChild>
+                    <motion.button 
+                      className="pill-glass text-base md:text-lg cursor-help border-0 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-transparent" 
+                      variants={pillVariants}
+                      onClick={() => setTooltipOpen(!tooltipOpen)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setTooltipOpen(!tooltipOpen);
+                        }
+                      }}
+                      aria-label="Informações sobre vagas disponíveis"
+                      data-testid="pill-vagas-disponiveis"
+                    >
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22" 
+                        height="22" 
+                        viewBox="0 0 24 24"
+                        className="flex-shrink-0"
+                        aria-hidden="true"
+                      >
+                        <path fill="currentColor" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
+                          <animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
+                        </path>
+                      </svg>
+                      <span className="font-body font-medium">
+                        Apenas{' '}
+                        <motion.span 
+                          key={availableSpots}
+                          className="font-bold inline-block"
+                          initial={{ scale: 1 }}
+                          animate={availableSpots === 6 ? {
+                            color: ['#FF3B3B', '#ffffff', '#FF3B3B'],
+                            textShadow: [
+                              '0 0 20px rgba(255, 59, 59, 0.8), 0 0 30px rgba(255, 59, 59, 0.6)',
+                              '0 0 0px rgba(255, 59, 59, 0)',
+                              '0 0 20px rgba(255, 59, 59, 0.8), 0 0 30px rgba(255, 59, 59, 0.6)'
+                            ],
+                            scale: [1, 1.15, 1]
+                          } : {}}
+                          transition={availableSpots === 6 ? {
+                            duration: 1.5,
+                            times: [0, 0.5, 1],
+                            ease: "easeInOut",
+                            repeat: Infinity
+                          } : {
+                            duration: 2,
+                            ease: "easeInOut"
+                          }}
+                        >
+                          {availableSpots}
+                        </motion.span>
+                        {' '}vagas
+                      </span>
+                    </motion.button>
+                  </TooltipTrigger>
+                  <TooltipContent 
+                    side="top"
+                    className="bg-black/80 backdrop-blur-sm border-white/10 px-4 py-2"
+                    data-testid="tooltip-tempo-real"
                   >
-                    {availableSpots}
-                  </motion.span>
-                  {' '}vagas
-                </span>
-              </motion.div>
+                    <div className="flex items-center gap-2">
+                      <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                      </span>
+                      <span className="text-white font-body font-medium text-sm">Atualizado em tempo real</span>
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </motion.div>
 
             {/* Glass Card - Event Info */}
