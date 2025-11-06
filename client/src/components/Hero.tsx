@@ -8,17 +8,12 @@ export function Hero() {
   const [tooltipOpen, setTooltipOpen] = useState(false);
 
   useEffect(() => {
-    const timer1 = setTimeout(() => {
-      setAvailableSpots(8);
+    const timer = setTimeout(() => {
+      setAvailableSpots(6);
     }, 3000);
 
-    const timer2 = setTimeout(() => {
-      setAvailableSpots(6);
-    }, 6000);
-
     return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
+      clearTimeout(timer);
     };
   }, []);
 
