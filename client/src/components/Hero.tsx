@@ -9,7 +9,7 @@ export function Hero() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAvailableSpots(5);
+      setAvailableSpots(3);
     }, 3000);
 
     return () => {
@@ -219,7 +219,7 @@ export function Hero() {
                           key={availableSpots}
                           className="font-bold inline-block"
                           initial={{ scale: 1 }}
-                          animate={availableSpots === 5 ? {
+                          animate={availableSpots === 3 ? {
                             color: ['#FF3B3B', '#ffffff', '#FF3B3B'],
                             textShadow: [
                               '0 0 20px rgba(255, 59, 59, 0.8), 0 0 30px rgba(255, 59, 59, 0.6)',
@@ -228,7 +228,7 @@ export function Hero() {
                             ],
                             scale: [1, 1.15, 1]
                           } : {}}
-                          transition={availableSpots === 5 ? {
+                          transition={availableSpots === 3 ? {
                             duration: 1.5,
                             times: [0, 0.5, 1],
                             ease: "easeInOut",
