@@ -6,9 +6,9 @@ import { EquipmentShowcase } from '@/components/EquipmentShowcase';
 import { StudentGallery } from '@/components/StudentGallery';
 import { Audience } from '@/components/Audience';
 import { Outcomes } from '@/components/Outcomes';
-import { FormatDate } from '@/components/FormatDate';
+
 import { Professors } from '@/components/Professors';
-import { Pricing } from '@/components/Pricing';
+
 import { Notices } from '@/components/Notices';
 import { FAQ } from '@/components/FAQ';
 import { Contact } from '@/components/Contact';
@@ -43,17 +43,17 @@ export default function Home() {
       <div className="bg-gradient-indigo-night with-grain min-h-screen">
         <main className="pt-16">
           <Hero />
-        <PartnersCarousel />
-        <Audience />
-        <Professors />
-        <Outcomes />
-        <EquipmentShowcase />
-        <StudentGallery />
-        <FormatDate />
-        <Pricing />
-        <FAQ />
-        <Notices />
-        <Contact />
+          <PartnersCarousel />
+          <Audience />
+          <Professors />
+          <Outcomes />
+          <EquipmentShowcase />
+          <StudentGallery />
+
+
+          <FAQ />
+          <Notices />
+          <Contact />
         </main>
         <Footer />
       </div>
