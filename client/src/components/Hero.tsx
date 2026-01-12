@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import mascoteUrl from '@assets/sem-fundo-pngggggg-mucrinha-hero.png';
+import { ClipboardList } from 'lucide-react';
 
 
 export function Hero() {
@@ -176,6 +177,7 @@ export function Hero() {
                 {/* Pill 3: Apenas X vagas */}
                 {/* Pill 3: Lista de espera */}
                 <motion.div className="pill-glass text-base md:text-lg" variants={pillVariants}>
+                  <ClipboardList className="w-5 h-5 flex-shrink-0" />
                   <span className="font-body font-medium">Lista de espera aberta</span>
                 </motion.div>
               </motion.div>
@@ -204,7 +206,7 @@ export function Hero() {
                     </svg>
                     <div>
                       <p className="text-sm text-white/60 mb-1 font-body font-medium">Data</p>
-                      <p className="text-white font-body font-medium" data-testid="text-event-date">1ª Turma de 2026</p>
+                      <p className="text-white font-body font-medium" data-testid="text-event-date">Em breve — 1ª Turma de 2026</p>
                     </div>
                   </div>
 
