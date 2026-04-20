@@ -278,14 +278,14 @@ export function EquipmentShowcase() {
               Durante o curso, você terá acesso hands-on a aparelhos da Butterfly
             </p>
             <motion.a
-              href="https://integrapocus2026lista-de-espera.netlify.app"
+              href="https://app.mirracheckout.com/c/integrapocus2026"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 text-white font-body font-semibold text-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
               data-testid="button-equipment-cta"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="relative z-10">Entrar na lista de espera</span>
+              <span className="relative z-10">Quero garantir minha vaga</span>
               <svg
                 width="20"
                 height="20"

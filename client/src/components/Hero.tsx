@@ -174,11 +174,10 @@ export function Hero() {
                   <span className="font-body font-medium">Foco no raciocínio clínico</span>
                 </motion.div>
 
-                {/* Pill 3: Apenas X vagas */}
-                {/* Pill 3: Lista de espera */}
+                {/* Pill 3: Inscrições */}
                 <motion.div className="pill-glass text-base md:text-lg" variants={pillVariants}>
                   <ClipboardList className="w-5 h-5 flex-shrink-0" />
-                  <span className="font-body font-medium">Lista de espera aberta</span>
+                  <span className="font-body font-medium">Inscrições abertas</span>
                 </motion.div>
               </motion.div>
 
@@ -206,7 +205,7 @@ export function Hero() {
                     </svg>
                     <div>
                       <p className="text-sm text-white/60 mb-1 font-body font-medium">Data</p>
-                      <p className="text-white font-body font-medium" data-testid="text-event-date">Em breve — 1ª Turma de 2026</p>
+                      <p className="text-white font-body font-medium" data-testid="text-event-date">21/06 — 1ª Turma de 2026</p>
                     </div>
                   </div>
 
@@ -238,11 +237,11 @@ export function Hero() {
                 variants={itemVariants}
               >
                 <button
-                  onClick={() => window.open('https://integrapocus2026lista-de-espera.netlify.app', '_blank')}
+                  onClick={() => window.open('https://app.mirracheckout.com/c/integrapocus2026', '_blank')}
                   className="btn-primary-hero text-lg px-8 font-body font-medium"
                   data-testid="button-hero-main-cta"
                 >
-                  Entrar na lista de espera
+                  Quero garantir minha vaga
                 </button>
                 <a
                   href="https://wa.me/5593991674540?text=Olá! Gostaria de saber mais sobre o Hands-on Integra POCUS."

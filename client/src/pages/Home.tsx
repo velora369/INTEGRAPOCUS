@@ -4,6 +4,7 @@ import { Hero } from '@/components/Hero';
 import { PartnersCarousel } from '@/components/PartnersCarousel';
 import { EquipmentShowcase } from '@/components/EquipmentShowcase';
 import { StudentGallery } from '@/components/StudentGallery';
+import { Pricing } from '@/components/Pricing';
 import { Audience } from '@/components/Audience';
 import { Outcomes } from '@/components/Outcomes';
 
@@ -49,7 +50,7 @@ export default function Home() {
           <Outcomes />
           <EquipmentShowcase />
           <StudentGallery />
-
+          <Pricing />
 
           <FAQ />
           <Notices />

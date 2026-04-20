@@ -27,8 +27,8 @@ export function Notices() {
     {
       icon: CalendarIcon,
       title: 'Turma 2026',
-      description: 'A lista de espera para a primeira turma de 2026 já está aberta. Inscreva-se para receber prioridade na matrícula e condições exclusivas.',
-      date: 'Em breve'
+      description: 'As inscrições estão abertas. Você já pode efetuar o pagamento e garantir sua vaga na 1ª turma de 2026.',
+      date: '21/06'
     }
   ];
 
@@ -114,12 +114,12 @@ export function Notices() {
 
                 <div className="mt-8">
                   <a
-                    href="https://integrapocus2026lista-de-espera.netlify.app"
+                    href="https://app.mirracheckout.com/c/integrapocus2026"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white text-indigo-900 font-body font-bold text-lg hover:shadow-lg hover:shadow-white/20 transition-all duration-300"
                   >
-                    Entrar na lista de espera
+                    Quero garantir minha vaga
                   </a>
                 </div>
               </motion.div>
