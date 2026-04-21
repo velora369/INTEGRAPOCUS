@@ -1,4 +1,4 @@
-import { Check, Sparkles } from 'lucide-react';
+import { Check, Wallet } from 'lucide-react';
 
 const CHECKOUT_URL = 'https://app.mirracheckout.com/c/integrapocus2026';
 
@@ -38,7 +38,7 @@ export function Pricing() {
               <div className="relative bg-white border border-slate-200 rounded-2xl p-8 md:p-10 transition-all duration-300 shadow-lg group-hover:border-blue-400/30 group-hover:shadow-blue-400/10">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 rounded-xl border bg-blue-400/10 border-blue-400/20">
-                    <Sparkles className="w-6 h-6 text-blue-400" />
+                    <Wallet className="w-6 h-6 text-blue-400" aria-hidden />
                   </div>
                   <div>
                     <p className="text-sm text-slate-600 uppercase tracking-wide font-body font-medium">
@@ -63,7 +63,7 @@ export function Pricing() {
                     <p className="text-sm text-slate-600 mb-2 font-body font-medium">Cartão de crédito</p>
                     <div className="flex items-baseline gap-2 mb-1 flex-wrap">
                       <span className="text-3xl font-medium text-slate-600 font-body font-medium">12x de</span>
-                      <span className="text-5xl md:text-6xl font-medium text-slate-900 font-medium">R$ 295,75</span>
+                      <span className="text-5xl md:text-6xl font-medium text-slate-900 font-medium">R$ 295,47</span>
                     </div>
                     <p className="text-sm text-slate-500 font-body font-medium mt-1">
                       Sem juros.
