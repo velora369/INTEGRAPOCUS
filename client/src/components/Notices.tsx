@@ -28,7 +28,7 @@ export function Notices() {
       icon: CalendarIcon,
       title: 'Turma 2026',
       description: 'As inscrições estão abertas. Você já pode efetuar o pagamento e garantir sua vaga na 1ª turma de 2026.',
-      date: '21/06'
+      date: '16/08'
     }
   ];
 

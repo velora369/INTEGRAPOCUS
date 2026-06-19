@@ -43,7 +43,7 @@ export function createEventSchema(): EventSchema {
     },
     offers: {
       '@type': 'Offer',
-      price: '2497.00',
+      price: '2259.00',
       priceCurrency: 'BRL'
     },
     performer: [

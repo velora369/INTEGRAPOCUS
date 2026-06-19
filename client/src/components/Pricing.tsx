@@ -52,7 +52,7 @@ export function Pricing() {
                   <div>
                     <p className="text-sm text-slate-600 mb-2 font-body font-medium">À vista no PIX</p>
                     <div className="flex items-baseline gap-2 mb-1">
-                      <span className="text-5xl md:text-6xl font-medium text-slate-900 font-body font-medium">R$ 2.759</span>
+                      <span className="text-5xl md:text-6xl font-medium text-slate-900 font-body font-medium">R$ 2.259</span>
                     </div>
                     <p className="text-sm text-slate-600 font-body font-medium">Pagamento único</p>
                   </div>

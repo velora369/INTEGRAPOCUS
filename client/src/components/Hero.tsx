@@ -205,7 +205,7 @@ export function Hero() {
                     </svg>
                     <div>
                       <p className="text-sm text-white/60 mb-1 font-body font-medium">Data</p>
-                      <p className="text-white font-body font-medium" data-testid="text-event-date">21/06 — 1ª Turma de 2026</p>
+                      <p className="text-white font-body font-medium" data-testid="text-event-date">16/08 — 1ª Turma de 2026</p>
                     </div>
                   </div>
 
